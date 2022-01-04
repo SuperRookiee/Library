@@ -34,6 +34,7 @@ public class JsoupTest {
 					tit=title.get(i).text();
 					log.info(tit);
 				}
+				log.info("test : 김종백 테스트");
 				
 			}
 			
