@@ -7,6 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.AllArgsConstructor;
@@ -17,6 +18,11 @@ import lombok.extern.log4j.Log4j;
 @RequestMapping("/book/*")
 @AllArgsConstructor
 public class BookController {
+	
+	@GetMapping("/home")
+	public String home() {
+		return "/Book/home";
+	}
 
 	@GetMapping("/searchTitle")
 	public String searchTitle(String key) {
