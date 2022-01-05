@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Book_Home</title>
+<title>Book</title>
 </head>
 <body>
  	<!-- ***** Main Banner Area Start ***** -->
@@ -16,8 +16,8 @@
                     <div class="left-content">
                         <div class="thumb">
                             <div class="inner-content">
-                                <h4>We Are Hexashop</h4>
-                                <span>Awesome, clean &amp; creative HTML5 Template</span>
+                                <h4> &quot;화제의 신간&quot; <br> -책 제목이 여기에 들어가요</h4>
+                                <span>많은 사람들이 선택한 책을 읽어보세요</span>
                                 <div class="main-border-button">
                                     <a href="#">Purchase Now!</a>
                                 </div>
@@ -33,15 +33,15 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>Women</h4>
-                                            <span>Best Clothes For Women</span>
+                                            <h4>베스트 셀러</h4>
+                                            <span>----책이름----</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>Women</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <h4>----책이름----</h4>
+                                                <p>수 많은 선택을 받은 책에는 이유가 있습니다.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    <a href="#">더 알아보기</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -53,15 +53,15 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>Men</h4>
-                                            <span>Best Clothes For Men</span>
+                                            <h4>20대 추천도서</h4>
+                                            <span>어떤 책을 가장 많이 읽었는지 확인해보세요</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>Men</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <h4>20대 추천도서</h4>
+                                                <p>20대만의 베스트셀러들을 만나보세요</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    <a href="#">연령별 추천 보러가기</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,15 +73,18 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>Kids</h4>
-                                            <span>Best Clothes For Kids</span>
+                                            <h4>최근 리뷰</h4>
+                                            <span>Recent Reviews</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>Kids</h4>
+                                                <h4>--Review--</h4>
                                                 <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                	<div class="scroll-to-section">
+                                                		<a href="#social">Show More</a>
+                                                	</div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -93,13 +96,13 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>Accessories</h4>
-                                            <span>Best Trend Accessories</span>
+                                            <h4>OO Membership</h4>
+                                            <span>더 많은 혜택을 누려보세요</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>Accessories</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <h4>멤버쉽 가입</h4>
+                                                <p>월 ₩5000원에 멤버쉽을 경험하실 수 있습니다.</p>
                                                 <div class="main-border-button">
                                                     <a href="#">Discover More</a>
                                                 </div>
@@ -117,14 +120,14 @@
     </div>
     <!-- ***** Main Banner Area End ***** -->
     
-    <!-- ***** Men Area Starts ***** -->
-    <section class="section" id="men">
+    <!-- ***** Recommend Area Starts ***** -->
+    <section class="section" id="Recommend">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>Men's Latest</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <h2>추천 도서</h2>
+                        <span>가장 많은 추천을 받은 리뷰순으로 나열됩니다.</span>
                     </div>
                 </div>
             </div>
@@ -134,19 +137,21 @@
                 <div class="col-lg-12">
                     <div class="men-item-carousel">
                         <div class="owl-men-item owl-carousel">
+                        
+                       		<!-- foreach -->
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="/resources/hexa/assets/images/men-01.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Spring</h4>
+                                    <h4>책 제목</h4>
                                     <span>$120.00</span>
                                     <ul class="stars">
                                         <li><i class="fa fa-star"></i></li>
@@ -157,6 +162,8 @@
                                     </ul>
                                 </div>
                             </div>
+                            <!-- foreach -->
+                            
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
@@ -232,68 +239,16 @@
             </div>
         </div>
     </section>
-    <!-- ***** Men Area Ends ***** -->
+    <!-- ***** Recommend Area Ends ***** -->
 
-
-    <!-- ***** Explore Area Starts ***** -->
-    <section class="section" id="explore">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="left-content">
-                        <h2>Explore Our Products</h2>
-                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
-                        <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-                        </div>
-                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
-                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
-                        <div class="main-border-button">
-                            <a href="products.html">Discover More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="right-content">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="leather">
-                                    <h4>Leather Bags</h4>
-                                    <span>Latest Collection</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="first-image">
-                                    <img src="/resources/hexa/assets/images/explore-image-01.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="second-image">
-                                    <img src="/resources/hexa/assets/images/explore-image-02.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="types">
-                                    <h4>Different Types</h4>
-                                    <span>Over 304 Products</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Explore Area Ends ***** -->
-
-    <!-- ***** Social Area Starts ***** -->
+	<!-- ***** Social Area Starts ***** -->
     <section class="section" id="social">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Social Media</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <h2>최근 리뷰</h2>
+                        <span>가장 최근에 작성된 리뷰 순으로 보여집니다.</span>
                     </div>
                 </div>
             </div>
@@ -371,6 +326,57 @@
     </section>
     <!-- ***** Social Area Ends ***** -->
 
+    <!-- ***** Explore Area Starts ***** -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>Explore Our Products</h2>
+                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                        </div>
+                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
+                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
+                        <div class="main-border-button">
+                            <a href="products.html">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="leather">
+                                    <h4>Leather Bags</h4>
+                                    <span>Latest Collection</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="first-image">
+                                    <img src="/resources/hexa/assets/images/explore-image-01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="second-image">
+                                    <img src="/resources/hexa/assets/images/explore-image-02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="types">
+                                    <h4>Different Types</h4>
+                                    <span>Over 304 Products</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Explore Area Ends ***** -->
+    
     <!-- ***** Subscribe Area Starts ***** -->
     <div class="subscribe">
         <div class="container">

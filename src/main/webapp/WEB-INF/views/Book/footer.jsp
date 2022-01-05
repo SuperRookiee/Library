@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Book_Footer</title>
+<title>Book</title>
 </head>
 <body>
  	<!-- ***** Footer Start ***** -->
@@ -32,12 +32,11 @@
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h4>Useful Links</h4>
+                    <h4>추천 도서</h4>
                     <ul>
-                        <li><a href="#">Homepage</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">주제별 추천도서</a></li>
+                        <li><a href="#">연령별 추천도서</a></li>
+                        <li><a href="#">성별 추천도서</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
