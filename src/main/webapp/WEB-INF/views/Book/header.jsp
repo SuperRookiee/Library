@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Book_Header</title>
+    <title>Book</title>
 
 
     <!-- Additional CSS Files -->
@@ -68,7 +68,10 @@
                                     <li><a href="#">성별 추천도서</a></li>
                                 </ul>
                             </li>
-                            <li class="scroll-to-section"><a href="#explore">로그인</a></li>
+                            <li class="scroll-to-section">
+	                            <a href="#">로그인</a>
+	                            <!-- 회원가입 후 -> 마이페이지로 변경 필요  -->
+                            </li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
