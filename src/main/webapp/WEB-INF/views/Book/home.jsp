@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Book</title>
+
 </head>
 <body>
  	<!-- ***** Main Banner Area Start ***** -->
@@ -22,7 +23,7 @@
                                     <a href="#">Purchase Now!</a>
                                 </div>
                             </div>
-                            <img src="/resources/hexa/assets/images/left-banner-image.jpg" alt="">
+                            <img src="/resources/image/crowd.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -65,7 +66,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="/resources/hexa/assets/images/baner-right-image-02.jpg">
+                                        <img src="/resources/image/20s.png">
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +89,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="/resources/hexa/assets/images/baner-right-image-03.jpg">
+                                        <img src="/resources/image/laptop.png">
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +149,7 @@
                                             <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="/resources/hexa/assets/images/men-01.jpg" alt="">
+                                    <img src="/resources/image/books.png" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>책 제목</h4>
@@ -173,10 +174,10 @@
                                             <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="/resources/hexa/assets/images/men-02.jpg" alt="">
+                                    <img src="/resources/image/books.png" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Air Force 1 X</h4>
+                                    <h4>책 제목</h4>
                                     <span>$90.00</span>
                                     <ul class="stars">
                                         <li><i class="fa fa-star"></i></li>
@@ -196,10 +197,10 @@
                                             <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="/resources/hexa/assets/images/men-03.jpg" alt="">
+                                    <img src="/resources/image/books.png" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Love Nana ‘20</h4>
+                                    <h4>책 제목</h4>
                                     <span>$150.00</span>
                                     <ul class="stars">
                                         <li><i class="fa fa-star"></i></li>
@@ -219,10 +220,10 @@
                                             <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="/resources/hexa/assets/images/men-01.jpg" alt="">
+                                    <img src="/resources/image/books.png" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Spring</h4>
+                                    <h4>책 제목</h4>
                                     <span>$120.00</span>
                                     <ul class="stars">
                                         <li><i class="fa fa-star"></i></li>
