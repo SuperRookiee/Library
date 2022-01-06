@@ -17,7 +17,7 @@
                             <img src="/resources/hexa/assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
-                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                            <li><a href="#">서울 서초구 서초대로74길 33</a></li>
                             <li><a href="#">hexashop@company.com</a></li>
                             <li><a href="#">010-020-0340</a></li>
                         </ul>
@@ -45,7 +45,6 @@
                         <li><a href="#">Help</a></li>
                         <li><a href="#">FAQ's</a></li>
                         <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Tracking ID</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-12">

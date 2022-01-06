@@ -349,8 +349,8 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="leather">
-                                    <h4>Leather Bags</h4>
-                                    <span>Latest Collection</span>
+                                    <h4>여기에</h4>
+                                    <span>페이지 소개를 넣을까해요</span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -365,8 +365,8 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="types">
-                                    <h4>Different Types</h4>
-                                    <span>Over 304 Products</span>
+                                    <h4>여기에는 </h4>
+                                    <span>팀원 소개도 넣어볼까해요</span>
                                 </div>
                             </div>
                         </div>
