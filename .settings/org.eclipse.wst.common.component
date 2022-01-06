@@ -1,41 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
                 	
+=======
+                    	
+    
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
     
     
     
     <wb-module deploy-name="controller-1.0.0-BUILD-SNAPSHOT">
+<<<<<<< HEAD
                                         
+=======
+                                                
+        
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
         
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+<<<<<<< HEAD
                                 		
+=======
+                                        		
+        
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
         
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+<<<<<<< HEAD
                                 		
+=======
+                                        		
+        
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
         
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+<<<<<<< HEAD
                                 		
+=======
+                                        		
+        
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
         
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+<<<<<<< HEAD
                                 		
+=======
+                                        		
+        
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
         
         
         
         <property name="java-output-path" value="target/classes"/>
         <property name="context-root" value="controller"/>
+<<<<<<< HEAD
                                 	
+=======
+                                        	
+    
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
     
     
     
     </wb-module>
+<<<<<<< HEAD
                 
+=======
+                    
+
+>>>>>>> b15326db6e068c334f251a36e98e397d2d5c327d
 
 
 
