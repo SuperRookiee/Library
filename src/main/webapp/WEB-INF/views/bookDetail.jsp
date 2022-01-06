@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<div>title</div>
+	<div>
+		image
+	</div>
+	
 </body>
 </html>
