@@ -103,7 +103,7 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>멤버쉽 가입</h4>
-                                                <p>월 ₩5000원에 멤버쉽을 경험하실 수 있습니다.</p>
+                                                <p>월 ₩100,000원에 멤버쉽을 경험하실 수 있습니다.</p>
                                                 <div class="main-border-button">
                                                     <a href="#">Discover More</a>
                                                 </div>
