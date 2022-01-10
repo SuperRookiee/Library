@@ -1566,6 +1566,9 @@ footer .under-footer a:hover {
   color: #c66;
 }
 
+footer #logo {
+	width: 90%;
+}
 
 /* 
 ---------------------------------------------

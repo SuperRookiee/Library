@@ -14,7 +14,7 @@
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="/resources/hexa/assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img id="logo" src="/resources/image/white-logo.png" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">서울 서초구 서초대로74길 33</a></li>

@@ -51,7 +51,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="/resources/hexa/assets/images/logo.png">
+                            <img src="/resources/image/logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -69,7 +69,7 @@
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
-	                            <a href="/book/login">로그인</a>
+	                            <a href="/login">로그인</a>
 	                            <!-- 회원가입 후 -> 마이페이지로 변경 필요  -->
                             </li>
                         </ul>        
