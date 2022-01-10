@@ -103,7 +103,7 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>멤버쉽 가입</h4>
-                                                <p>월 ₩5000원에 멤버쉽을 경험하실 수 있습니다.</p>
+                                                <p>월 ₩100,000원에 멤버쉽을 경험하실 수 있습니다.</p>
                                                 <div class="main-border-button">
                                                     <a href="#">Discover More</a>
                                                 </div>
@@ -140,6 +140,9 @@
                         <div class="owl-men-item owl-carousel">
                         
                        		<!-- foreach -->
+                       		<%-- <c:forEach var="book" items="${attribute}">
+                       		</c:forEach> --%>
+                       		
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
@@ -149,7 +152,7 @@
                                             <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="/resources/image/books.png" alt="">
+                                    <img src="/resources/image/books.png" alt="">	<!-- 책 이미지 넣기  -->
                                 </div>
                                 <div class="down-content">
                                     <h4>책 제목</h4>
@@ -334,7 +337,7 @@
                 <div class="col-lg-6">
                     <div class="left-content">
                         <h2>Explore Our Products</h2>
-                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
+                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to2 modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
                         <div class="quote">
                             <i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>
                         </div>
