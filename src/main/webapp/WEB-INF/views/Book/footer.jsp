@@ -64,5 +64,42 @@
         </div>
     </footer>
     
+    <!-- Bootstrap -->
+    <script src="/resources/hexa/assets/js/popper.js"></script>
+    <script src="/resources/hexa/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="/resources/hexa/assets/js/owl-carousel.js"></script>
+    <script src="/resources/hexa/assets/js/accordions.js"></script>
+    <script src="/resources/hexa/assets/js/datepicker.js"></script>
+    <script src="/resources/hexa/assets/js/scrollreveal.min.js"></script>
+    <script src="/resources/hexa/assets/js/waypoints.min.js"></script>
+    <script src="/resources/hexa/assets/js/jquery.counterup.min.js"></script>
+    <script src="/resources/hexa/assets/js/imgfix.min.js"></script> 
+    <script src="/resources/hexa/assets/js/slick.js"></script> 
+    <script src="/resources/hexa/assets/js/lightbox.js"></script> 
+    <script src="/resources/hexa/assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="/resources/hexa/assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+    
 </body>
 </html>
