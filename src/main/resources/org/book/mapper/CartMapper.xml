@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.book.mapper.CartMapper">
+
+	<select id="getList" resultType="org.book.domain.CartDTO">
+		select * from cart where userId = #{userId}
+	</select>
+
+	<insert id="insert">
+		insert into cart(userId, bookName) values (#{userId}, #{bookName})
+	</insert>
+</mapper>
