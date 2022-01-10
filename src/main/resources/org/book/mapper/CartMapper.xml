@@ -2,11 +2,46 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.book.mapper.CartMapper">
 
+	<!-- 개인 장바구니 목록 출력 -->
 	<select id="getList" resultType="org.book.domain.CartDTO">
-		select * from cart where userId = #{userId}
+		select * from cart where userId
+		= #{userId}
 	</select>
 
+	<!-- 장바구니 목록 수 카운트 -->
+	<select id="getTotalCount" resultType="Integer">
+		select count(*) from cart
+		userId = #{userId}
+	</select>
+
+	<!-- 장바구니 목록 추가 -->
 	<insert id="insert">
-		insert into cart(userId, bookName) values (#{userId}, #{bookName})
+		insert into cart(userId, bookName) values (#{userId},
+		#{bookName})
 	</insert>
+
+	<!-- 선택항목 삭제 -->
+	<delete id="delete">
+		delete from cart where userId = #{userId} AND
+		bookName=#{bookName}
+	</delete>
+
+	<!-- 개인 장바구니 비우기 -->
+	<delete id="deleteAll">
+		delete from cart where userId = #{userId}
+	</delete>
+
+	<!-- 도서수량 업데이트 -->
+	<update id="update">
+		update cart set amount=#{amount} where
+		userId=#{userId} AND
+		bookName=#{bookName}
+	</update>
+
+	<!-- xml수정 필요 -->
+	<select id="totalPrice" resultType="int">
+		select sum(#{sumPrice})
+		from cart where userId = #{userId} AND
+		bookName=#{bookName}
+	</select>
 </mapper>

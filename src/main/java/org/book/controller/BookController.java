@@ -23,6 +23,14 @@ public class BookController {
 	public String home() {
 		return "/Book/home";
 	}
+	@GetMapping("/cart")
+	public String cart() {
+		return "/Book/cart";
+	}
+	@GetMapping("/taxbill")
+	public String taxbill() {
+		return "/Book/taxbill";
+	}
 
 	@GetMapping("/searchTitle")
 	public String searchTitle(String key) {

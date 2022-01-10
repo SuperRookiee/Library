@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Book</title>
+<title>AVOCADO</title>
 </head>
 <body>
  	<!-- ***** Footer Start ***** -->
@@ -18,17 +18,17 @@
                         </div>
                         <ul>
                             <li><a href="#">서울 서초구 서초대로74길 33</a></li>
-                            <li><a href="#">hexashop@company.com</a></li>
-                            <li><a href="#">010-020-0340</a></li>
+                            <li><a href="https://github.com/SuperRookiee/Library">github.com/SuperRookiee/Library</a></li>
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <h4>Shopping &amp; Categories</h4>
+                    <h4>Search</h4>
                     <ul>
-                        <li><a href="#">Men’s Shopping</a></li>
-                        <li><a href="#">Women’s Shopping</a></li>
-                        <li><a href="#">Kid's Shopping</a></li>
+                        <li><a href="#">Search1</a></li>
+                        <li><a href="#">Search2</a></li>
+                        <li><a href="#">Search3</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -44,7 +44,7 @@
                     <ul>
                         <li><a href="#">Help</a></li>
                         <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cart</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-12">
@@ -56,12 +56,13 @@
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="https://github.com/SuperRookiee/Library"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

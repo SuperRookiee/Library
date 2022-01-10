@@ -1,22 +1,17 @@
-<!--
-  Inspired by Vladyslav Tyzun / Awesomed
-  https://dribbble.com/shots/2738907-PayPal-Email-Receipt
--->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="../Book/header.jsp" %>
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>UI 1</title>
-
-    <link rel="shortcut icon" href="paypal.png">
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" charset="utf-8">
-  </head>
-  <body>
-
-    <div class="paypal">
-
+<head>
+<meta charset="UTF-8">
+<title>AVOCADO Taxbill</title>
+	<link rel="shortcut icon" href="paypal.png">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" href="/resources/css/taxbill.css" charset="utf-8">
+</head>
+<body>
+<div class="paypal">
       <div class="paypal__header">
         <div class="paypal__logo-wrapper">
           <img src="https://i.ibb.co/DrvmW5y/paypal.png" alt="Paypal" class="paypal__logo">
@@ -72,6 +67,6 @@
     <span class="inspired-by">
       Inspired by <a href="https://dribbble.com/shots/2738907-PayPal-Email-Receipt">Vladyslav Tyzun / Awesomed</a>
     </span>
-
-  </body>
+</body>
+<%@include file="../Book/footer.jsp" %>
 </html>
