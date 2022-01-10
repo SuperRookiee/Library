@@ -140,8 +140,6 @@
                         <div class="owl-men-item owl-carousel">
                         
                        		<!-- foreach -->
-<<<<<<< HEAD
-=======
                        		<%-- <c:forEach var="book" items="${attribute}">
 	                       		<div class="item">
 	                                <div class="thumb">
@@ -168,8 +166,6 @@
 	                            </div>
                        		</c:forEach> --%>
                        		<!-- foreach -->
-                       		
->>>>>>> 04d35ce18b9a147c2dd411898d7688e2fc02be32
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
@@ -362,13 +358,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-content">
-<<<<<<< HEAD
                         <h2>Explore Our Products</h2>
                         <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
-=======
                         <h2>Bookstore AVOCADO</h2>
                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
->>>>>>> 04d35ce18b9a147c2dd411898d7688e2fc02be32
+
                         <div class="quote">
                             <i class="fa fa-quote-left"></i><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                         </div>

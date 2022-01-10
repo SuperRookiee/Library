@@ -1,4 +1,4 @@
-body {
+#main {
     background: #ddd;
     min-height: 100vh;
     vertical-align: middle;
@@ -8,11 +8,11 @@ body {
     font-weight: bold
 }
 
-.title {
+#main .title {
     margin-bottom: 5vh
 }
 
-.card {
+#main .card {
     margin: auto;
     max-width: 950px;
     width: 90%;
@@ -22,12 +22,12 @@ body {
 }
 
 @media(max-width:767px) {
-    .card {
+    #main .card {
         margin: 3vh auto
     }
 }
 
-.cart {
+#main .cart {
     background-color: #fff;
     padding: 4vh 5vh;
     border-bottom-left-radius: 1rem;
@@ -35,14 +35,14 @@ body {
 }
 
 @media(max-width:767px) {
-    .cart {
+    #main .cart {
         padding: 4vh;
         border-bottom-left-radius: unset;
         border-top-right-radius: 1rem
     }
 }
 
-.summary {
+#main .summary {
     background-color: #ddd;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -51,69 +51,69 @@ body {
 }
 
 @media(max-width:767px) {
-    .summary {
+    #main .summary {
         border-top-right-radius: unset;
         border-bottom-left-radius: 1rem
     }
 }
 
-.summary .col-2 {
+#main .summary .col-2 {
     padding: 0
 }
 
-.summary .col-10 {
+#main .summary .col-10 {
     padding: 0
 }
 
-.row {
+#main .row {
     margin: 0
 }
 
-.title b {
+#main .title b {
     font-size: 1.5rem
 }
 
-.main {
+#main .main {
     margin: 0;
     padding: 2vh 0;
     width: 100%
 }
 
-.col-2,
-.col {
+#main .col-2,
+#main .col {
     padding: 0 1vh
 }
 
-a {
+#main a {
     padding: 0 1vh
 }
 
-.close {
+#main .close {
     margin-left: auto;
     font-size: 0.7rem
 }
 
-img {
+#main img {
     width: 3.5rem
 }
 
-.back-to-shop {
+#main .back-to-shop {
     margin-top: 4.5rem
 }
 
-h5 {
+#main h5 {
     margin-top: 4vh
 }
 
-hr {
+#main hr {
     margin-top: 1.25rem
 }
 
-form {
+#main form {
     padding: 2vh 0
 }
 
-select {
+#main select {
     border: 1px solid rgba(0, 0, 0, 0.137);
     padding: 1.5vh 1vh;
     margin-bottom: 4vh;
@@ -122,7 +122,7 @@ select {
     background-color: rgb(247, 247, 247)
 }
 
-input {
+#main input {
     border: 1px solid rgba(0, 0, 0, 0.137);
     padding: 1vh;
     margin-bottom: 4vh;
@@ -131,11 +131,11 @@ input {
     background-color: rgb(247, 247, 247)
 }
 
-input:focus::-webkit-input-placeholder {
+#main input:focus::-webkit-input-placeholder {
     color: transparent
 }
 
-.btn {
+#main .btn {
     background-color: #000;
     border-color: #000;
     color: white;
@@ -146,7 +146,7 @@ input:focus::-webkit-input-placeholder {
     border-radius: 0
 }
 
-.btn:focus {
+#main .btn:focus {
     box-shadow: none;
     outline: none;
     box-shadow: none;
@@ -156,20 +156,20 @@ input:focus::-webkit-input-placeholder {
     transition: none
 }
 
-.btn:hover {
+#main .btn:hover {
     color: white
 }
 
-a {
+#main a {
     color: black
 }
 
-a:hover {
+#main a:hover {
     color: black;
     text-decoration: none
 }
 
-#code {
+#main #code {
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
     background-repeat: no-repeat;
     background-position-x: 95%;
