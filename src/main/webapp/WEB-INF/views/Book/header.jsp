@@ -69,7 +69,7 @@
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
-	                            <a href="#">로그인</a>
+	                            <a href="/login">로그인</a>
 	                            <!-- 회원가입 후 -> 마이페이지로 변경 필요  -->
                             </li>
                         </ul>        
