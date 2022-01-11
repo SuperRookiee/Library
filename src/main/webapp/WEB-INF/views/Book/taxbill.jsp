@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../Book/header.jsp" %>
@@ -63,7 +64,6 @@
         <img src="https://i.ibb.co/c8CQvBq/barcode.png" alt="Paypal Barcode" class="paypal__barcode">
       </div>
     </div>
-
     <span class="inspired-by">
       Inspired by <a href="https://dribbble.com/shots/2738907-PayPal-Email-Receipt">Vladyslav Tyzun / Awesomed</a>
     </span>

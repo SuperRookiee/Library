@@ -50,7 +50,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="/book/home" class="logo">
                             <img src="/resources/image/logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -69,7 +69,7 @@
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
-	                            <a href="#">로그인</a>
+	                            <a href="/login">로그인</a>
 	                            <!-- 회원가입 후 -> 마이페이지로 변경 필요  -->
                             </li>
                         </ul>        
@@ -84,41 +84,6 @@
     </header>
     <!-- ***** Header Area End ***** -->
     
-    <!-- Bootstrap -->
-    <script src="/resources/hexa/assets/js/popper.js"></script>
-    <script src="/resources/hexa/assets/js/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="/resources/hexa/assets/js/owl-carousel.js"></script>
-    <script src="/resources/hexa/assets/js/accordions.js"></script>
-    <script src="/resources/hexa/assets/js/datepicker.js"></script>
-    <script src="/resources/hexa/assets/js/scrollreveal.min.js"></script>
-    <script src="/resources/hexa/assets/js/waypoints.min.js"></script>
-    <script src="/resources/hexa/assets/js/jquery.counterup.min.js"></script>
-    <script src="/resources/hexa/assets/js/imgfix.min.js"></script> 
-    <script src="/resources/hexa/assets/js/slick.js"></script> 
-    <script src="/resources/hexa/assets/js/lightbox.js"></script> 
-    <script src="/resources/hexa/assets/js/isotope.js"></script> 
     
-    <!-- Global Init -->
-    <script src="/resources/hexa/assets/js/custom.js"></script>
-
-    <script>
-
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
-
-    </script>
 </body>
 </html>

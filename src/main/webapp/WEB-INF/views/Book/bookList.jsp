@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>bookList</title>
 </head>
-<body>
 
+<script type="text/javascript">
+
+</script>
+<body>
+	
 </body>
 </html>
