@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Book</title>
+    <title>AVOCADO</title>
 
 
     <!-- Additional CSS Files -->
@@ -39,7 +39,7 @@
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
     
     
@@ -56,9 +56,9 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#" class="active">처음 화면</a></li>
+                            <li class="scroll-to-section"><a href="/book/home" class="active">처음 화면</a></li>
                             <li class="scroll-to-section"><a href="#">조건 검색</a></li>
-                            <li class="scroll-to-section"><a href="#">담아둔 상품</a></li>
+                            <li class="scroll-to-section"><a href="/book/cart">담아둔 상품</a></li>
                             
                             <li class="submenu">
                                 <a href="javascript:;">추천도서</a>
@@ -84,5 +84,41 @@
     </header>
     <!-- ***** Header Area End ***** -->
     
+    <!-- Bootstrap -->
+    <script src="/resources/hexa/assets/js/popper.js"></script>
+    <script src="/resources/hexa/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="/resources/hexa/assets/js/owl-carousel.js"></script>
+    <script src="/resources/hexa/assets/js/accordions.js"></script>
+    <script src="/resources/hexa/assets/js/datepicker.js"></script>
+    <script src="/resources/hexa/assets/js/scrollreveal.min.js"></script>
+    <script src="/resources/hexa/assets/js/waypoints.min.js"></script>
+    <script src="/resources/hexa/assets/js/jquery.counterup.min.js"></script>
+    <script src="/resources/hexa/assets/js/imgfix.min.js"></script> 
+    <script src="/resources/hexa/assets/js/slick.js"></script> 
+    <script src="/resources/hexa/assets/js/lightbox.js"></script> 
+    <script src="/resources/hexa/assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="/resources/hexa/assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
 </body>
 </html>
