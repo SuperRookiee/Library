@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background-color: #FF84A1;
+  background-color: #cd8c52;
   font-family: "Source Sans Pro", "Helvetica", sans-serif;
   letter-spacing: 1.5px;
 }
@@ -155,7 +155,7 @@ body {
 .paypal__footer {
   position: relative;
   padding: 30px 20px;
-  border-top: 2px dashed #FF84A1;
+  border-top: 2px dashed #cd8c52;
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -176,12 +176,12 @@ body {
 
 .paypal__footer::before {
   left: 0;
-  border-left: 7px solid #ff85a1;
+  border-left: 7px solid #cd8c52;
 }
 
 .paypal__footer::after {
   right: 0;
-  border-right: 7px solid #ff85a1;
+  border-right: 7px solid #cd8c52;
 }
 
 .paypal__barcode {

@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Book</title>
+    <title>AVOCADO</title>
 
 
     <!-- Additional CSS Files -->
@@ -39,7 +39,7 @@
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
     
     
@@ -50,15 +50,15 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="/resources/hexa/assets/images/logo.png">
+                        <a href="/book/home" class="logo">
+                            <img src="/resources/image/logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#" class="active">처음 화면</a></li>
+                            <li class="scroll-to-section"><a href="/book/home" class="active">처음 화면</a></li>
                             <li class="scroll-to-section"><a href="#">조건 검색</a></li>
-                            <li class="scroll-to-section"><a href="#">담아둔 상품</a></li>
+                            <li class="scroll-to-section"><a href="/book/cart">담아둔 상품</a></li>
                             
                             <li class="submenu">
                                 <a href="javascript:;">추천도서</a>
@@ -83,6 +83,7 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+    
     
 </body>
 </html>

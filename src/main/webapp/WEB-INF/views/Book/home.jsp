@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Book</title>
+<title>AVOCADO</title>
 
 </head>
 <body>
@@ -103,7 +103,7 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>멤버쉽 가입</h4>
-                                                <p>월 ₩5000원에 멤버쉽을 경험하실 수 있습니다.</p>
+                                                <p>월 ₩100,000원에 멤버쉽을 경험하실 수 있습니다.</p>
                                                 <div class="main-border-button">
                                                     <a href="#">Discover More</a>
                                                 </div>
@@ -140,6 +140,32 @@
                         <div class="owl-men-item owl-carousel">
                         
                        		<!-- foreach -->
+                       		<%-- <c:forEach var="book" items="${attribute}">
+	                       		<div class="item">
+	                                <div class="thumb">
+	                                    <div class="hover-content">
+	                                        <ul>
+	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+	                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+	                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+	                                        </ul>
+	                                    </div>
+	                                    <img src="imgURL" alt="">	<!-- 책 이미지 넣기  -->
+	                                </div>
+	                                <div class="down-content">
+	                                    <h4>Title</h4>
+	                                    <span>Price or 대여비용</span>
+	                                    <ul class="stars">
+	                                        <li><i class="fa fa-star"></i></li>
+	                                        <li><i class="fa fa-star"></i></li>
+	                                        <li><i class="fa fa-star"></i></li>
+	                                        <li><i class="fa fa-star"></i></li>
+	                                        <li><i class="fa fa-star"></i></li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+                       		</c:forEach> --%>
+                       		<!-- foreach -->
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
@@ -163,7 +189,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- foreach -->
                             
                             <div class="item">
                                 <div class="thumb">
@@ -333,13 +358,14 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-content">
-                        <h2>Explore Our Products</h2>
-                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
+                        <h2>Bookstore AVOCADO</h2>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
+
                         <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                            <i class="fa fa-quote-left"></i><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                         </div>
-                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
-                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
+                        <p>Ultrices gravida dictum fusce ut. Quis risus sed vulputate odio. Tellus elementum sagittis vitae et leo duis. Nulla facilisi morbi tempus iaculis urna</p>
+                        <p> Viverra mauris in aliquam sem fringilla ut. Nisl nunc mi ipsum faucibus <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a>Scelerisque felis imperdiet proin fermentum leo vel orci porta non</p>
                         <div class="main-border-button">
                             <a href="products.html">Discover More</a>
                         </div>
@@ -356,12 +382,14 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="first-image">
-                                    <img src="/resources/hexa/assets/images/explore-image-01.jpg" alt="">
+                                    <img src="/resources/image/project.png" alt="">
+                                    <!-- 임시 사진 -->
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="second-image">
-                                    <img src="/resources/hexa/assets/images/explore-image-02.jpg" alt="">
+                                    <img src="/resources/image/project.png" alt="">
+                                    <!-- 임시 사진 -->
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -384,19 +412,14 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="section-heading">
-                        <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <h2>찾으시려는 책이 있으신가요?</h2>
+                        <span>--------------------------------------------------------------</span>
                     </div>
                     <form id="subscribe" action="" method="get">
                         <div class="row">
-                          <div class="col-lg-5">
+                          <div class="col-lg-8">
                             <fieldset>
-                              <input name="name" type="text" id="name" placeholder="Your Name" required="">
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-5">
-                            <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                              <input name="name" type="text" id="title" placeholder="책 제목" required="">
                             </fieldset>
                           </div>
                           <div class="col-lg-2">
@@ -411,14 +434,14 @@
                     <div class="row">
                         <div class="col-6">
                             <ul>
-                                <li>Store Location:<br><span>Sunny Isles Beach, FL 33160, United States</span></li>
+                                <li>지금 뜨는 검색어<br><span>수능 특강 영어</span></li>
                                 <li>Phone:<br><span>010-020-0340</span></li>
                                 <li>Office Location:<br><span>North Miami Beach</span></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul>
-                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
+                                <li>가장 인기있는 책:<br><span>책 제목----</span></li>
                                 <li>Email:<br><span>info@company.com</span></li>
                                 <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
                             </ul>
@@ -430,44 +453,6 @@
     </div>
     <!-- ***** Subscribe Area Ends ***** -->
     
-    
-
-    <!-- Bootstrap -->
-    <script src="/resources/hexa/assets/js/popper.js"></script>
-    <script src="/resources/hexa/assets/js/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="/resources/hexa/assets/js/owl-carousel.js"></script>
-    <script src="/resources/hexa/assets/js/accordions.js"></script>
-    <script src="/resources/hexa/assets/js/datepicker.js"></script>
-    <script src="/resources/hexa/assets/js/scrollreveal.min.js"></script>
-    <script src="/resources/hexa/assets/js/waypoints.min.js"></script>
-    <script src="/resources/hexa/assets/js/jquery.counterup.min.js"></script>
-    <script src="/resources/hexa/assets/js/imgfix.min.js"></script> 
-    <script src="/resources/hexa/assets/js/slick.js"></script> 
-    <script src="/resources/hexa/assets/js/lightbox.js"></script> 
-    <script src="/resources/hexa/assets/js/isotope.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="/resources/hexa/assets/js/custom.js"></script>
-
-    <script>
-
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
-
-    </script>
     
 </body>
 <%@include file="../Book/footer.jsp" %>
