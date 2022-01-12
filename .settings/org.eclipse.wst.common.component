@@ -11,7 +11,11 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
                 
         <property name="java-output-path" value="/Library/target/classes"/>
+<<<<<<< HEAD
         <property name="context-root" value="/"/>
+=======
+        <property name="context-root" value="sample"/>
+>>>>>>> 7d06c78148fb95bf037060a9608b57c4c6a820b3
             
     </wb-module>
     

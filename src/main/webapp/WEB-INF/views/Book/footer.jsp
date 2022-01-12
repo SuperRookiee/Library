@@ -1,18 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>AVOCADO</title>
-<style>
-footer {
-	position: fixed;
-	left: 0px;
-	bottom: 0px;
-	height: 150px;
-	width: 100%;
-}
-</style>
 </head>
 <body>
  	<!-- ***** Footer Start ***** -->
@@ -92,7 +84,6 @@ footer {
     <script src="/resources/hexa/assets/js/custom.js"></script>
 
     <script>
-
         $(function() {
             var selectedClass = "";
             $("p").click(function(){
@@ -106,7 +97,10 @@ footer {
                 
             });
         });
-
     </script>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 7d06c78148fb95bf037060a9608b57c4c6a820b3
 </body>
 </html>
