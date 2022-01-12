@@ -42,7 +42,7 @@ public class LoginController {
 		System.out.println("네이버:" + naverAuthUrl);
 		// 네이버
 		model.addAttribute("url", naverAuthUrl);
-		
+
 		return "login";
 	}
 
@@ -51,17 +51,17 @@ public class LoginController {
 	public String callback(Model model, @RequestParam String code, @RequestParam String state, HttpSession session)
 			throws IOException, ParseException {
 		System.out.println("여기는 callback");
-		
-		Map <String, Object> resultMap = new HashMap<String, Object>();
+
+		Map<String, Object> resultMap = new HashMap<String, Object>();
 		OAuth2AccessToken oauthToken;
-		oauthToken = naverLoginBO.getAccessToken(session, code, state); //return accessTocken
+		oauthToken = naverLoginBO.getAccessToken(session, code, state); // return accessTocken
 
 		// 1. 로그인 사용자 정보를 읽어온다.
 		apiResult = naverLoginBO.getUserProfile(oauthToken); // String형식의 json데이터
-		ObjectMapper objectMapper =new ObjectMapper();
+		ObjectMapper objectMapper = new ObjectMapper();
 		Map<String, Object> apiJson = (Map<String, Object>) objectMapper.readValue(apiResult, Map.class).get("response");
 		String apiResult = naverLoginBO.getUserProfile(oauthToken);
-		System.out.println("혹시 이거???"+apiResult);
+		System.out.println("혹시 이거???" + apiResult);
 		/**
 		 * apiResult json 구조 {"resultcode":"00", "message":"success",
 		 * "response":{"id":"33666449","nickname":"shinn****","age":"20-29",
@@ -71,13 +71,13 @@ public class LoginController {
 		// 2. String형식인 apiResult를 json형태로 바꿈
 		JSONParser parser = new JSONParser();
 		Object obj = parser.parse(apiResult);
-		System.out.println("obj는????"+obj);
+		System.out.println("obj는????" + obj);
 		JSONObject jsonObj = (JSONObject) obj;
 
 		// 3. 데이터 파싱
 		// Top레벨 단계 _response 파싱
 		JSONObject response_obj = (JSONObject) jsonObj.get("response");
-		System.out.println("response_obj??????????"+response_obj);
+		System.out.println("response_obj??????????" + response_obj);
 		// response의 nickname값 파싱
 		String name = (String) response_obj.get("name");
 		System.out.println(name);
@@ -89,13 +89,14 @@ public class LoginController {
 		return "login";
 
 	}
-	//로그아웃
-		@RequestMapping(value = "/logout", method = { RequestMethod.GET, RequestMethod.POST })
-		public String logout(HttpSession session)throws IOException {
-				System.out.println("여기는 logout");
-				session.invalidate();
-		        
-				return "redirect:book/home";
-			}
+
+	// 로그아웃
+	@RequestMapping(value = "/logout", method = { RequestMethod.GET, RequestMethod.POST })
+	public String logout(HttpSession session) throws IOException {
+		System.out.println("여기는 logout");
+		session.invalidate();
+
+		return "redirect:book/home";
+	}
 
 }

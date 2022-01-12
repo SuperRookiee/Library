@@ -29,7 +29,6 @@
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	
-	
 </head>
 <body>
 	<!-- ***** Preloader Start ***** -->
@@ -50,15 +49,15 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="/book/home" class="logo">
+                        <a href="/Book/home" class="logo">
                             <img src="/resources/image/logo.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="/book/home" class="active">처음 화면</a></li>
-                            <li class="scroll-to-section"><a href="#">조건 검색</a></li>
-                            <li class="scroll-to-section"><a href="/book/cart">담아둔 상품</a></li>
+                            <li class="scroll-to-section"><a href="/Book/home">처음 화면</a></li>
+                            <li class="scroll-to-section"><a href="/Book/bookList?key=해리포터&pageNum=1">조건 검색</a></li>
+                            <li class="scroll-to-section"><a href="/Book/cart">담아둔 상품</a></li>
                             
                             <li class="submenu">
                                 <a href="javascript:;">추천도서</a>
@@ -69,8 +68,14 @@
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
-	                            <a href="/login">로그인</a>
-	                            <!-- 회원가입 후 -> 마이페이지로 변경 필요  -->
+	                            <c:choose>
+	                            	<c:when test="${sessionId == null}">
+		                            <a href="/login">로그인</a>
+		                            </c:when>
+		                           <c:otherwise>
+		                            <a href="/book/myPage">마이페이지</a>
+		                           </c:otherwise>
+		                        </c:choose>
                             </li>
                         </ul>        
                         <a class='menu-trigger'>

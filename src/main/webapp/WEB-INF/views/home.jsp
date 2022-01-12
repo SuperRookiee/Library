@@ -5,9 +5,12 @@
 	<title>Home</title>
 </head>
 <body>
+
+<script>location.href = "Book/home"; </script>
 <h1>
+
 	Hello hyoenju world!  
-	Hello hyunwook world!  ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ
+	Hello hyunwook world!��
 
 </h1>
 
