@@ -140,7 +140,7 @@
                         <div class="owl-men-item owl-carousel">
                         
                        		<!-- foreach -->
-                       		<%-- <c:forEach var="book" items="${attribute}">
+                       		<c:forEach var="item" items="${bestlist}" varStatus="indexNo">
 	                       		<div class="item">
 	                                <div class="thumb">
 	                                    <div class="hover-content">
@@ -150,23 +150,25 @@
 	                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
 	                                        </ul>
 	                                    </div>
-	                                    <img src="imgURL" alt="">	<!-- 책 이미지 넣기  -->
+	                                    <img src="${item.bookImageURL}" height="490" >
 	                                </div>
 	                                <div class="down-content">
-	                                    <h4>Title</h4>
-	                                    <span>Price or 대여비용</span>
+	                                    <h4>${item.bookName}</h4>
+	                                    <span>${indexNo.count}0,000</span>
 	                                    <ul class="stars">
+	                                    	<li>${indexNo.count}위</li>
+	                                       <!--  <li><i class="fa fa-star"></i></li>
 	                                        <li><i class="fa fa-star"></i></li>
 	                                        <li><i class="fa fa-star"></i></li>
 	                                        <li><i class="fa fa-star"></i></li>
-	                                        <li><i class="fa fa-star"></i></li>
-	                                        <li><i class="fa fa-star"></i></li>
+	                                        <li><i class="fa fa-star"></i></li> -->
 	                                    </ul>
 	                                </div>
 	                            </div>
-                       		</c:forEach> --%>
+                       		</c:forEach>
                        		<!-- foreach -->
-                            <div class="item">
+                       		
+                            <!-- <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
@@ -258,7 +260,8 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
+                            
                         </div>
                     </div>
                 </div>

@@ -60,9 +60,11 @@ public class BookController {
 			
 		}
 		catch(IOException e) {e.printStackTrace();}
-		model.addAttribute("list",bestlist);
+		model.addAttribute("bestlist",bestlist);
 		return "/Book/home";
 	}
+	
+	
 	@GetMapping("/myPage")
 	public String myPage() {
 		return "/Book/myPage";
