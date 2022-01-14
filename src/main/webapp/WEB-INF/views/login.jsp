@@ -17,7 +17,7 @@
 				<div class="col-lg-12">
 					<div class="inner-content">
 						<h2>Login</h2>
-						<span>Awesome, clean &amp; creative HTML5 Template</span>
+						<span>아보카도에 오신 것을 환영합니다!</span>
 					</div>
 				</div>
 			</div>
@@ -48,12 +48,14 @@
 								type="password" id="pwd" name="pwd" class="w3-input w3-border"
 								placeholder="비밀번호"> <br> <input type="submit"
 								value="로그인" onclick="#"> <br>
+							<br>
+							<div id="naver_id_login" style="text-align: center">
+								<a href="${url}"> <img width="223"
+								 src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png" /></a>
+							</div>
+							
 						</form>
-						<br>
-						<div id="naver_id_login" style="text-align: center">
-							<a href="${url}"> <img width="223"
-								src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png" /></a>
-						</div>
+						
 					</c:otherwise>
 				</c:choose>
 			</div>
