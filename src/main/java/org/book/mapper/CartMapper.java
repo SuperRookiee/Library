@@ -15,10 +15,10 @@ public interface CartMapper {
 	public void insert(CartDTO cart);
 
 	// 장바구니 목록 삭제
-	public void delete(String userId, String bookName);
+	public int delete(String userId, String bookName);
 
 	// 장바구니 전체 비우기
-	public void deleteAll(String userId);
+	public int deleteAll(String userId);
 
 	// 도서수량 업데이트
 	public int update(String userId, String bookName, int amount);
