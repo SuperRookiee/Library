@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class BookDTO {
+	
 	private String bookName;
 	private String category;
 	private String writer;

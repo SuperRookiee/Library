@@ -84,7 +84,6 @@
     <script src="/resources/hexa/assets/js/custom.js"></script>
 
     <script>
-
         $(function() {
             var selectedClass = "";
             $("p").click(function(){
@@ -98,7 +97,6 @@
                 
             });
         });
-
     </script>
     
 </body>

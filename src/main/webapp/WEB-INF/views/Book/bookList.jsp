@@ -15,11 +15,15 @@
 	{
 		var actionForm=$("#actionForm");
 		
+<<<<<<< HEAD
 		
+=======
+>>>>>>> c340c869b3307af1f1ed4ed574a5222d1f310d8f
 		$(".detail").on("click",function(e)
 		{
 			e.preventDefault();
 			console.log('detailClick');
+<<<<<<< HEAD
 			actionForm.find("input[name='bookIsbn']").val($(this).attr("href"));
 			if(!actionForm.find("input[name='bookIsbn']").val())
 			{
@@ -27,6 +31,9 @@
 				return false;
 			}
 			actionForm.submit();
+=======
+			actionForm.append("<input type='hidden' name=''")
+>>>>>>> c340c869b3307af1f1ed4ed574a5222d1f310d8f
 		})
 	})
 
@@ -39,7 +46,7 @@
 		</tr>
 		<c:forEach var="item" items="${list}">
 		<tr>
-			
+
 			<td><a class="detail" href="<c:out value='${item.bookIsbn}'/>" onclick="nameClick()">${item.bookName}</a></td>
 			<td>
 				${item.description}<br>
