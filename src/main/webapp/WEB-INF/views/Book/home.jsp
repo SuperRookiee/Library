@@ -150,7 +150,7 @@
 	                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
 	                                        </ul>
 	                                    </div>
-	                                    <img src="${item.bookImageURL}" height="490" >
+	                                    <img src="${item.bookImageURL}" height="490" style="border: 0.5px solid black">
 	                                </div>
 	                                <div class="down-content">
 	                                    <h4>${item.bookName}</h4>
