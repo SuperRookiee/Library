@@ -60,9 +60,11 @@ public class BookController {
 			
 		}
 		catch(IOException e) {e.printStackTrace();}
-		model.addAttribute("list",bestlist);
+		model.addAttribute("bestlist",bestlist);
 		return "/Book/home";
 	}
+	
+	
 	@GetMapping("/myPage")
 	public String myPage() {
 		return "/Book/myPage";
@@ -111,7 +113,7 @@ public class BookController {
 			{
 				for(int i=0;i<title.size();i++)
 				{
-					String url_naru="http://data4library.kr/api/usageAnalysisList?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd"
+					String url_naru="http://data4library.kr/api/usageAnalysisList?authKey=98f61069b118242705dcd27c2fa00bf1c2ecfa258eeca760214c31dad2c234cb"
 							+ "&isbn13=";
 					String tit=title.get(i).text();
 					String wri=writer.get(i).text();

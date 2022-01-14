@@ -55,8 +55,8 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="/Book/home">처음 화면</a></li>
-                            <li class="scroll-to-section"><a href="/Book/bookList?key=해리포터&pageNum=1">조건 검색</a></li>
+                            <li class="scroll-to-section"><a href="/Book/home">홈 화면</a></li>
+                            <li class="scroll-to-section"><a href="#">조건 검색</a></li>
                             <li class="scroll-to-section"><a href="/Book/cart">담아둔 상품</a></li>
                             
                             <li class="submenu">
@@ -73,7 +73,7 @@
 		                            <a href="/login">로그인</a>
 		                            </c:when>
 		                           <c:otherwise>
-		                            <a href="/book/myPage">마이페이지</a>
+		                            <a href="/Book/myPage">마이페이지</a>
 		                           </c:otherwise>
 		                        </c:choose>
                             </li>
