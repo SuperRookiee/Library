@@ -18,7 +18,4 @@ public class BookDTO {
 	private String bookImageURL;
 	private String description;
 	
-	
-	
-
 }
