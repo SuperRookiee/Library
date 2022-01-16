@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>AVOCADO</title>
-
 </head>
 <body>
  	<!-- ***** Main Banner Area Start ***** -->
@@ -134,7 +133,7 @@
                         <div class="row">
                           <div class="col-lg-8">
                             <fieldset>
-                              <input name="key" type="text" id="key" placeholder="책 제목" required="">
+                              <input name="key" type="text" id="key" placeholder="검색어 입력" required="">
                               <input name="pageNum" type="hidden" id="pageNum" value='1'>
                             </fieldset>
                           </div>
@@ -150,16 +149,14 @@
                     <div class="row">
                         <div class="col-6">
                             <ul>
-                                <li>지금 뜨는 검색어<br><span>수능 특강 영어</span></li>
-                                <li>Phone:<br><span>010-020-0340</span></li>
-                                <li>Office Location:<br><span>North Miami Beach</span></li>
+                                <li>지금 뜨는 검색어:<br><span>수능 특강 영어</span></li>
+                                <li>사용  API:<br><span>국립중앙도서관</span></li>
+                                <li>사용  API:<br><span>도서관 정보 나루</span></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul>
-                                <li>가장 인기있는 책:<br><span>책 제목----</span></li>
-                                <li>Email:<br><span>info@company.com</span></li>
-                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                                <li>검색 가능 키워드:<br><span>책 제목</span><br><span>작가</span><br><span>....</span></li>
                             </ul>
                         </div>
                     </div>
@@ -193,19 +190,15 @@
 	                                <div class="thumb">
 	                                    <div class="hover-content">
 	                                        <ul>
-	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
-	                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>	<!-- detailList -->  -->
+	                                            <li><a href="#"><i class="fa fa-star"></i></a></li>	
 	                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
 	                                        </ul>
 	                                    </div>
-<<<<<<< HEAD
 	                                    <img src="${item.bookImageURL}" height="490" style="border: 0.5px solid black">
-=======
-	                                    <img src="${item.bookImageURL}" height="490" style="border: 1px solid black">
->>>>>>> dbaa58ffbe5533201183b26bd31da7affa83bd76
 	                                </div>
 	                                <div class="down-content">
-	                                    <h4>${item.bookName}</h4>
+	                                    <h4><a href="./bookDetail?isbn=<c:out value='${item.bookIsbn}'/>" style="color: black;"> ${item.bookName}</a></h4>
 	                                    <span>${indexNo.count}0,000</span>
 	                                    <ul class="stars">
 	                                    	<li>${indexNo.count}위</li>

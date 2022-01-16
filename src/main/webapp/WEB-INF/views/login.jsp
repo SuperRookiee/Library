@@ -7,6 +7,13 @@
 <meta charset="UTF-8">
 <title>AVOCADO</title>
 
+<style>
+	#explore{
+		padding: 10px 10px;
+		border-bottom: none;
+	}
+</style>
+
 </head>
 <body>
 <div id="main">
@@ -35,7 +42,13 @@
 						<div class="col-lg-6">
 							<div class="section-heading">
 								<h2>'${sessionId}' 님 환영합니다!</h2>
-								<a href="logout">Logout</a>
+								<section class="section" id="explore">
+			                        <div class="left-content">
+				                     	<div class="main-border-button">
+				                            <a href="/Book/myPage"> 마이페이지로 가기</a> <a href="#"> 로그아웃 </a>
+				                        </div>
+				                    </div>
+			                    </section>
 							</div>
 						</div>
 					</c:when>

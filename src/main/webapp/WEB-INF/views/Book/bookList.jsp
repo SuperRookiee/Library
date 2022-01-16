@@ -40,8 +40,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="inner-content">
-							<h2>"${param.key}" 에 대한 검색 결과입니다</h2>
-							<span>일반 검색</span>
+							<h2><strong>"${param.key}"</strong> 에 대한 검색 결과입니다</h2>
+							<span>일반 검색 - <b>${param.pageNum}</b> 페이지 </span>
 						</div>
 					</div>
 				</div>
@@ -49,9 +49,34 @@
 		</div>
 		<!-- ***** Main Banner Area End ***** -->
 		
+		<div id="products">
+			<div class="col-lg-12">
+				<div class="pagination">
+				    <ul>
+				        <li class="active">
+				            <a href="./bookList?key=${param.key}&pageNum=1">1</a>
+				        </li>
+				        <li >
+				            <a href="./bookList?key=${param.key}&pageNum=2">2</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=3">3</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=4">4</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=5">5</a>
+				        </li>
+				        <li>
+				            <a href="#">></a>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+		</div>
 		
 		<c:forEach var="item" items="${list}">
-			<hr>
 			<!-- ***** Product Area Starts ***** -->
 		    <section class="section" id="product">
 		        <div class="container">
@@ -63,12 +88,12 @@
 		            </div>
 		            <div class="col-lg-8">
 		                <div class="right-content">
-		                    <h4><a class="detail" href="Book/bookDetail?isbn=<c:out value='${item.bookIsbn}'/>" onclick="nameClick()">${item.bookName}</a> </h4>
+		                    <h4><a class="detail" href="./bookDetail?isbn=<c:out value='${item.bookIsbn}'/>&bookName=<c:out value='${item.bookName}'/>" onclick="nameClick()">${item.bookName}</a> </h4>
 		                    <span class="price">${item.writer}</span>
-		                    <span class="price">출판년도 : ${item.bookPublishYear}</span>
+		                    <span class="price">출판사 : ${item.publisher}	/	출판년도 : ${item.bookPublishYear}</span>
 		                    
 		                    <ul class="stars">
-		                        ${item.category}
+		                        <li>${item.category}</li>
 		                    </ul>
 		                    <span>${item.description}</span>
 		                    <br>
@@ -82,9 +107,35 @@
 		        </div>
 		    </section>
 		    <!-- ***** Product Area Ends ***** -->
+		    <hr>
 		</c:forEach>
 		
-	</div>
+		<div id="products">
+			<div class="col-lg-12">
+				<div class="pagination">
+				    <ul>
+				        <li class="active">
+				            <a href="./bookList?key=${param.key}&pageNum=1">1</a>
+				        </li>
+				        <li >
+				            <a href="./bookList?key=${param.key}&pageNum=2">2</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=3">3</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=4">4</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=5">5</a>
+				        </li>
+				        <li>
+				            <a href="#">></a>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+		</div>
 </body>
 <%@include file="../Book/footer.jsp" %>
 </html>
