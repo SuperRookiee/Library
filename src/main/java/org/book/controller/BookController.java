@@ -81,7 +81,10 @@ public class BookController {
 	public String findBook() {
 		return "/Book/findBook";
 	}
-	
+	@GetMapping("/recommend")
+	public String recommend() {
+		return "/Book/recommend";
+	}
 
 	@GetMapping("/bookDetail")
 	public void DetailView(@RequestParam("isbn") String isbn,Model model){

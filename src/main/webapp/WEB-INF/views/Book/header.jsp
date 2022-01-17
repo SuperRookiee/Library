@@ -65,9 +65,9 @@
                             <li class="submenu">
                                 <a href="javascript:;">추천도서</a>
                                 <ul>
-                                    <li><a href="#">주제별 추천도서</a></li>
-                                    <li><a href="#">연령별 추천도서</a></li>
-                                    <li><a href="#">성별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=주제">주제별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=연령">연령별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=성">성별 추천도서</a></li>
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
