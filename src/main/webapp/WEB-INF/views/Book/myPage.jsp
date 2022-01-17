@@ -44,7 +44,7 @@
        		</div>
 	  		<div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
 	  			<div class="user-logo">
-	  				<div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div>
+	  				<div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div>	<!-- 프로필 사진 -->
 	  				<h3>User 이름</h3>
 	  			</div>
 	  		</div>

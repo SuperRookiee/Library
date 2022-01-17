@@ -77,6 +77,10 @@ public class BookController {
 	public String taxbill() {
 		return "/Book/taxbill";
 	}
+	@GetMapping("/findBook")
+	public String findBook() {
+		return "/Book/findBook";
+	}
 	
 
 	@GetMapping("/bookDetail")

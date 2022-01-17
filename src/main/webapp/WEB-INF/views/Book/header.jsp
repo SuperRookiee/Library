@@ -16,21 +16,21 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/bootstrap.min.css?after">
 
-    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/font-awesome.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/templatemo-hexashop.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/owl-carousel.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/lightbox.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/lightbox.css?after">
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	
 	<!-- BootStrap icon -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css?after">
 
 </head>
 <body>
@@ -59,7 +59,7 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="/Book/home">홈 화면</a></li>
-                            <li class="scroll-to-section"><a href="#">조건 검색</a></li>
+                            <li class="scroll-to-section"><a href="/Book/findBook">조건 검색</a></li>
                             <li class="scroll-to-section"><a href="/Book/cart">담아둔 상품</a></li>
                             
                             <li class="submenu">
