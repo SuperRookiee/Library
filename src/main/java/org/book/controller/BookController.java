@@ -78,14 +78,18 @@ public class BookController {
 			Elements category=doc_naru.getElementsByTag("class_nm");
 			
 			
-			String tit=title.get(0).text();
+			String bookName=title.get(0).text();
 			String wri=writer.get(0).text();
 			String pub=publisher.get(0).text();
 			String img=bookImageURL.get(0).text();
 			String des=description.get(0).text();
-			String pubyear=bookPublishYear.get(0).text();
+			String pubYear=bookPublishYear.get(0).text();
 			String cate=category.get(0).text();
 			
+			int bookPrice=(Character.getNumericValue(isbn.charAt(isbn.length()-1))+1)*20000/4;
+			
+			BookDTO book=new BookDTO(bookName,cate,wri,pub,pubYear,bookPrice,isbn,img,des);
+			model.addAttribute("book",book);
 		}
 		catch(IOException e) {e.printStackTrace();}
 	}
@@ -123,7 +127,7 @@ public class BookController {
 			{
 				for(int i=0;i<title.size();i++)
 				{
-					String url_naru="http://data4library.kr/api/usageAnalysisList?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd"
+					String url_naru="http://data4library.kr/api/usageAnalysisList?authKey=98f61069b118242705dcd27c2fa00bf1c2ecfa258eeca760214c31dad2c234cb"
 							+ "&isbn13=";
 					
 					String tit=title.get(i).text();
