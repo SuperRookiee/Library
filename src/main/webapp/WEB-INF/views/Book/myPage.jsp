@@ -65,7 +65,7 @@
 	            <a href="#"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
 	          </li>
 	          <li>
-	            <a href="#"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
+	            <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
 	          </li>
 	          <li>
 	            <a href="#"><span class="fa fa-sign-out mr-3"></span> 회원 탈퇴</a>

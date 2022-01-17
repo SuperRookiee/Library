@@ -96,7 +96,7 @@ public class LoginController {
 		System.out.println("여기는 logout");
 		session.invalidate();
 
-		return "redirect:book/home";
+		return "redirect:Book/home";
 	}
 
 }
