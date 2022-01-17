@@ -27,7 +27,7 @@
 						</div>
 					</div>
 					<!-- 담긴품목 반복문 -->
-					<c:forEach var="item" items="${items}" varStatus="status">
+					<c:forEach var="item" items="${list}" varStatus="status">
 						<div class="row border-top border-bottom">
 							<div class="row main align-items-center">
 								<!-- 도서사진 -->
@@ -36,7 +36,7 @@
 								</div>
 								<!-- 카테고리 -->
 								<div class="col">
-									<div class="row text-muted">${item.catagory }</div>
+									<div class="row text-muted">${item.purchaseDate }</div>
 									<div class="row">${item.bookName }</div>
 								</div>
 								<!-- 수량 -->
@@ -45,7 +45,7 @@
 								</div>
 								<!-- 가격 -->
 								<div class="col">
-									${item.sumPrice } <span class="close"></span>
+									${item.price } <span class="close"></span>
 								</div>
 							</div>
 						</div>

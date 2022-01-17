@@ -20,10 +20,11 @@ import lombok.extern.log4j.Log4j;
 public class CartController {
 	private CartService service;
 
-	@GetMapping("/list")
-	public void list(Model model, @RequestParam("userId") String userId) {
+	@GetMapping("/cart")
+	public String list(Model model, @RequestParam("userId") String userId) {
 		log.info("list");
 		model.addAttribute("list", service.getList(userId));
+		return "/Book/cart";
 	}
 
 	@PostMapping("/register") // 장바구니 저장
