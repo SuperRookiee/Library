@@ -1,14 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="../Book/header.jsp" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <meta charset="EUC-KR">
-<title>bookList</title>
+<title>AVOCADO</title>
 </head>
+
+<style>
+	#IMG{
+		width: 210px;
+		height: 297px;
+		border: 0.5px solid gray;
+	}
+</style>
 
 <script type="text/javascript">
 	$(document).ready(function()
@@ -22,7 +30,7 @@
 			actionForm.find("input[name='bookIsbn']").val($(this).attr("href"));
 			if(!actionForm.find("input[name='bookIsbn']").val())
 			{
-				alert('ÇØ´ç Ã¥ÀÇ »ó¼¼³»¿ëÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.')
+				alert('ì±… ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.')
 				return false;
 			}
 			actionForm.submit();
@@ -31,28 +39,110 @@
 
 </script>
 <body>
-	
-		<table>
-		<tr>
-			<th>ÀÌ¸§</th><th>³»¿ë</th><th>°¡°İ</th><th>ÀÌ¹ÌÁö</th>
-		</tr>
+	<div id="main">
+		<!-- ***** Main Banner Area Start ***** -->
+		<div class="page-heading about-page-heading" id="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="inner-content">
+							<h2><strong>"${param.key}"</strong> ì— ëŒ€í•œ ê²€ìƒ‰ ê²°ê³¼ì…ë‹ˆë‹¤</h2>
+							<span>ì¼ë°˜ ê²€ìƒ‰ - <b>${param.pageNum}</b> í˜ì´ì§€ </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ***** Main Banner Area End ***** -->
+		
+		<div id="products">
+			<div class="col-lg-12">
+				<div class="pagination">
+				    <ul>
+				        <li class="active">
+				            <a href="./bookList?key=${param.key}&pageNum=1">1</a>
+				        </li>
+				        <li >
+				            <a href="./bookList?key=${param.key}&pageNum=2">2</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=3">3</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=4">4</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=5">5</a>
+				        </li>
+				        <li>
+				            <a href="#">></a>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+		
 		<c:forEach var="item" items="${list}">
-		<tr>
-
-			<td><a class="detail" href="<c:out value='${item.bookIsbn}'/>">${item.bookName}</a></td>
-			<td>
-				${item.description}<br>
-				${item.writer}<br>
-				ÃâÆÇ»ç : ${item.publisher}<br>
-				Ä«Å×°í¸® : ${item.category} ÃâÆÇ³âµµ : ${item.bookPublishYear}
-			</td>
-			<td>${item.bookPrice}</td>
-			<td><img alt="¾øÀ½" src="${item.bookImageURL}"></td>
-		</tr>
+			<!-- ***** Product Area Starts ***** -->
+		    <section class="section" id="product">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-lg-4">
+		                <div class="left-images">
+		                    <img id="IMG" src="${item.bookImageURL}" onerror="this.src='/resources/image/books.png';"/>
+		                </div>
+		            </div>
+		            <div class="col-lg-8">
+		                <div class="right-content">
+		                    <h4><a class="detail" href="./bookDetail?isbn=<c:out value='${item.bookIsbn}'/>&bookName=<c:out value='${item.bookName}'/>" onclick="nameClick()">${item.bookName}</a> </h4>
+		                    <span class="price">${item.writer}</span>
+		                    <span class="price">ì¶œíŒì‚¬ : ${item.publisher}	/	ì¶œíŒë…„ë„ : ${item.bookPublishYear}</span>
+		                    
+		                    <ul class="stars">
+		                        <li>${item.category}</li>
+		                    </ul>
+		                    <span>${item.description}</span>
+		                    <br>
+		                    <div class="total">
+		                        <h4>â‚©<fmt:formatNumber value="${item.bookPrice}" pattern="#,###"/>ì›</h4>
+		                        <div class="main-border-button"><a href="#">Add To Cart</a></div>
+		                    </div>
+		                </div>
+		            </div>
+		            </div>
+		        </div>
+		    </section>
+		    <!-- ***** Product Area Ends ***** -->
+		    <hr>
 		</c:forEach>
-		</table>
-		<form id="actionForm" action="/Book/bookDetail" method="get">
-			<input type='hidden' name='bookIsbn'/>
-		</form>
+		
+		<div id="products">
+			<div class="col-lg-12">
+				<div class="pagination">
+				    <ul>
+				        <li class="active">
+				            <a href="./bookList?key=${param.key}&pageNum=1">1</a>
+				        </li>
+				        <li >
+				            <a href="./bookList?key=${param.key}&pageNum=2">2</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=3">3</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=4">4</a>
+				        </li>
+				        <li>
+				            <a href="./bookList?key=${param.key}&pageNum=5">5</a>
+				        </li>
+				        <li>
+				            <a href="#">></a>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+
 </body>
+<%@include file="../Book/footer.jsp" %>
 </html>

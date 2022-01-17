@@ -7,6 +7,13 @@
 <meta charset="UTF-8">
 <title>AVOCADO</title>
 
+<style>
+	#explore{
+		padding: 10px 10px;
+		border-bottom: none;
+	}
+</style>
+
 </head>
 <body>
 <div id="main">
@@ -17,7 +24,7 @@
 				<div class="col-lg-12">
 					<div class="inner-content">
 						<h2>Login</h2>
-						<span>Awesome, clean &amp; creative HTML5 Template</span>
+						<span>아보카도에 오신 것을 환영합니다!</span>
 					</div>
 				</div>
 			</div>
@@ -35,7 +42,13 @@
 						<div class="col-lg-6">
 							<div class="section-heading">
 								<h2>'${sessionId}' 님 환영합니다!</h2>
-								<a href="logout">Logout</a>
+								<section class="section" id="explore">
+			                        <div class="left-content">
+				                     	<div class="main-border-button">
+				                            <a href="/Book/myPage"> 마이페이지로 가기</a> <a href="#"> 로그아웃 </a>
+				                        </div>
+				                    </div>
+			                    </section>
 							</div>
 						</div>
 					</c:when>
@@ -48,12 +61,14 @@
 								type="password" id="pwd" name="pwd" class="w3-input w3-border"
 								placeholder="비밀번호"> <br> <input type="submit"
 								value="로그인" onclick="#"> <br>
+							<br>
+							<div id="naver_id_login" style="text-align: center">
+								<a href="${url}"> <img width="223"
+								 src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png" /></a>
+							</div>
+							
 						</form>
-						<br>
-						<div id="naver_id_login" style="text-align: center">
-							<a href="${url}"> <img width="223"
-								src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png" /></a>
-						</div>
+						
 					</c:otherwise>
 				</c:choose>
 			</div>
