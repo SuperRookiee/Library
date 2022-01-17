@@ -18,7 +18,7 @@
                         </div>
                         <ul>
                             <li><a href="#">서울 서초구 서초대로74길 33</a></li>
-                            <li><a href="https://github.com/SuperRookiee/Library">github.com/SuperRookiee/Library</a></li>
+                            <li><a href="https://github.com/SuperRookiee/Library"><i class="bi bi-git"></i> github.com/SuperRookiee/Library</a></li>
                             
                         </ul>
                     </div>
