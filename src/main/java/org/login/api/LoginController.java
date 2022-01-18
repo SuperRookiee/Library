@@ -86,6 +86,9 @@ public class LoginController {
 		session.setAttribute("sessionId", name);
 		// 세션 생성
 		model.addAttribute("result", apiResult);
+		
+		session.setAttribute("result", response_obj);
+		
 		return "login";
 
 	}

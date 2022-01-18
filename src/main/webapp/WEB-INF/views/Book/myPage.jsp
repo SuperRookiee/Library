@@ -9,18 +9,13 @@
 <title>Insert title here</title>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-      
+		
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/resources/sidebar/css/style.css">
 
 <style>
-   @import url('https://fonts.googleapis.com/css?family=Abel');
+	@import url('https://fonts.googleapis.com/css?family=Abel');
 
-html, body {
-	background: #FCEEB5;
-  /* font-family: Abel, Arial, Verdana, sans-serif; */
-  /* 메인 베너 및 사이드버튼까지 변경됨 - 위치변경을 요구*/
-}
  .skin { fill: #eab38f; }
                   .eyes { fill: #1f1f1f; }
                   .hair { fill: #2f1b0d; }
@@ -33,8 +28,8 @@ html, body {
 }
 
 .card {
-  width: 450px;
-  height: 250px;
+  width: 900px;
+  height: 500px;
   background-color: #fff;
   background: linear-gradient(#f8f8f8, #fff);
   box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
@@ -42,6 +37,7 @@ html, body {
   overflow: hidden;
   position: relative;
   margin: 1.5rem;
+  margin-left: 20rem;
 }
 
 .card h1 {
@@ -50,7 +46,7 @@ html, body {
 
 .card .additional {
   position: absolute;
-  width: 150px;
+  width: 300px;
   height: 100%;
   background: linear-gradient(#dE685E, #EE786E);
   transition: width 0.4s;
@@ -62,14 +58,14 @@ html, body {
   background: linear-gradient(#92bCa6, #A2CCB6);
 }
 
-
+/* 
 .card:hover .additional {
   width: 100%;
   border-radius: 0 5px 5px 0;
-}
+} */
 
 .card .additional .user-card {
-  width: 150px;
+  width: 350px;
   height: 100%;
   position: relative;
   float: left;
@@ -107,10 +103,9 @@ html, body {
 }
 
 .card .additional .more-info {
-  width: 300px;
+  width: 310px;
   float: left;
   position: absolute;
-  left: 150px;
   height: 100%;
 }
 
@@ -178,10 +173,10 @@ html, body {
 }
 
 .card .general {
-  width: 300px;
+  width: 600px;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 0;
   z-index: 1;
   box-sizing: border-box;
@@ -195,87 +190,122 @@ html, body {
   right: 1rem;
   font-size: 0.9em;
 }
+
+.circle-img {
+	height: 200px;
+	width: 200px;
+	margin-top: 141px;
+	margin-left: 53px;
+	border-radius : 106px;
+}
+
+.nameStyle {
+	margin-top: 50px;
+}
+
+.fontStyle{
+	color: #32a852;
+}
+
+.mypage-content{
+	font-size: 28px;
+	margin-left: 30px; 
+	line-height: 40px;
+}
+
+.logoPlace{
+	float: right;
+	padding-top:25px;
+}
 </style>
 
 </head>
 <body>
 <div id="main">
-   <!-- ***** Main Banner Area Start ***** -->
-   <div class="page-heading about-page-heading" id="top">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12">
-               <div class="inner-content">
-                  <h2>My Page</h2>
-                  <span>마이페이지입니다</span>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+	<!-- ***** Main Banner Area Start ***** -->
+	<div class="page-heading about-page-heading" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="inner-content">
+						<h2>My Page</h2>
+						<span>마이페이지입니다</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- ***** Main Banner Area End ***** -->
-   
-   <div class="wrapper d-flex align-items-stretch">
-      <nav id="sidebar">
-         <div class="custom-menu">
-            <button type="button" id="sidebarCollapse" class="btn btn-dark"> <i class="bi bi-arrow-left-right"></i> </button>
-            <!-- <button type="button" id="sidebarCollapse" class="btn btn-dark"></button> -->
-             </div>
-           <div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
-              <div class="user-logo">
-              <!-- 시작 -->
-              <c:choose>
-               <c:when test="${result.profile_image != null}">
-               <!-- profile 사진이 있으면? -->
-               <div class="img" style="background-image: url('${result.profile_image}')"></div>
-               </c:when>
-               <c:otherwise>
-               <div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div>
-               </c:otherwise>
-           </c:choose>
-              <!-- 끝 -->
-                 <!-- <div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div> -->   <!-- 프로필 사진 -->
-                 <h3><c:out value="${result.name }"/></h3>
-              </div>
-           </div>
-           <ul class="list-unstyled components mb-5">
-             <li class="active">
-               <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
-             </li>
-             <li>
-                 <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
-             </li>
-             <li>
-               <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
-             </li>
-             <li>
-               <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
-             </li>
-             <li>
-               <a href="#"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
-             </li>
-             <li>
-               <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
-             </li>
-             <li>
-               <a href="#"><span class="fa fa-sign-out mr-3"></span> 회원 탈퇴</a>
-             </li>
-           </ul>
-         </nav>
-         
-       <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
-        <h2 class="mb-4">My Page</h2>
-        <div class="card green">
+	
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-dark"> <i class="bi bi-arrow-left-right"></i> </button>
+				<!-- <button type="button" id="sidebarCollapse" class="btn btn-dark"></button> -->
+       		</div>
+	  		<div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
+	  			<div class="user-logo">
+	  			<!-- 시작 -->
+	  			<c:choose>
+					<c:when test="${result.profile_image != null}">
+					<!-- profile 사진이 있으면? -->
+						<div class="img" style="background-image: url('${result.profile_image}')"></div>
+					</c:when>
+					<c:otherwise>
+						<div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div>
+					</c:otherwise>
+	  		</c:choose>
+	  			<!-- 끝 -->
+	  				<!-- <div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div> -->	<!-- 프로필 사진 -->
+	  				<h3><c:out value="${result.name }"/></h3>
+	  			</div>
+	  		</div>
+	        <ul class="list-unstyled components mb-5">
+	          <li class="active">
+	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+	          </li>
+	          <li>
+	              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+	          </li>
+	          <li>
+	            <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
+	          </li>
+	          <li>
+	            <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
+	          </li>
+	          <li>
+	            <a href="https://nid.naver.com/user2/help/changeUserInfo?menu=nid&lang=ko_KR"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
+	          </li>
+	          <li>
+	            <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
+	          </li>
+	          <li>
+	            <a href="#"><span class="fa fa-sign-out mr-3"></span> 회원 탈퇴</a>
+	          </li>
+	        </ul>
+   		</nav>
+   		
+	    <!-- Page Content  -->
+		<div id="content" class="p-4 p-md-5 pt-5">
+		  <h2 class="mb-4">My Page</h2>
+		  <div class="card green">
           <div class="additional">
             <div class="user-card">
-              <div class="level center">
-                Level 13
+              <%-- <div class="level center">
+                 ${result.birthyear }-${result.birthday }
               </div>
               <div class="points center">
-                5,312 Points
-              </div>
-              <svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
+                ${result.mobile }
+              </div> --%>
+              <!-- svg시작 -->
+              <div>
+              <c:choose>
+					<c:when test="${result.profile_image != null}">
+					<!-- profile 사진이 있으면? -->
+					<div class="img circle-img" style="background-image: url('${result.profile_image}')"></div>
+					</c:when>
+					<c:otherwise>
+					<svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
                 <title id="title">Teacher</title>
                 <desc id="desc">Cartoon of a Caucasian woman smiling, and wearing black glasses and a purple shirt with white collar drawn by Alvaro Montoro.</desc>
                 <defs>
@@ -325,32 +355,18 @@ html, body {
                   </g>
                 </g>
               </svg>
+					</c:otherwise>
+	  		</c:choose>
+              </div>
+              <!-- svg 끝 -->
             </div>
             <div class="more-info">
-              <h1>Jane Doe</h1>
-              <div class="coords">
-                <span>Group Name</span>
-                <span>Joined January 2019</span>
-              </div>
-              <div class="coords">
-                <span>Position/Role</span>
-                <span>City, Country</span>
-              </div>
+              <h1 class="nameStyle">${result.name }</h1>
               <div class="stats">
                 <div>
-                  <div class="title">Awards</div>
+                  <div class="title">Age</div>
                   <i class="fa fa-trophy"></i>
-                  <div class="value">2</div>
-                </div>
-                <div>
-                  <div class="title">Matches</div>
-                  <i class="fa fa-gamepad"></i>
-                  <div class="value">27</div>
-                </div>
-                <div>
-                  <div class="title">Pals</div>
-                  <i class="fa fa-group"></i>
-                  <div class="value">123</div>
+                  <div class="value">${result.age }</div>
                 </div>
                 <div>
                   <div class="title">Coffee</div>
@@ -361,18 +377,21 @@ html, body {
             </div>
           </div>
           <div class="general">
-            <h1>Jane Doe</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
-            <span class="more">Mouse over the card for more info</span>
+            <h1>회원 정보</h1><br>
+            <p class="mypage-content"><span class="fontStyle">이메일</span> ${result.email }</p>
+            <p class="mypage-content"><span class="fontStyle">생년월일</span> ${result.birthyear }-${result.birthday }</p>
+            <p class="mypage-content"><span class="fontStyle">성별</span> ${result.gender }</p>
+            <p class="mypage-content"><span class="fontStyle">전화번호</span> ${result.mobile }</p>
+            <img src="/resources/image/logo.png" class="logoPlace">
           </div>
         </div>
-      </div>
-      
-   </div>
+		</div>
+		
+	</div>
 
     <script src="/resources/sidebar/js/popper.js"></script>
     <script src="/resources/sidebar/js/main.js"></script>
-   
+	
 </div>
 </body>
 <%@include file="../Book/footer.jsp" %>

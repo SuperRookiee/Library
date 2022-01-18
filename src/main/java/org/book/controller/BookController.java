@@ -66,20 +66,16 @@ public class BookController {
 	
 	
 	@GetMapping("/myPage")
-	public String myPage() {
-		return "/Book/myPage";
-	}
-	@GetMapping("/cart")
-	public String cart() {
-		return "/Book/cart";
-	}
-	@GetMapping("/taxbill")
-	public String taxbill() {
-		return "/Book/taxbill";
+	public void myPage() {
 	}
 	@GetMapping("/findBook")
-	public String findBook() {
-		return "/Book/findBook";
+	public void findBook() {
+	}
+	@GetMapping("/cart")
+	public void cart() {
+	}
+	@GetMapping("/taxbill")
+	public void taxbill() {
 	}
 	@GetMapping("/recommend")
 	public String recommend() {
@@ -88,6 +84,56 @@ public class BookController {
 
 	@GetMapping("/bookDetail")
 	public void DetailView(@RequestParam("isbn") String isbn,Model model){
+		String url_naru="http://data4library.kr/api/srchDtlList?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd&isbn13=9788972756194";
+		Document doc_naru;
+		
+		log.info("bookDetail...");
+		url_naru+=isbn;
+		
+		try
+		{
+			doc_naru=Jsoup.connect(url_naru).get();
+			Elements bookname=doc_naru.getElementsByTag("bookname");
+			Elements authors=doc_naru.getElementsByTag("authors");
+			Elements publisher=doc_naru.getElementsByTag("publisher");
+			Elements class_nm=doc_naru.getElementsByTag("class_nm");
+			Elements publication_year=doc_naru.getElementsByTag("publication_year");
+			Elements bookImageURL=doc_naru.getElementsByTag("bookImageURL");
+			Elements isbn13=doc_naru.getElementsByTag("isbn13");
+			Elements description=doc_naru.getElementsByTag("description");
+			
+			if(bookname.size()>0)
+			{
+				String tit=bookname.get(0).text();
+				String wri=authors.get(0).text();
+				String pub=publisher.get(0).text();
+				String pubYear=publication_year.get(0).text();
+					
+				String isbn_real=isbn13.get(0).text();
+				String imgURL="";
+				if(bookImageURL.size()!=0)		//이미지가 있으면 넣어주고 없으면 빈채로 놔두기(이하 동일패턴)
+				{
+					imgURL=bookImageURL.get(0).text();
+				}
+					
+				int bookPrice=(Character.getNumericValue(isbn.charAt(isbn.length()-1))+1)*20000/4;
+					
+				String des="";
+				if(description.size()!=0)
+				{
+					des=description.get(0).text();
+				}
+					
+				String category="";
+				if(class_nm.size()!=0)
+				{
+					category=class_nm.get(0).text();
+				}
+					
+				BookDTO book=new BookDTO(tit,category,wri,pub,pubYear,bookPrice,isbn_real,imgURL,des);
+			}
+		}
+		catch(IOException e) {e.printStackTrace();}
 		
 	}
 	

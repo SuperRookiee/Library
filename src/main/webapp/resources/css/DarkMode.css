@@ -59,9 +59,8 @@
 		}
 		
 		.dark-mode .header-area .main-nav .nav li a,
-		.dark-mode .background-header .logo,
 		.dark-mode .background-header .main-nav .nav li a{
-			color: #FFFFFF;
+			color: #FFFFFF !important;
 		}
 		
 		
