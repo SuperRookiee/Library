@@ -33,69 +33,13 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css?after">
 
 	<!-- 다크모드 -->
-	<style>
-		:root {
-		  --background: #fff;
-		  --text: #363636;
-		  --heading-text: #000;
-		  --anchor-text: #0076d1;
-		  --code-background: #efefef;
-		  --code-text: #000;
-		}
-		
-		@media (prefers-color-scheme: dark) {
-		  :root {
-		    --background: #202b38;
-		    --text: #dbdbdb;
-		    --heading-text: #fff;
-		    --anchor-text: #0076d1;
-		    --code-background: #161f27;
-		    --code-text: #ffbe85;
-		  }
-		}
-		
-		.dark-mode {
-		  background: var(--background);
-		  line-height: 1.6;
-		  margin: 0 auto;
-		}
-		
-		.dark-mode h1,
-		.dark-mode h2,
-		.dark-mode h3,
-		.dark-mode .nav {
-		  color: var(--heading-text);
-		}
-		
-		.dark-mode p,
-		.dark-mode dl {
-		  color: var(--text);
-		}
-		
-		.dark-mode a {
-		  color: var(--anchor-text);
-		  text-decoration: none;
-		}
-		
-		.dark-mode code {
-		  color: var(--code-text);
-		  background: var(--code-background);
-		  border-radius: 6px;
-		  padding: 2.5px 5px;
-		}
-		
-		.dark-mode header,
-		.dark-mode #main{
-		  background: var(--background);
-		}
-		
-	</style>
+	<link rel="stylesheet" href="/resources/css/DarkMode.css?after">
+	
 	
 	<script>
 		function myFunction() {
 			document.body.classList.toggle("dark-mode");
 		}
-		
 	</script>
 	
 </head>
@@ -139,11 +83,11 @@
                             <li class="scroll-to-section">
 	                            <c:choose>
 	                            	<c:when test="${sessionId == null}">
-		                            <a href="/login">로그인</a>
+		                            	<a href="/login">로그인</a>
 		                            </c:when>
-		                           <c:otherwise>
-		                            <a href="/Book/myPage">마이페이지</a>
-		                           </c:otherwise>
+		                            <c:otherwise>
+		                            	<a href="/Book/myPage">마이페이지</a>
+		                            </c:otherwise>
 		                        </c:choose>
                             </li>
                         </ul>        

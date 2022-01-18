@@ -26,6 +26,8 @@
                         </div>
                     </div>
                 </div>
+                
+                <c:set var="list" value="${bestlist}"/>
                 <div class="col-lg-6">
                     <div class="right-content">
                         <div class="row">
@@ -34,11 +36,11 @@
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <h4>베스트 셀러</h4>
-                                            <span>----책이름----</span>
+                                            <span><c:out value="${list[0].bookName}"/></span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>----책이름----</h4>
+                                                <h4><c:out value="${list[0].bookName}"/></h4>
                                                 <p>수 많은 선택을 받은 책에는 이유가 있습니다.</p>
                                                 <div class="main-border-button">
                                                     <a href="#">더 알아보기</a>

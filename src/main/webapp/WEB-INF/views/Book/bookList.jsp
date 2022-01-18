@@ -25,7 +25,8 @@
 		
 		$(".detail").on("click",function(e)
 		{
-			e.preventDefault();
+			/* e.preventDefault(); */
+			//a 태그 안 눌림
 			console.log('detailClick');
 			actionForm.append("<input type='hidden' name=''")
 		})
