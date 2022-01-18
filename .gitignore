@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+.gitignore
 pom.properties
-
+org.eclipse.wst.common.component
 MANIFEST.MF
 =======
 <<<<<<< HEAD

@@ -6,12 +6,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>AVOCADO</title>
-<style>
-	#explore{
-		padding: 50px 0px;
-		border-bottom: none;
-	}
-</style>
+<link rel="stylesheet" href="/resources/css/bookDetail.css?after">
 </head>
 <body>
 <div id="main">
@@ -61,9 +56,58 @@
                     </div>
                 </div>
             </div>
-            
             <br>
-            <!-- ***** Services Area Starts ***** -->
+            
+            <!-- reply Area Starts -->
+            <div class="container mt-5 mb-5">
+		        <div class="col-md-13">
+		            <div class="card">
+		                <div class="p-3">
+		                    <h6>Comments</h6>
+		                </div>
+		                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color"> 
+		                	<img src="https://i.imgur.com/zQZSWrt.jpg" width="50" class="rounded-circle mr-2"> <input type="text" class="form-control" placeholder="댓글을 입력하세요..."> 
+		                </div>
+						<div class="panel-body">
+							<ul class="media-list">
+		                        <li class="media">
+		                            <a href="#" class="pull-left">
+		                                <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+		                            </a>
+		                            <div class="media-body">
+		                                <span class="text-muted pull-right">
+		                                    <small class="text-muted">30 min ago</small>
+		                                </span>
+		                                <strong class="text-info">@글쓴이</strong>
+		                                <p>
+		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		                                    Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.
+		                                </p>
+		                            </div>
+		                        </li>
+		                        <li class="media">
+		                            <a href="#" class="pull-left">
+		                                <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
+		                            </a>
+		                            <div class="media-body">
+		                                <span class="text-muted pull-right">
+		                                    <small class="text-muted">30 min ago</small>
+		                                </span>
+		                                <strong class="text-success">@LaurenceCorreil</strong>
+		                                <p>
+		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		                                    Lorem ipsum dolor <a href="#">#ipsumdolor </a>adipiscing elit.
+		                                </p>
+		                            </div>
+		                        </li>
+		                    </ul>
+	                 	</div>
+		            </div>	
+			    </div>
+			</div>
+            <!-- reply Area Ends -->
+            
+            <!-- ***** Another Book Area Starts ***** -->
 		    <section class="our-services">
 		        <div class="container">
 		            <div class="row">
@@ -77,27 +121,27 @@
 		                    <div class="service-item">
 		                        <h4>Title 1</h4>
 		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-		                        <img src="assets/images/service-01.jpg" alt="">
+		                        <img src="/resources/hexa/assets/images/service-01.jpg" alt="">
 		                    </div>
 		                </div>
 		                <div class="col-lg-4">
 		                    <div class="service-item">
 		                        <h4>Title 2</h4>
 		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-		                        <img src="assets/images/service-02.jpg" alt="">
+		                        <img src="/resources/hexa/assets/images/service-02.jpg" alt="">
 		                    </div>
 		                </div>
 		                <div class="col-lg-4">
 		                    <div class="service-item">
 		                        <h4>Title 3</h4>
 		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-		                        <img src="assets/images/service-03.jpg" alt="">
+		                        <img src="/resources/hexa/assets/images/service-03.jpg" alt="">
 		                    </div>
 		                </div>
 		            </div>
 		        </div>
 		    </section>
-		    <!-- ***** Services Area Ends ***** -->
+		    <!-- ***** Another Book Area Ends ***** -->
 		    
         </div>
     </div>
