@@ -83,12 +83,14 @@ public class BookController {
 	}
 
 	@GetMapping("/bookDetail")
-	public void DetailView(@RequestParam("isbn") String isbn,Model model){
-		String url_naru="http://data4library.kr/api/srchDtlList?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd&isbn13=9788972756194";
+	public void bookDetail(@RequestParam("isbn") String isbn,Model model){
+		String url_naru="http://data4library.kr/api/srchDtlList?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd"
+				+ "&isbn13=";
 		Document doc_naru;
 		
 		log.info("bookDetail...");
 		url_naru+=isbn;
+		BookDTO book=new BookDTO();
 		
 		try
 		{
@@ -130,11 +132,11 @@ public class BookController {
 					category=class_nm.get(0).text();
 				}
 					
-				BookDTO book=new BookDTO(tit,category,wri,pub,pubYear,bookPrice,isbn_real,imgURL,des);
+				book=new BookDTO(tit,category,wri,pub,pubYear,bookPrice,isbn_real,imgURL,des);
 			}
 		}
 		catch(IOException e) {e.printStackTrace();}
-		
+		model.addAttribute("book",book);
 	}
 	
 	
