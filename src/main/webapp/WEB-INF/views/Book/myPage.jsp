@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>AVOCADO</title>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 		
@@ -56,10 +56,10 @@
 	              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
 	          </li>
 	          <li>
-	            <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
+	            <a href="#" ><span class="fa fa-gift mr-3"></span> Cart</a>
 	          </li>
 	          <li>
-	            <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
+	            <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
 	          </li>
 	          <li>
 	            <a href="#"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
