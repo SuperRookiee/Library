@@ -21,23 +21,36 @@ public class CartServiceImpl implements CartService {
 		log.info("register...." + cart);
 		mapper.insert(cart);
 	}
-
+	
+//	@Override
+//	public void payAdd(List<CartDTO> cart) {
+//		// TODO Auto-generated method stub
+//		log.info("pay...." + cart);
+//		mapper.payAdd(cart);
+//	}
 	@Override
-	public boolean modify(String userId, String bookName, int amount) {
-		log.info("modify...." + userId);
-		return mapper.update(userId, bookName, amount) == 1;
+	public void payAdd(String userId) {
+		// TODO Auto-generated method stub
+		log.info("pay...." + userId);
+		mapper.payAdd(userId);
 	}
 
 	@Override
-	public boolean remove(String userId, String bookName) {
-		log.info("remove...." + userId + bookName);
-		return mapper.delete(userId, bookName) == 1;
+	public void modify(String userId, String bookName, int amount) {
+		log.info("modify...." + userId);
+		mapper.update(userId, bookName, amount);
+	}
+
+	@Override
+	public void remove(String userId, String bookName) {
+		log.info("remove....Impl" + userId + bookName);
+		mapper.delete(userId, bookName);
 	}
 	
 	@Override
 	public boolean removeAll(String userId) {
 		// TODO Auto-generated method stub
-		log.info("remove...." + userId);
+		log.info("removeAll....Impl" + userId);
 		return mapper.deleteAll(userId) == 1;
 	}
 
@@ -55,10 +68,17 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public int totalPrice(CartDTO cart) {
+	public int totalPrice(String userId, String bookName) {
 		// TODO Auto-generated method stub
-		log.info("totalPrice....................?"+cart);
-		return mapper.totalPrice(cart);
+		log.info("totalPrice....................?"+userId+ bookName);
+		return mapper.totalPrice(userId, bookName);
+	}
+	
+	@Override
+	public int totalSumPrice(String userId) {
+		// TODO Auto-generated method stub
+		log.info("totalSumPrice....................?"+userId);
+		return mapper.totalSumPrice(userId);
 	}
 
 }

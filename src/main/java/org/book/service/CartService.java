@@ -6,11 +6,11 @@ import org.book.domain.CartDTO;
 
 public interface CartService {
 
-	public void register(CartDTO cart);
+	public void register(CartDTO cart);//장바구니 추가
 
-	public boolean modify(String userId, String bookName, int amount);
+	public void modify(String userId, String bookName, int amount);
 
-	public boolean remove(String userId, String bookName);
+	public void remove(String userId, String bookName);
 
 	public boolean removeAll(String userId);
 
@@ -18,6 +18,12 @@ public interface CartService {
 
 	public int getTotalCount(String userId);
 
-	public int totalPrice(CartDTO cart);
+	public int totalPrice(String userId, String bookName);
+	
+	public int totalSumPrice(String userId);
+	
+//	public void payAdd(List<CartDTO> pay);//구매목록 추가
+	public void payAdd(String userId);//구매목록 추가
+	
 
 }

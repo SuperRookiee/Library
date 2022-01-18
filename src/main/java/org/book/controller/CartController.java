@@ -1,5 +1,7 @@
 package org.book.controller;
 
+import java.util.List;
+
 import org.book.domain.CartDTO;
 import org.book.service.CartService;
 import org.springframework.stereotype.Controller;
@@ -23,7 +25,10 @@ public class CartController {
 	@GetMapping("/cart")
 	public String list(Model model, @RequestParam("userId") String userId) {
 		log.info("list");
+		model.addAttribute("count",service.getTotalCount(userId));
 		model.addAttribute("list", service.getList(userId));
+		model.addAttribute("totalSum", service.totalSumPrice(userId));
+		model.addAttribute("userId",userId);
 		return "/Book/cart";
 	}
 
@@ -32,37 +37,48 @@ public class CartController {
 		log.info("register :" + cart);
 		service.register(cart);
 		rttr.addFlashAttribute("result", cart.getUserId());
-		return "redirect:/cart/list"; // redirect를 하지않는 경우, 새로 고침시 도배
+		return "redirect:/cart/cart?userId=" + cart.getUserId(); // redirect를 하지않는 경우, 새로 고침시 도배
 	}
-	
+
 	@GetMapping("/register")
 	public void register() {
 	}
-	
-	@PostMapping("/remove")
-	public String remove(@RequestParam("userId") String userId, @RequestParam("bookName") String bookName, RedirectAttributes rttr) {
-		log.info("remove.........:" + userId);
-		if (service.remove(userId, bookName)) {
-			rttr.addFlashAttribute("result", "success");
-		}
-		return "redirect:/cart/list";
+
+	@GetMapping("/remove")
+	public String remove(@RequestParam("userId") String userId, @RequestParam("bookName") String bookName,
+			RedirectAttributes rttr) {
+		log.info("remove.........:" + userId + bookName);
+		service.remove(userId, bookName);
+		log.info("remove.........:" + userId + "," + bookName);
+		rttr.addFlashAttribute("result", "success");
+		return "redirect:/cart/cart?userId=" + userId;
 	}
-	
-	@PostMapping("/removeAll")
+
+	@GetMapping("/removeAll")
 	public String removeAll(@RequestParam("userId") String userId, RedirectAttributes rttr) {
 		log.info("removeAll.........:" + userId);
 		if (service.removeAll(userId)) {
 			rttr.addFlashAttribute("result", "success");
 		}
-		return "redirect:/cart/list";
+		return "redirect:/cart/cart?userId=" + userId;
+	}
+
+	@GetMapping("/modify")
+	public String modify(@RequestParam("userId") String userId, @RequestParam("bookName") String bookName,
+			@RequestParam("amount") int amount, RedirectAttributes rttr) {
+		log.info("modify.........:" + userId + bookName + amount);
+		service.modify(userId, bookName, amount);
+		rttr.addFlashAttribute("result", "success");
+		return "redirect:/cart/cart?userId=" + userId;
 	}
 	
-	@PostMapping("/modify")
-	public String modify(@RequestParam("userId") String userId, @RequestParam("bookName") String bookName, @RequestParam("amount") int amount, RedirectAttributes rttr) {
-		log.info("modify.........:" + userId + bookName + amount);
-		if (service.modify(userId, bookName, amount)) {
-			rttr.addFlashAttribute("result", "success");
-		}
-		return "redirect:/cart/list";
+	@GetMapping("/pay")
+	public String pay(Model model, @RequestParam("userId") String userId) {
+		log.info("pay....userId:"+userId);
+		service.payAdd(userId);
+		log.info("pay 결제정보 입력 완료");
+		service.removeAll(userId);
+		log.info("결제로 넘어간 카트데이터들 삭제");
+		return "redirect:/Book/taxbill?userId="+userId;
 	}
 }
