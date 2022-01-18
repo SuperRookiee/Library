@@ -16,7 +16,7 @@
                     <div class="left-content">
                         <div class="thumb">
                             <div class="inner-content">
-                                <h4> &quot;화제의 신간&quot; <br> -책 제목이 여기에 들어가요</h4>
+                                <h4> &quot;화제의 신간&quot; <br></h4>
                                 <span>많은 사람들이 선택한 책을 읽어보세요</span>
                                 <div class="main-border-button">
                                     <a href="#">Purchase Now!</a>
@@ -26,6 +26,8 @@
                         </div>
                     </div>
                 </div>
+                
+                <c:set var="list" value="${bestlist}"/>
                 <div class="col-lg-6">
                     <div class="right-content">
                         <div class="row">
@@ -34,11 +36,11 @@
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <h4>베스트 셀러</h4>
-                                            <span>----책이름----</span>
+                                            <span><c:out value="${list[0].bookName}"/></span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>----책이름----</h4>
+                                                <h4><c:out value="${list[0].bookName}"/></h4>
                                                 <p>수 많은 선택을 받은 책에는 이유가 있습니다.</p>
                                                 <div class="main-border-button">
                                                     <a href="#">더 알아보기</a>
@@ -190,7 +192,7 @@
 	                                <div class="thumb">
 	                                    <div class="hover-content">
 	                                        <ul>
-	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>	<!-- detailList -->  -->
+	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>	<!-- detailList -->
 	                                            <li><a href="#"><i class="fa fa-star"></i></a></li>	
 	                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
 	                                        </ul>

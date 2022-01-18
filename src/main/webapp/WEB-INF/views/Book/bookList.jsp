@@ -27,7 +27,8 @@
 		{
 			e.preventDefault();
 			console.log('detailClick');
-			actionForm.append("<input type='hidden' name=''")
+			actionForm.find("input[name='isbn']").val($(this).attr("href"));
+			actionForm.submit();
 		})
 	})
 
@@ -88,7 +89,7 @@
 		            </div>
 		            <div class="col-lg-8">
 		                <div class="right-content">
-		                    <h4><a class="detail" href="./bookDetail?isbn=<c:out value='${item.bookIsbn}'/>&bookName=<c:out value='${item.bookName}'/>" onclick="nameClick()">${item.bookName}</a> </h4>
+		                    <h4><a class="detail" href="<c:out value='${item.bookIsbn}'/>">${item.bookName}</a></h4>
 		                    <span class="price">${item.writer}</span>
 		                    <span class="price">출판사 : ${item.publisher}	/	출판년도 : ${item.bookPublishYear}</span>
 		                    
@@ -109,7 +110,9 @@
 		    <!-- ***** Product Area Ends ***** -->
 		    <hr>
 		</c:forEach>
-		
+		<form id="actionForm" action="/Book/bookDetail">
+			<input type="hidden" name="isbn">
+		</form>
 		<div id="products">
 			<div class="col-lg-12">
 				<div class="pagination">
@@ -136,6 +139,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 </body>
 <%@include file="../Book/footer.jsp" %>
 </html>

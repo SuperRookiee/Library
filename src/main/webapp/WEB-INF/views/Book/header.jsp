@@ -16,22 +16,32 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/bootstrap.min.css?after">
 
-    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/font-awesome.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/templatemo-hexashop.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/owl-carousel.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/lightbox.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/lightbox.css?after">
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	
 	<!-- BootStrap icon -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css?after">
 
+	<!-- 다크모드 -->
+	<link rel="stylesheet" href="/resources/css/DarkMode.css?after">
+	
+	
+	<script>
+		function myFunction() {
+			document.body.classList.toggle("dark-mode");
+		}
+	</script>
+	
 </head>
 <body>
 	<!-- ***** Preloader Start ***** -->
@@ -59,25 +69,25 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="/Book/home">홈 화면</a></li>
-                            <li class="scroll-to-section"><a href="#">조건 검색</a></li>
+                            <li class="scroll-to-section"><a href="/Book/findBook">조건 검색</a></li>
                             <li class="scroll-to-section"><a href="/Book/cart">담아둔 상품</a></li>
                             
                             <li class="submenu">
                                 <a href="javascript:;">추천도서</a>
                                 <ul>
-                                    <li><a href="#">주제별 추천도서</a></li>
-                                    <li><a href="#">연령별 추천도서</a></li>
-                                    <li><a href="#">성별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=주제">주제별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=연령">연령별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=성">성별 추천도서</a></li>
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
 	                            <c:choose>
 	                            	<c:when test="${sessionId == null}">
-		                            <a href="/login">로그인</a>
+		                            	<a href="/login">로그인</a>
 		                            </c:when>
-		                           <c:otherwise>
-		                            <a href="/Book/myPage">마이페이지</a>
-		                           </c:otherwise>
+		                            <c:otherwise>
+		                            	<a href="/Book/myPage">마이페이지</a>
+		                            </c:otherwise>
 		                        </c:choose>
                             </li>
                         </ul>        
