@@ -79,6 +79,6 @@ public class CartController {
 		log.info("pay 결제정보 입력 완료");
 		service.removeAll(userId);
 		log.info("결제로 넘어간 카트데이터들 삭제");
-		return "redirect:/Book/taxbill?userId="+userId;
+		return "redirect:/pay/result?userId="+userId;
 	}
 }

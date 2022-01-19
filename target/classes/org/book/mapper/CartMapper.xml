@@ -4,23 +4,19 @@
 
 	<!-- 개인 장바구니 목록 출력 -->
 	<select id="getList" resultType="org.book.domain.CartDTO">
-		select * from cart where userId
-		= #{userId}
+		select * from cart where userId = #{userId}
 	</select>
 
 	<!-- 장바구니 목록 수 카운트 -->
 	<select id="getTotalCount" resultType="Integer">
-		select count(*) from cart where
-		userId = #{userId}
+		select count(*) from cart where userId = #{userId}
 	</select>
 
 	<!-- 장바구니 목록 추가 -->
 	<insert id="insert">
 		insert into cart(userId, bookName, category, imgUrl, bookIsbn, price, amount) values (#{userId},
 		#{bookName}, #{category}, #{imgUrl}, #{bookIsbn}, #{price}, #{amount})
-	
 	</insert>
-	
 <!-- 	<insert id="payAdd">
 		insert into pay(userId, bookName, category, imgUrl, bookIsbn, price, amount) values (#{userId},
 		#{bookName}, #{category}, #{bookIsbn}, #{price}, #{amount})
