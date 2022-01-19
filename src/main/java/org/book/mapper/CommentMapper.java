@@ -17,3 +17,4 @@ public interface CommentMapper {
 	// 리뷰 삭제
 	public int delete(@Param("name") String name, @Param("isbn") String isbn);
 }
+

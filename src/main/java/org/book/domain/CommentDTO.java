@@ -9,5 +9,6 @@ public class CommentDTO {
 	private String name;
 	private String isbn;
 	private String content;
+	private String img_Url;
 	private Date regdate;
 }

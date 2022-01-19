@@ -12,7 +12,7 @@
 	</select>
 	<insert id="insert">
 		insert into Comments (name, isbn, content)
-		values(#{name),
+		values(#{name},
 		#{isbn},#{content})
 	</insert>
 	<update id="update">
