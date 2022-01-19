@@ -6,6 +6,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.book.domain.UserDTO;
+import org.book.service.UserService;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -16,15 +18,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.scribejava.core.model.OAuth2AccessToken;
 
+import lombok.AllArgsConstructor;
+import lombok.extern.log4j.Log4j;
+
+@AllArgsConstructor 
 @Controller
+@Log4j
 public class LoginController {
 	/* NaverLoginBO */
 	private NaverLoginBO naverLoginBO;
 	private String apiResult = null;
-
+	
+	//UserDTO
+	private UserService service;
+	
 	@Autowired
 	private void setNaverLoginBO(NaverLoginBO naverLoginBO) {
 		this.naverLoginBO = naverLoginBO;
@@ -48,7 +57,7 @@ public class LoginController {
 
 	// 네이버 로그인 성공시 callback호출 메소드
 	@RequestMapping(value = "/callback", method = { RequestMethod.GET, RequestMethod.POST })
-	public String callback(Model model, @RequestParam String code, @RequestParam String state, HttpSession session)
+	public String callback(@RequestParam String code, @RequestParam String state, HttpSession session)
 			throws IOException, ParseException {
 		System.out.println("여기는 callback");
 
@@ -58,8 +67,8 @@ public class LoginController {
 
 		// 1. 로그인 사용자 정보를 읽어온다.
 		apiResult = naverLoginBO.getUserProfile(oauthToken); // String형식의 json데이터
-		ObjectMapper objectMapper = new ObjectMapper();
-		Map<String, Object> apiJson = (Map<String, Object>) objectMapper.readValue(apiResult, Map.class).get("response");
+		//ObjectMapper objectMapper = new ObjectMapper();
+//		Map<String, Object> apiJson = (Map<String, Object>) objectMapper.readValue(apiResult, Map.class).get("response");
 		String apiResult = naverLoginBO.getUserProfile(oauthToken);
 		System.out.println("혹시 이거???" + apiResult);
 		/**
@@ -79,13 +88,26 @@ public class LoginController {
 		JSONObject response_obj = (JSONObject) jsonObj.get("response");
 		System.out.println("response_obj??????????" + response_obj);
 		// response의 nickname값 파싱
+		String id = (String) response_obj.get("id");
 		String name = (String) response_obj.get("name");
-		System.out.println(name);
-
+		String email = (String) response_obj.get("email");
+		String age = (String) response_obj.get("age");
+		String mobile = (String) response_obj.get("mobile");
+		String profile_image = (String) response_obj.get("profile_image");
+		
+		
+		
 		// 4.파싱 user네임 세션으로 저장
 		session.setAttribute("sessionId", name);
 		// 세션 생성
-		model.addAttribute("result", apiResult);
+		session.setAttribute("result", response_obj);
+		
+		UserDTO dto = new UserDTO(id,name,email,age,mobile,profile_image);
+		System.out.println("dto 니놈은뭐니???????"+dto.getName());
+		System.out.println(dto instanceof UserDTO );
+		
+		/* service.signup(dto); */
+		
 		return "login";
 
 	}
@@ -96,7 +118,7 @@ public class LoginController {
 		System.out.println("여기는 logout");
 		session.invalidate();
 
-		return "redirect:book/home";
+		return "redirect:Book/home";
 	}
 
 }

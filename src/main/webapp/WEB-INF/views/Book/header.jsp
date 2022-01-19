@@ -16,18 +16,88 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/bootstrap.min.css?after">
 
-    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/resources/hexa/assets/css/font-awesome.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/templatemo-hexashop.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/owl-carousel.css?after">
 
-    <link rel="stylesheet" href="/resources/hexa/assets/css/lightbox.css">
+    <link rel="stylesheet" href="/resources/hexa/assets/css/lightbox.css?after">
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<!-- BootStrap icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css?after">
+
+	<!-- 다크모드 -->
+	<style>
+		:root {
+		  --background: #fff;
+		  --text: #363636;
+		  --heading-text: #000;
+		  --anchor-text: #0076d1;
+		  --code-background: #efefef;
+		  --code-text: #000;
+		}
+		
+		@media (prefers-color-scheme: dark) {
+		  :root {
+		    --background: #202b38;
+		    --text: #dbdbdb;
+		    --heading-text: #fff;
+		    --anchor-text: #0076d1;
+		    --code-background: #161f27;
+		    --code-text: #ffbe85;
+		  }
+		}
+		
+		.dark-mode {
+		  background: var(--background);
+		  line-height: 1.6;
+		  margin: 0 auto;
+		}
+		
+		.dark-mode h1,
+		.dark-mode h2,
+		.dark-mode h3,
+		.dark-mode .nav {
+		  color: var(--heading-text);
+		}
+		
+		.dark-mode p,
+		.dark-mode dl {
+		  color: var(--text);
+		}
+		
+		.dark-mode a {
+		  color: var(--anchor-text);
+		  text-decoration: none;
+		}
+		
+		.dark-mode code {
+		  color: var(--code-text);
+		  background: var(--code-background);
+		  border-radius: 6px;
+		  padding: 2.5px 5px;
+		}
+		
+		.dark-mode header,
+		.dark-mode #main,
+		.dark-mode body{
+		  background: var(--background);
+		}
+		
+	</style>
+	
+	<script>
+		function myFunction() {
+			document.body.classList.toggle("dark-mode");
+		}
+		
+	</script>
 	
 </head>
 <body>
@@ -55,16 +125,16 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="/Book/home">처음 화면</a></li>
-                            <li class="scroll-to-section"><a href="/Book/bookList?key=해리포터&pageNum=1">조건 검색</a></li>
+                            <li class="scroll-to-section"><a href="/Book/home">홈 화면</a></li>
+                            <li class="scroll-to-section"><a href="/Book/findBook">조건 검색</a></li>
                             <li class="scroll-to-section"><a href="/Book/cart">담아둔 상품</a></li>
                             
                             <li class="submenu">
                                 <a href="javascript:;">추천도서</a>
                                 <ul>
-                                    <li><a href="#">주제별 추천도서</a></li>
-                                    <li><a href="#">연령별 추천도서</a></li>
-                                    <li><a href="#">성별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=주제">주제별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=연령">연령별 추천도서</a></li>
+                                    <li><a href="/Book/recommend?sort=성">성별 추천도서</a></li>
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
@@ -73,7 +143,7 @@
 		                            <a href="/login">로그인</a>
 		                            </c:when>
 		                           <c:otherwise>
-		                            <a href="/book/myPage">마이페이지</a>
+		                            <a href="/Book/myPage">마이페이지</a>
 		                           </c:otherwise>
 		                        </c:choose>
                             </li>
