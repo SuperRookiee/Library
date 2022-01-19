@@ -16,7 +16,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="inner-content">
-							<h2>"${param.bookName}"</h2>
+							<h2>"${book.bookName}"</h2>
 							<span>상세 페이지 </span>
 						</div>
 					</div>
@@ -30,22 +30,21 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-image">
-                        <img src="/resources/image/books.png" alt="">
+                        <img src="${book.bookImageURL}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="right-content">
-                        <h4>${param.bookName}</h4>
-                        <span>작가 : ----- </span>
-                        <span>출판연도: ----- </span>
+                        <h4>${book.bookName}</h4>
+                        <span>작가 : ${book.writer} </span>
+                        <span>출판연도: ${book.bookPublishYear} </span>
                         <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>책 내용 --------------------------------------------------------------</p>
+                            <i class="fa fa-quote-left"></i><p>${book.description}</p>
                         </div>
 						
 
                         <ul>
-                        	<h5>가격: ₩ ??,???원 </h5>
-                        	<%-- <p>가격: ₩<fmt:formatNumber value=" " pattern="#,###"/>원 </p> --%>
+                        	<h5>가격: ₩<fmt:formatNumber value="${book.bookPrice}" pattern="#,###"/>원</h5>
                         </ul>
                         <section class="section" id="explore">
 	                        <div class="left-content">

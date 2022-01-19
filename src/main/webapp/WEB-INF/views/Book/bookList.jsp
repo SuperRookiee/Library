@@ -28,6 +28,11 @@
 			e.preventDefault();
 			console.log('detailClick');
 			actionForm.find("input[name='isbn']").val($(this).attr("href"));
+			if(actionForm.find("input[name='isbn']").val()=="")
+			{
+				alert("해당 책을 구매하실 수 없습니다.");
+				return;
+			}	
 			actionForm.submit();
 		})
 	})
