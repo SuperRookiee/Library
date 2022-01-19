@@ -5,9 +5,9 @@
 	
 	<insert id="insert">
 		insert into USERS(id,name, email, age,mobile, 
-		profile_image)
+		profile_image,gender,birthyear, birthday)
 		values(#{id},#{name},#{email},#{age},#{mobile},
-		#{profile_image})
+		#{profile_image},#{gender}, #{birthyear}, #{birthday})
 	</insert>
 	<select id="checkId" resultType="boolean">
 	select count(*) from USERS where id=#{id}

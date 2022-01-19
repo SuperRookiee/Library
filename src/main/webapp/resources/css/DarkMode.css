@@ -21,7 +21,7 @@
       }
       
       .dark-mode {
-        background: var(--background);
+        background: #202b38;
         line-height: 1.6;
         margin: 0 auto;
       }
@@ -30,22 +30,21 @@
       .dark-mode h2,
       .dark-mode h3,
       .dark-mode .nav {
-        color: var(--heading-text);
+        color: #fff;
       }
       
       .dark-mode p,
       .dark-mode dl {
-        color: var(--text);
+        color: #dbdbdb;
       }
       
       .dark-mode a {
-        /* color: var(--anchor-text); */
         text-decoration: none;
       }
       
       .dark-mode code {
-        color: var(--code-text);
-        background: var(--code-background);
+        color: #000;
+        background: #efefef;
         border-radius: 6px;
         padding: 2.5px 5px;
       }
@@ -55,7 +54,7 @@
       .dark-mode #main,
       .dark-mode html, 
       .dark-mode body {
-        background: var(--background);
+        background: #202b38;
       }
       
       .dark-mode .header-area .main-nav .nav li a,
@@ -63,6 +62,9 @@
          color: #FFFFFF !important;
       }
       
-      
+      .dark-mode .general h1,
+      .dark-mode .general p{
+         color: #000000 !important;
+      }
       
       

@@ -105,7 +105,9 @@ public class LoginController {
 		String age = (String) response_obj.get("age");
 		String mobile = (String) response_obj.get("mobile");
 		String profile_image = (String) response_obj.get("profile_image");
-		
+		String gender = (String) response_obj.get("gender");
+		Integer birthyear = Integer.valueOf((String)response_obj.get("birthyear")) ;
+		String birthday = (String) response_obj.get("birthday");
 		
 		// 4.파싱 user네임 세션으로 저장
 		session.setAttribute("sessionId", name);
@@ -118,7 +120,7 @@ public class LoginController {
 		
 		
 		
-		UserDTO dto = new UserDTO(id,name,email,age,mobile,profile_image);
+		UserDTO dto = new UserDTO(id,name,email,age,mobile,profile_image,gender,birthyear, birthday);
 		System.out.println("dto 니놈은뭐니???????"+dto.getName());
 		System.out.println("==============dto 타입==================");
 		System.out.println( dto instanceof UserDTO );
@@ -128,6 +130,8 @@ public class LoginController {
 		if(!(service.insertCheck(id))) {
 			service.signup(dto);
 		}
+		//db에 있는 회원정보 가져오기
+//		service.getUserList(id);
 		
 		return "login";
 
@@ -195,5 +199,12 @@ public class LoginController {
 		      return null;
 		    }
 		  }
+	 
+	 @GetMapping("/update") 
+		public String update() {
+			log.info("updateForm으로 이동...");
+				
+			    return "/Book/mypageUpdateFrm";
+		}
 
 }

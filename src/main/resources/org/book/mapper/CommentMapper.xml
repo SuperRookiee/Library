@@ -11,14 +11,8 @@
 		Comments where isbn=#{isbn}
 	</select>
 	<insert id="insert">
-<<<<<<< HEAD
 		insert into Comments (name, isbn, content)
-		values(#{name},
-		#{isbn},#{content})
-=======
-		insert into Comments (name, isbn, content, img_Url)
-		values(#{name}, #{isbn},#{content}, #{img_Url})
->>>>>>> f07e109bea7aca8d45b0c7dceb10e51ffc8ff902
+		values(#{name},#{isbn},#{content})
 	</insert>
 	<update id="update">
 		update Comments set content=#{content}, regdate=now()
