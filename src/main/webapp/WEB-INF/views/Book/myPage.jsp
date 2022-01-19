@@ -60,13 +60,16 @@
 	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
 	          </li>
 	          <li>
-	              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+	              <a href="#"><span class="fa fa-id-card mr-3"><small class="d-flex align-items-center justify-content-center"></small></span> Membership</a>
 	          </li>
 	          <li>
 	            <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
 	          </li>
 	          <li>
-	            <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
+	            <a href="javascript:;" onclick="LightMode()"><span class="fa fa-cog mr-3"></span>Light Mode</a>
+	          </li>
+	          <li>
+	            <a href="javascript:;" onclick="DarkMode()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
 	          </li>
 	          <li>
 	            <a href="/update"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
@@ -183,23 +186,4 @@
 </div>
 </body>
 <%@include file="../Book/footer.jsp" %>
-
-<script>
-function deleteToken(consumerKey, consumerName) {
-    var url;
-
-   else {
-        url = "/user2/help/externalAuth?m=externalAuthDrop&auth_token=" + consumerKey;
-
-        if (confirm(replaceAll("[service_name]의 정보 제공 동의를 철회 하시겠습니까? \n\n정보 제공 동의를 철회한 이후부터는 [service_name]에서 회원님의 정보를 조회할 수 없습니다.\n[service_name] 탈퇴는 해당 서비스에서 진행해 주세요.", "[service_name]", consumerName))) {
-            document.fm.action = url;
-            document.fm.method = "POST";
-            document.fm.submit();
-        } else {
-            document.getElementById(on).className = "btn_connect";
-            document.getElementById(off).className = "btn_connect selected";
-        }
-    }
-}
-</script>
 </html>

@@ -39,7 +39,7 @@ public class CommentController {
 	@GetMapping("/register")
 	public void register() {
 	}
-
+	
 	@GetMapping("/remove")
 	   public String remove(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
 	         RedirectAttributes rttr) {
