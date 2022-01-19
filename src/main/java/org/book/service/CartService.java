@@ -3,7 +3,8 @@ package org.book.service;
 import java.util.List;
 
 import org.book.domain.CartDTO;
-
+import org.springframework.stereotype.Service;
+@Service
 public interface CartService {
 
 	public void register(CartDTO cart);//장바구니 추가

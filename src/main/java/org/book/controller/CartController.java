@@ -24,7 +24,7 @@ public class CartController {
 
 	@GetMapping("/cart")
 	public String list(Model model, @RequestParam("userId") String userId) {
-		log.info("list");
+		log.info("list.......userId : " + userId);
 		model.addAttribute("count",service.getTotalCount(userId));
 		model.addAttribute("list", service.getList(userId));
 		model.addAttribute("totalSum", service.totalSumPrice(userId));
@@ -36,8 +36,11 @@ public class CartController {
 	public String register(CartDTO cart, RedirectAttributes rttr) {
 		log.info("register :" + cart);
 		service.register(cart);
+		String userId = cart.getUserId();
+		log.info("userId = "+userId+"....., cart.getUserId = "+cart.getUserId());
 		rttr.addFlashAttribute("result", cart.getUserId());
-		return "redirect:/cart/cart?userId=" + cart.getUserId(); // redirect를 하지않는 경우, 새로 고침시 도배
+		rttr.addAttribute("userId", userId);
+		return "redirect:/cart/cart"; // redirect를 하지않는 경우, 새로 고침시 도배
 	}
 
 	@GetMapping("/register")
@@ -51,7 +54,8 @@ public class CartController {
 		service.remove(userId, bookName);
 		log.info("remove.........:" + userId + "," + bookName);
 		rttr.addFlashAttribute("result", "success");
-		return "redirect:/cart/cart?userId=" + userId;
+		rttr.addAttribute("userId", userId);
+		return "redirect:/cart/cart";
 	}
 
 	@GetMapping("/removeAll")
@@ -59,8 +63,9 @@ public class CartController {
 		log.info("removeAll.........:" + userId);
 		if (service.removeAll(userId)) {
 			rttr.addFlashAttribute("result", "success");
+			rttr.addAttribute("userId", userId);
 		}
-		return "redirect:/cart/cart?userId=" + userId;
+		return "redirect:/cart/cart";
 	}
 
 	@GetMapping("/modify")
@@ -69,16 +74,18 @@ public class CartController {
 		log.info("modify.........:" + userId + bookName + amount);
 		service.modify(userId, bookName, amount);
 		rttr.addFlashAttribute("result", "success");
-		return "redirect:/cart/cart?userId=" + userId;
+		rttr.addAttribute("userId", userId);
+		return "redirect:/cart/cart";
 	}
 	
 	@GetMapping("/pay")
-	public String pay(Model model, @RequestParam("userId") String userId) {
+	public String pay(@RequestParam("userId") String userId,RedirectAttributes rttr) {
 		log.info("pay....userId:"+userId);
 		service.payAdd(userId);
 		log.info("pay 결제정보 입력 완료");
 		service.removeAll(userId);
 		log.info("결제로 넘어간 카트데이터들 삭제");
-		return "redirect:/pay/result?userId="+userId;
+		rttr.addAttribute("userId", userId);
+		return "redirect:/pay/result";
 	}
 }

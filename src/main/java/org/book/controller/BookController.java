@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.book.domain.BookDTO;
+import org.book.domain.CommentDTO;
+import org.book.service.CommentService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -23,10 +25,13 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class BookController {
 	
+	private CommentService service;
+	
 	@GetMapping("/home")
 	public String home(Model model) {
 		Document doc_naru;
-		String url = "http://data4library.kr/api/loanItemSrch?authKey=98f61069b118242705dcd27c2fa00bf1c2ecfa258eeca760214c31dad2c234cb&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
+//		String url = "http://data4library.kr/api/loanItemSrch?authKey=98f61069b118242705dcd27c2fa00bf1c2ecfa258eeca760214c31dad2c234cb&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
+		String url = "http://data4library.kr/api/loanItemSrch?authKey=252d4cf1dc317d82e5929ae1d837b812fa0bfd72bc773e25f1d4a8a061f82ef1&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
 		List<BookDTO> bestlist=new ArrayList<BookDTO>();
 		
 		try {
@@ -82,11 +87,16 @@ public class BookController {
 		return "/Book/recommend";
 	}
 
+	
+	
+	
 	@GetMapping("/bookDetail")
-	public void bookDetail(@RequestParam("isbn") String isbn,Model model){
+	public void bookDetail(@RequestParam("isbn") String isbn, Model model){
 		String url_naru="http://data4library.kr/api/srchDtlList?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd"
 				+ "&isbn13=";
 		Document doc_naru;
+		
+		
 		
 		log.info("bookDetail...");
 		url_naru+=isbn;
@@ -137,6 +147,7 @@ public class BookController {
 		}
 		catch(IOException e) {e.printStackTrace();}
 		model.addAttribute("book",book);
+		model.addAttribute("commentList",service.getList(isbn));
 	}
 	
 	

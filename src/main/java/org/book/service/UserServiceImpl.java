@@ -2,6 +2,7 @@ package org.book.service;
 
 import org.book.domain.UserDTO;
 import org.book.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -24,6 +25,12 @@ public class UserServiceImpl implements UserService {
 		log.info("insertCheck............");
 		
 		return mapper.checkId(id);
+	}
+	@Override
+	public UserDTO getUserList(String id) {
+		// TODO Auto-generated method stub
+		log.info("getUserList............");
+		return mapper.getList(id);
 	}
 
 }

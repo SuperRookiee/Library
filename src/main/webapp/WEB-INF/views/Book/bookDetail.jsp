@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <%@include file="../Book/header.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -8,6 +9,22 @@
 <title>AVOCADO</title>
 <link rel="stylesheet" href="/resources/css/bookDetail.css?after">
 </head>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		var actionForm=$("#actionForm");
+		$(".toCart").on("click",function(e)
+		{
+			e.preventDefault();
+			console.log('cartClick');
+			var amount=$(".amount").val();
+			actionForm.find("input[name='amount']").val(amount);
+			actionForm.submit();
+		})
+	})
+
+</script>
+
 <body>
 <div id="main">
 		<!-- ***** Main Banner Area Start ***** -->
@@ -16,7 +33,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="inner-content">
-							<h2>"${book.bookName}"</h2>
+							<h2 class="bookName">"${book.bookName}"</h2>
 							<span>상세 페이지 </span>
 						</div>
 					</div>
@@ -30,7 +47,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-image">
-                        <img src="${book.bookImageURL}" alt="">
+                        <img class="bookImageURL" src="${book.bookImageURL}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -49,7 +66,8 @@
                         <section class="section" id="explore">
 	                        <div class="left-content">
 		                     	<div class="main-border-button">
-		                            <a href="#"> <i class="bi bi-bag-check"></i> 카트에 담기</a> <a href="#"> <i class="bi bi-credit-card"></i> 주문하기</a>
+									수량 : <input class="amount" type="number" min="1" max="5" name="amount">
+		                            <a class="toCart" href="${book.bookIsbn}"> <i class="bi bi-bag-check"></i> 카트에 담기</a>
 		                        </div>
 		                    </div>
 	                    </section>
@@ -67,29 +85,32 @@
 		                </div>
 		                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color">
 		                <form action="/comment/register" method = "post"> 
-		                	<input type="image" src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
-		                	<input type="text" class="form-control" placeholder="댓글을 입력하세요...">
+		                	<img src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
+		                	<input type="text" name="content" class="form-control" placeholder="댓글을 입력하세요...">
+		                	<input type="hidden" name="img_Url" value="${result.profile_image}">
+		                	<input type="hidden" name="name" value="${result.name}">
+	    					<input type="hidden" name="isbn" value="${book.bookIsbn}">
 		                	<input type="submit" value="send">
 		                	</form>
 		                </div>
 						<div class="panel-body">
 							<ul class="media-list">
-							<c:forEach var="item" items="${commentList}" varStatus="status">
-		                        <li class="media">
-		                            <a href="#" class="pull-left">
-		                                <img src="${item.img_Url}" alt="" class="img-circle">
-		                            </a>
-		                            <div class="media-body">
-		                                <span class="text-muted pull-right">
-		                                    <small class="text-muted">${item.regDate }</small>
-		                                </span>
-		                                <strong class="text-info">${item.userId }</strong>
-		                                <p>
-		                                    ${item.content }
-		                                </p>
-		                            </div>
-		                        </li>
-		                        </c:forEach>
+							   <c:forEach var="item" items="${commentList}">
+		                        	<li class="media">
+		                            	<a href="#" class="pull-left">
+		                                	<img src="${item.img_Url}" alt="" class="img-circle">
+		                            	</a>
+		                            	<div class="media-body">
+		                                	<span class="text-muted pull-right">
+		                                   		<small class="text-muted">${item.regdate}</small>
+		                                	</span>
+		                                	<strong class="text-info">${item.name}</strong>
+		                                	<p>
+		                                    	${item.content}
+		                                	</p>
+		                            	</div>
+		                        	</li>
+		                       </c:forEach>
 		                    </ul>
 	                 	</div>
 		            </div>	
@@ -132,10 +153,17 @@
 		        </div>
 		    </section>
 		    <!-- ***** Another Book Area Ends ***** -->
-		    
+		    <form id="actionForm" action="../cart/register" method="post">
+	    		<input type="hidden" name="userId" value="${result.name}">
+	    		<input type="hidden" name="bookName" value="${book.bookName}">
+				<input type="hidden" name="category" value="${book.category}">
+				<input type="hidden" name="imgUrl" value="${book.bookImageURL}">
+				<input type="hidden" name="bookIsbn" value="${book.bookIsbn}">
+				<input type="hidden" name="price" value="${book.bookPrice}">
+				<input type="hidden" name="amount">
+    		</form>
         </div>
     </div>
-    
 </div>
 </body>
 <%@include file="../Book/footer.jsp" %>

@@ -20,26 +20,30 @@ import lombok.extern.log4j.Log4j;
 public class CommentController {
 	private CommentService service;
 
-	@GetMapping("/list")
-	public String list(Model model, @RequestParam("isbn") String isbn) {
-		log.info("list");
-		model.addAttribute("count", service.totalCount(isbn));
-		model.addAttribute("commentList", service.getList(isbn));
-		return "/Book/bookDetail";
-	}
+//	@GetMapping("/list")
+//	public String list(Model model, @RequestParam("isbn") String isbn) {
+//		log.info("list");
+//		model.addAttribute("commentcount", service.totalCount(isbn));
+//		
+//		log.info("listController....");
+//		return "redirect:/Book/bookDetail?isbn="+isbn;
+//	}
 
 	@PostMapping("/register") // 장바구니 저장
 	public String register(CommentDTO comment, RedirectAttributes rttr) {
 		log.info("register :" + comment);
 		service.register(comment);
-		rttr.addFlashAttribute("result", "success");
-		return "redirect:/comment/list?isbn=" + comment.getIsbn(); // redirect를 하지않는 경우, 새로 고침시 도배
-	}
+		String isbn=comment.getIsbn();
+//		rttr.addFlashAttribute("result", "success");
+		
+		return "redirect:/Book/bookDetail?isbn="+isbn;
+		//return "redirect:/comment/list?isbn=" + comment.getIsbn(); // redirect를 하지않는 경우, 새로 고침시 도배	
+		}
 
 	@GetMapping("/register")
 	public void register() {
 	}
-
+	
 	@GetMapping("/remove")
 	   public String remove(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
 	         RedirectAttributes rttr) {

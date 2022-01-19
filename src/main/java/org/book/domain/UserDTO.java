@@ -15,5 +15,8 @@ public class UserDTO {
 	private String age;
 	private String mobile;
 	private String profile_image;
-
+	private String gender;
+	private int birthyear; 
+	private String birthday;
+	
 }
