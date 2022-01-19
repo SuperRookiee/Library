@@ -11,15 +11,17 @@
 		Comments where isbn=#{isbn}
 	</select>
 	<insert id="insert">
-		insert into Comments (name, isbn, content)
+		insert into Comments (name, isbn, content, img_Url)
 		values(#{name),
-		#{isbn},#{content})
+		#{isbn},#{content}, #{img_Url})
 	</insert>
 	<update id="update">
-		update Comments set content=#{content} where
+		update Comments set content=#{content}, regdate=now()
+		where
 		name=#{name} AND isbn=#{isbn}
 	</update>
 	<delete id="delete">
-		delete from Comments where name=#{name} AND isbn=#{isbn}
+		delete from Comments where name=#{name} AND
+		isbn=#{isbn}
 	</delete>
 </mapper>
