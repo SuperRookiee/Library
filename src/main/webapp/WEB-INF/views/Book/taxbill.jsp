@@ -18,44 +18,34 @@
         </div>
 
         <div class="paypal__header-info">
-          <span class="paypal__date">25.04.2016</span>
-          <span class="paypal__ref">0f-113</span>
+          <span class="paypal__date">${date}</span>
         </div>
       </div>
 
       <div class="paypal__subheader-wrapper">
         <div class="paypal__subheader">
-          <h1 class="paypal__username">VladysLav, Hi</h1>
-          <span class="paypal__help-text">you've purchased three (3) items in our store:</span>
+          <h1 class="paypal__username">${payuserId}님, 안녕하세요</h1>
+          <span class="paypal__help-text">you've purchased three ${paycount} items in our store:</span>
         </div>
       </div>
 
       <div class="paypal__cart">
-        <h2 class="paypal__cart-title">Cart:</h2>
+        <h2 class="paypal__cart-title">결제내역</h2>
 
         <ul class="paypal__cart-list">
+    <c:forEach var="item" items="${paylist}" varStatus="status">
           <li class="paypal__cart-item">
-            <span class="paypal__index">1</span>
-            <span class="paypal__item-name">t-Shirt Lacoste</span>
-            <span class="paypal__item-price">$48.00</span>
+            <span class="paypal__index">${status.count}</span>
+            <span class="paypal__item-name">[${item.category}]</span>
+            <span class="paypal__item-name">${item.bookName}</span>
+            <span class="paypal__item-price">${item.price*item.amount}원</span>
           </li>
-
-          <li class="paypal__cart-item">
-            <span class="paypal__index">2</span>
-            <span class="paypal__item-name">Snickers Nike</span>
-            <span class="paypal__item-price">$125.00</span>
-          </li>
-
-          <li class="paypal__cart-item">
-            <span class="paypal__index">3</span>
-            <span class="paypal__item-name">All Stars</span>
-            <span class="paypal__item-price">$95.00</span>
-          </li>
-
+          </c:forEach>
           <li class="paypal__cart-item">
             <span class="paypal__cart-total">Total</span>
-            <span class="paypal__item-price">$268.00</span>
+            <span class="paypal__item-price">${paytotalSum}원</span>
           </li>
+          
         </ul>
       </div>
 
