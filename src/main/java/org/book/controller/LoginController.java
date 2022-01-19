@@ -132,7 +132,7 @@ public class LoginController {
 		}
 		//db에 있는 회원정보 id로 가져오기
 		model.addAttribute("userList", service.getUserList(id));
-		
+		log.info("service.getUserList........................:"+service.getUserList(id));
 		return "login";
 
 	}

@@ -29,14 +29,14 @@ public class CommentController {
 //		return "redirect:/Book/bookDetail?isbn="+isbn;
 //	}
 
-	@PostMapping("/register") // 장바구니 저장
+	@PostMapping("/register") // 
 	public String register(CommentDTO comment, RedirectAttributes rttr) {
 		log.info("register :" + comment);
 		service.register(comment);
 		String isbn=comment.getIsbn();
 //		rttr.addFlashAttribute("result", "success");
-		
-		return "redirect:/Book/bookDetail?isbn="+isbn;
+		rttr.addAttribute("isbn",isbn);
+		return "redirect:/Book/bookDetail";
 		//return "redirect:/comment/list?isbn=" + comment.getIsbn(); // redirect를 하지않는 경우, 새로 고침시 도배	
 		}
 
