@@ -12,5 +12,7 @@
 	<select id="checkId" resultType="boolean">
 	select count(*) from USERS where id=#{id}
 	</select>
-
+	<select id="getList" resultType="org.book.domain.UserDTO">
+	select * from USERS where id=#{id}
+	</select>
 </mapper>
