@@ -55,6 +55,7 @@
 		document.cookie = name + '=' + value + ';expires='
 				+ date.toUTCString() + ';path=/';
 	};
+	
 	//쿠기 가져오기
 	var getCookie = function(name) {
 		var value = document.cookie.match('(^|;) ?' + name
@@ -77,14 +78,14 @@
 		document.body.classList.add("dark-mode");
 	}
 	
-	
 	$(document).ready(function() {
 		console.log("쿠키 Dark변수에 저장된 값: " + Mode);
 
-		if (Mode == "false") {
-			LightMode()
-		} else {
+		if (Mode == "true") {
 			DarkMode()
+		} 
+		else {
+			LightMode()
 		}
 
 	});
