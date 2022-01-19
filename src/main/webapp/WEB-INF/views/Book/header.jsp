@@ -69,23 +69,23 @@
 	
 	//라이트모드 실행
 	function LightMode() {
-		setCookie("Mode", "true", 30);
+		setCookie("Mode", "false", 30);
 		document.body.classList.remove("dark-mode");
 	}
 	//다크모드 실행
 	function DarkMode() {
-		setCookie("Mode", "false", 30);
+		setCookie("Mode", "true", 30);
 		document.body.classList.add("dark-mode");
 	}
-	
 	
 	$(document).ready(function() {
 		console.log("쿠키 Dark변수에 저장된 값: " + Mode);
 
-		if (Mode == "false") {
-			LightMode()
-		} else {
+		if (Mode == "true") {
 			DarkMode()
+		} 
+		else {
+			LightMode()
 		}
 
 	});
