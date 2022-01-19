@@ -20,6 +20,7 @@ import lombok.extern.log4j.Log4j;
 public class CommentController {
 	private CommentService service;
 
+<<<<<<< HEAD
 	@GetMapping("/list")
 	public String list(Model model, @RequestParam("isbn") String isbn) {
 		log.info("list");
@@ -35,10 +36,32 @@ public class CommentController {
 		rttr.addFlashAttribute("result", "success");
 		return "redirect:/comment/list?isbn=" + comment.getIsbn(); // redirect를 하지않는 경우, 새로 고침시 도배
 	}
+=======
+//	@GetMapping("/list")
+//	public String list(Model model, @RequestParam("isbn") String isbn) {
+//		log.info("list");
+//		model.addAttribute("commentcount", service.totalCount(isbn));
+//		
+//		log.info("listController....");
+//		return "redirect:/Book/bookDetail?isbn="+isbn;
+//	}
+
+	@PostMapping("/register") // 
+	public String register(CommentDTO comment, RedirectAttributes rttr) {
+		log.info("register :" + comment);
+		service.register(comment);
+		String isbn=comment.getIsbn();
+//		rttr.addFlashAttribute("result", "success");
+		rttr.addAttribute("isbn",isbn);
+		return "redirect:/Book/bookDetail";
+		//return "redirect:/comment/list?isbn=" + comment.getIsbn(); // redirect를 하지않는 경우, 새로 고침시 도배	
+		}
+>>>>>>> da012d1615027e1f5166cd7019e214fcb9b2e63b
 
 	@GetMapping("/register")
 	public void register() {
 	}
+<<<<<<< HEAD
 
 	@GetMapping("/remove")
 	public String remove(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
@@ -58,4 +81,24 @@ public class CommentController {
 		rttr.addFlashAttribute("result", "success");
 		return "redirect:/comment/list?isbn=" + comment.getIsbn();
 	}
+=======
+	
+	@GetMapping("/remove")
+	   public String remove(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
+	         RedirectAttributes rttr) {
+	      log.info("remove.........:" + userId + isbn);
+	      service.remove(userId, isbn);
+	      log.info("remove.........:" + userId + "," + isbn);
+	      rttr.addFlashAttribute("result", "success");
+	      return "redirect:/comment/list?isbn=" + isbn;
+	   }
+
+	   @GetMapping("/modify")
+	   public String modify(CommentDTO comment, RedirectAttributes rttr) {
+	      log.info("modify.........:" + comment);
+	      service.modify(comment);
+	      rttr.addFlashAttribute("result", "success");
+	      return "redirect:/comment/list?isbn=" + comment.getIsbn();
+	   }
+>>>>>>> da012d1615027e1f5166cd7019e214fcb9b2e63b
 }

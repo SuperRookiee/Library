@@ -1,6 +1,6 @@
 package org.book.service;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import org.book.domain.CommentDTO;
 import org.book.mapper.CommentMapper;
@@ -37,7 +37,7 @@ public class CommentServiceImpl implements CommentService{
 	}
 
 	@Override
-	public List<CommentDTO> getList(String isbn) {
+	public ArrayList<CommentDTO> getList(String isbn) {
 		// TODO Auto-generated method stub
 		log.info("commentgetList.............."+isbn);
 		return mapper.getList(isbn);

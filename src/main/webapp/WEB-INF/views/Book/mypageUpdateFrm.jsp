@@ -14,6 +14,155 @@
 <link rel="stylesheet" href="/resources/sidebar/css/style.css">
 
 <link rel="stylesheet" href="/resources/css/myPage.css">
+<style>
+        @import url('https://fonts.googleapis.com/css?family=Dosis');
+
+:root {
+  /* generic */
+  --gutterSm: 0.4rem;
+  --gutterMd: 0.8rem;
+  --gutterLg: 1.6rem;
+  --gutterXl: 2.4rem;
+  --gutterXx: 7.2rem;
+  --colorPrimary400: #92bCa6;
+  --colorPrimary600: #A2CCB6;
+  --colorPrimary800: #32a852;
+  --fontFamily: "Dosis", sans-serif;
+  --fontSizeSm: 1.2rem;
+  --fontSizeMd: 1.6rem;
+  --fontSizeLg: 2.1rem;
+  --fontSizeXl: 2.8rem;
+  --fontSizeXx: 3.6rem;
+  --lineHeightSm: 1.1;
+  --lineHeightMd: 1.8;
+  --transitionDuration: 300ms;
+  --transitionTF: cubic-bezier(0.645, 0.045, 0.355, 1);
+  
+  /* floated labels */
+  --inputPaddingV: var(--gutterMd);
+  --inputPaddingH: var(--gutterLg);
+  --inputFontSize: var(--fontSizeLg);
+  --inputLineHeight: var(--lineHeightMd);
+  --labelScaleFactor: 0.8;
+  --labelDefaultPosY: 50%;
+  --labelTransformedPosY: calc(
+    (var(--labelDefaultPosY)) - 
+    (var(--inputPaddingV) * var(--labelScaleFactor)) - 
+    (var(--inputFontSize) * var(--inputLineHeight))
+  );
+  --inputTransitionDuration: var(--transitionDuration);
+  --inputTransitionTF: var(--transitionTF);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* html {
+  font-size: 10px;
+}
+ */
+/* body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: #455A64;
+  background-color: #7E57C2;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSizeMd);
+  line-height: var(--lineHeightMd);
+} */
+
+.Wrapper {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+
+.Title {
+  margin: 0 0 var(--gutterXx) 0;
+  padding: 0;
+  color: #fff;
+  font-size: var(--fontSizeXx);
+  font-weight: 400;
+  line-height: var(--lineHeightSm);
+  text-align: center;
+  text-shadow: -0.1rem 0.1rem 0.2rem var(--colorPrimary800);
+}
+
+.Input {
+  position: relative;
+}
+
+.Input-text {
+  display: block;
+  margin: 0;
+  padding: var(--inputPaddingV) var(--inputPaddingH);
+  color: inherit;
+  width: 100%;
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: inherit;
+  line-height: var(--inputLineHeight);
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow var(--transitionDuration);
+}
+
+.Input-text::placeholder {
+  color: #B0BEC5;
+}
+
+.Input-text:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem var(--colorPrimary600);
+}
+
+.Input-label {
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  left: 1rem;
+  color: #fff;
+  font-family: inherit;
+  font-size: var(--inputFontSize);
+  font-weight: inherit;
+  line-height: var(--inputLineHeight);
+  opacity: 0;
+  transform: 
+    translate3d(0, var(--labelDefaultPosY), 0)
+    scale(1);
+  transform-origin: 0 0;
+  transition:
+    opacity var(--inputTransitionDuration) var(--inputTransitionTF),
+    transform var(--inputTransitionDuration) var(--inputTransitionTF),
+    visibility 0ms var(--inputTransitionDuration) var(--inputTransitionTF),
+    z-index 0ms var(--inputTransitionDuration) var(--inputTransitionTF);
+}
+
+.Input-text:placeholder-shown + .Input-label {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.Input-text:not(:placeholder-shown) + .Input-label,
+.Input-text:focus:not(:placeholder-shown) + .Input-label {
+  visibility: visible;
+  z-index: 1;
+  opacity: 1;
+  transform:
+    translate3d(0, var(--labelTransformedPosY), 0)
+    scale(var(--labelScaleFactor));
+  transition:
+    transform var(--inputTransitionDuration),
+    visibility 0ms,
+    z-index 0ms;
+}
+</style>
 </head>
 <body>
 <div id="main">
@@ -23,8 +172,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="inner-content">
-						<h2>My Page</h2>
-						<span>마이페이지입니다</span>
+						<h2>My Page Update Form</h2>
+						<span>내 정보 수정페이지입니다</span>
 					</div>
 				</div>
 			</div>
@@ -40,18 +189,7 @@
        		</div>
 	  		<div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
 	  			<div class="user-logo">
-	  			<!-- 시작 -->
-	  			<c:choose>
-					<c:when test="${result.profile_image != null}">
-					<!-- profile 사진이 있으면? -->
 					<div class="img" style="background-image: url('${result.profile_image}')"></div>
-					</c:when>
-					<c:otherwise>
-					<div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div>
-					</c:otherwise>
-	  		</c:choose>
-	  			<!-- 끝 -->
-	  				<!-- <div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div> -->	<!-- 프로필 사진 -->
 	  				<h3><c:out value="${result.name }"/></h3>
 	  			</div>
 	  		</div>
@@ -60,19 +198,16 @@
 	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
 	          </li>
 	          <li>
-	              <a href="#"><span class="fa fa-id-card mr-3"><small class="d-flex align-items-center justify-content-center"></small></span> Membership</a>
+	              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
 	          </li>
 	          <li>
 	            <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
 	          </li>
 	          <li>
-	            <a href="javascript:;" onclick="LightMode()"><span class="fa fa-cog mr-3"></span>Light Mode</a>
+	            <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
 	          </li>
 	          <li>
-	            <a href="javascript:;" onclick="DarkMode()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
-	          </li>
-	          <li>
-	            <a href="/update"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
+	            <a href="#"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
 	          </li>
 	          <li>
 	            <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
@@ -170,7 +305,10 @@
           </div>
           <div class="general">
             <h1>회원 정보</h1><br>
-            <p class="mypage-content"><span class="fontStyle">이메일</span> ${result.email }</p>
+            <div class="Input">
+	          <input type="text" id="input" class="Input-text" placeholder="email" value="${result.email }">
+	          <label for="input" class="Input-label">이메일</label>
+        	</div>
             <p class="mypage-content"><span class="fontStyle">생년월일</span> ${result.birthyear }-${result.birthday }</p>
             <p class="mypage-content"><span class="fontStyle">성별</span> ${result.gender }</p>
             <p class="mypage-content"><span class="fontStyle">전화번호</span> ${result.mobile }</p>

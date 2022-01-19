@@ -16,8 +16,11 @@
                     <div class="left-content">
                         <div class="thumb">
                             <div class="inner-content">
-                                <h4> &quot;화제의 신간&quot; <br></h4>
+                                <h4> &quot;베스트 셀러&quot; <br></h4>
+                                <span style="font-size: 1.5em; background-color: rgba(0,0,0,0.7);"><c:out value="${list[0].bookName}"/></span>
+
                                 <span>많은 사람들이 선택한 책을 읽어보세요</span>
+                                <span>수 많은 선택을 받은 책에는 이유가 있습니다</span>
                                 <div class="main-border-button">
                                     <a href="#">Purchase Now!</a>
                                 </div>
@@ -35,15 +38,18 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>베스트 셀러</h4>
-                                            <span><c:out value="${list[0].bookName}"/></span>
+                                            <h4>Our Team</h4>
+                                            <span>AVOCADO서점에 오신 것을 환영합니다</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4><c:out value="${list[0].bookName}"/></h4>
-                                                <p>수 많은 선택을 받은 책에는 이유가 있습니다.</p>
-                                                <div class="main-border-button">
-                                                    <a href="#">더 알아보기</a>
+                                                <h4><c:out value="Team AVOCADO"/></h4>
+                                                <p>저희 페이지를 소개합니다.</p>
+                                                <<div class="main-border-button">
+                                                	<div class="scroll-to-section">
+                                                		<a href="#explore">더 알아보기</a>
+                                                	</div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -240,12 +246,15 @@
                 <div class="col-2">
                     <div class="thumb">
                         <div class="icon">
+                        <h7 style="color:white; padding:5px">2022-01-19</h7>
+                        <h5 style="color:white; padding:5px">댓글로렘입슘로렘입슘로렘입슘 로렘입슘로렘입슘로렘입슘 로렘입슘로렘입슘로렘입슘</h5><br>
                             <a href="http://instagram.com">
-                                <h6>Fashion</h6>
+                                <h6>${list[0].bookName}</h6>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="/resources/hexa/assets/images/instagram-01.jpg" alt="">
+                        <img src="${list[0].bookImageURL}" alt="">
+<!--                         <img src="/resources/hexa/assets/images/instagram-01.jpg" alt=""> -->
                     </div>
                 </div>
                 <div class="col-2">
@@ -315,13 +324,22 @@
                 <div class="col-lg-6">
                     <div class="left-content">
                         <h2>Bookstore AVOCADO</h2>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
+                        <span>AVOCADO는 고객의 진정한 지식 및 (예술)문화콘텐츠 파트너입니다.<br>
+                        <br>
+						<b>핵심 목적</b><br>
+						우리의 사명은 모든 사람이 다양한 지식 및 (예술)문화콘텐츠를 경험해 지적/문화적/사회적으로
+						성장할 수 있도록 도와드리는 것입니다.<br>
+						</span>
 
                         <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                            <i class="fa fa-quote-left"></i><p>AVOCADO는 예술문화경험과 다양한 지식을 제공합니다.</p>
                         </div>
-                        <p>Ultrices gravida dictum fusce ut. Quis risus sed vulputate odio. Tellus elementum sagittis vitae et leo duis. Nulla facilisi morbi tempus iaculis urna</p>
-                        <p> Viverra mauris in aliquam sem fringilla ut. Nisl nunc mi ipsum faucibus <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a>Scelerisque felis imperdiet proin fermentum leo vel orci porta non</p>
+                        <p>
+						<b>지적 성장</b> : &nbsp;‘지식’습득을 넘어 스스로 생각을 키워 나가는 ‘지성’을 함양하는 것
+						</p>
+                        <p> <b>문화적 성장</b> : &nbsp;다양한 지식과 예술문화콘텐츠를 수용, 해석, 창작하는 역량을 갖추는 것
+						</p>
+						<p><b>사회적 성장</b> : &nbsp;지적/문화적 성장을 통해 사회에 선한 영향을 끼치는 사람으로 변화하는 것</p>
                         <div class="main-border-button">
                             <a href="products.html">Discover More</a>
                         </div>
@@ -331,27 +349,27 @@
                     <div class="right-content">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="leather">
-                                    <h4>여기에</h4>
-                                    <span>페이지 소개를 넣을까해요</span>
+                                <div class="leather" style="background-image: url(/resources/image/JHJ.jpg)">
+                                    <!-- <h4>여기에</h4>
+                                    <span>페이지 소개를 넣을까해요</span> -->
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="first-image">
-                                    <img src="/resources/image/project.png" alt="">
+                                    <img src="/resources/image/JJH.jpg" alt="">
                                     <!-- 임시 사진 -->
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="second-image">
-                                    <img src="/resources/image/project.png" alt="">
+                                    <img src="/resources/image/GHW.jpg" alt="">
                                     <!-- 임시 사진 -->
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="types">
-                                    <h4>여기에는 </h4>
-                                    <span>팀원 소개도 넣어볼까해요</span>
+                            <div class="col-lg-6" >
+                                <div class="leather" style="background-image: url(/resources/image/KJB.jpg)">
+                                    <!-- <h4>여기에는 </h4>
+                                    <span>팀원 소개도 넣어볼까해요</span> -->
                                 </div>
                             </div>
                         </div>
@@ -361,7 +379,6 @@
         </div>
     </section>
     <!-- ***** Explore Area Ends ***** -->
-    
 </body>
 <%@include file="../Book/footer.jsp" %>
 </html>

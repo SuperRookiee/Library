@@ -30,7 +30,7 @@
       </div>
 
       <div class="paypal__cart">
-        <h2 class="paypal__cart-title">결제내역</h2>
+        <h2 class="paypal__cart-title">구매내역</h2>
 
         <ul class="paypal__cart-list">
     <c:forEach var="item" items="${paylist}" varStatus="status">
