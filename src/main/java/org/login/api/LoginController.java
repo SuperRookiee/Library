@@ -100,6 +100,7 @@ public class LoginController {
 		// 4.파싱 user네임 세션으로 저장
 		session.setAttribute("sessionId", name);
 		// 세션 생성
+<<<<<<< HEAD
 		session.setAttribute("result", response_obj);
 		
 		UserDTO dto = new UserDTO(id,name,email,age,mobile,profile_image);
@@ -108,6 +109,12 @@ public class LoginController {
 		
 		/* service.signup(dto); */
 		
+=======
+		model.addAttribute("result", apiResult);
+		
+		session.setAttribute("result", response_obj);
+		
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		return "login";
 
 	}

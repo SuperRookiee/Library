@@ -6,7 +6,7 @@
 <html>
 <head>
 
-	<meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" href="/resources/hexa/assets/css/lightbox.css?after">
 
+<<<<<<< HEAD
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	
@@ -99,9 +100,27 @@
 		
 	</script>
 	
+=======
+   <!-- jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+   <!-- BootStrap icon -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css?after">
+
+   <!-- 다크모드 -->
+   <link rel="stylesheet" type="text/css" href="/resources/css/DarkMode.css?after">
+   
+   
+   <script>
+      function myFunction() {
+         document.body.classList.toggle("dark-mode");
+      }
+   </script>
+   
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 </head>
 <body>
-	<!-- ***** Preloader Start ***** -->
+   <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -138,6 +157,7 @@
                                 </ul>
                             </li>
                             <li class="scroll-to-section">
+<<<<<<< HEAD
 	                            <c:choose>
 	                            	<c:when test="${sessionId == null}">
 		                            <a href="/login">로그인</a>
@@ -146,6 +166,16 @@
 		                            <a href="/Book/myPage">마이페이지</a>
 		                           </c:otherwise>
 		                        </c:choose>
+=======
+                               <c:choose>
+                                  <c:when test="${sessionId == null}">
+                                     <a href="/login">로그인</a>
+                                  </c:when>
+                                  <c:otherwise>
+                                     <a href="/Book/myPage">마이페이지</a>
+                                  </c:otherwise>
+                              </c:choose>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                             </li>
                         </ul>        
                         <a class='menu-trigger'>
@@ -158,7 +188,5 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-    
-    
 </body>
 </html>

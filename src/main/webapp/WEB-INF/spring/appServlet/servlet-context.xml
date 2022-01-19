@@ -25,12 +25,36 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
+<<<<<<< HEAD
 
 	<!-- naverLogin class 에 대한 bean 설정 추가 -->
 	<beans:bean id="naverLoginBO"
 		class="org.login.api.NaverLoginBO">
 	</beans:bean>
 
+=======
+
+	<!-- naverLogin -->
+	<beans:bean id="naverClientID" class="java.lang.String">
+		<beans:constructor-arg
+			value="0Yfj9XcVIz7esbpF9pxf" />
+	</beans:bean>
+	<beans:bean id="naverClientSecret" class="java.lang.String">
+		<beans:constructor-arg value="t3X0ymU8LK" />
+	</beans:bean>
+	<beans:bean id="naverRedirectUrl" class="java.lang.String">
+		<beans:constructor-arg
+			value="http://localhost:8080/auth/naver/callback" />
+	</beans:bean>
+	<!-- naverLogin class 에 대한 bean 설정 추가 -->
+	<beans:bean id="naverLoginBO"
+		class="org.login.api.NaverLoginBO">
+		<!-- <beans:constructor-arg value="naver" /> <beans:constructor-arg ref="naverClientID" 
+			/> <beans:constructor-arg ref="naverClientSecret" /> <beans:constructor-arg 
+			ref="naverRedirectUrl" /> -->
+	</beans:bean>
+
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 	<context:component-scan
 		base-package="org.book.*" />
 	<context:component-scan

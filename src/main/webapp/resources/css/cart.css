@@ -81,7 +81,8 @@
 
 #main .col-2,
 #main .col {
-    padding: 0 1vh
+    padding: 0 
+    /* 1vh */
 }
 
 #main a {

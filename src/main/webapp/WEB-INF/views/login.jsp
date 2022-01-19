@@ -25,7 +25,11 @@
 				<div class="col-lg-12">
 					<div class="inner-content">
 						<h2>Login</h2>
+<<<<<<< HEAD
 						<span>아보카도에 오신 것을 환영합니다! </span>
+=======
+						<span>아보카도에 오신 것을 환영합니다!</span>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 					</div>
 				</div>
 			</div>

@@ -16,8 +16,12 @@
                     <div class="left-content">
                         <div class="thumb">
                             <div class="inner-content">
+<<<<<<< HEAD
                                 <h4> &quot;베스트 셀러&quot; <br></h4>
                                 <span style="font-size: 1.5em; background-color: rgba(0,0,0,0.7);"><c:out value="${list[0].bookName}"/></span>
+=======
+                                <h4> &quot;화제의 신간&quot; <br></h4>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                                 <span>많은 사람들이 선택한 책을 읽어보세요</span>
                                 <span>수 많은 선택을 받은 책에는 이유가 있습니다</span>
                                 <div class="main-border-button">
@@ -37,6 +41,7 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
+<<<<<<< HEAD
                                             <h4>Our Team</h4>
                                             <span>AVOCADO서점에 오신 것을 환영합니다</span>
                                         </div>
@@ -49,6 +54,17 @@
                                                 		<a href="#explore">더 알아보기</a>
                                                 	</div>
                                                     
+=======
+                                            <h4>베스트 셀러</h4>
+                                            <span><c:out value="${list[0].bookName}"/></span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4><c:out value="${list[0].bookName}"/></h4>
+                                                <p>수 많은 선택을 받은 책에는 이유가 있습니다.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">더 알아보기</a>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                                                 </div>
                                             </div>
                                         </div>
@@ -197,7 +213,11 @@
 	                                <div class="thumb">
 	                                    <div class="hover-content">
 	                                        <ul>
+<<<<<<< HEAD
 	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>	<!-- detailList -->  -->
+=======
+	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>	<!-- detailList -->
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 	                                            <li><a href="#"><i class="fa fa-star"></i></a></li>	
 	                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
 	                                        </ul>

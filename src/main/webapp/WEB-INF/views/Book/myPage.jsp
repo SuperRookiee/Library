@@ -9,12 +9,24 @@
 <title>Insert title here</title>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<<<<<<< HEAD
 		
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/resources/sidebar/css/style.css">
 
 <style>
 	@import url('https://fonts.googleapis.com/css?family=Abel');
+=======
+      
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/resources/sidebar/css/style.css">
+<<<<<<< HEAD
+<link rel="stylesheet" href="/resources/css/myPage.css">
+
+=======
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Abel');
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 
  .skin { fill: #eab38f; }
                   .eyes { fill: #1f1f1f; }
@@ -192,6 +204,7 @@
 }
 
 .circle-img {
+<<<<<<< HEAD
 	height: 200px;
 	width: 200px;
 	margin-top: 141px;
@@ -218,10 +231,40 @@
 	padding-top:25px;
 }
 </style>
+=======
+   height: 200px;
+   width: 200px;
+   margin-top: 141px;
+   margin-left: 53px;
+   border-radius : 106px;
+}
+
+.nameStyle {
+   margin-top: 50px;
+}
+
+.fontStyle{
+   color: #32a852;
+}
+
+.mypage-content{
+   font-size: 28px;
+   margin-left: 30px; 
+   line-height: 40px;
+}
+
+.logoPlace{
+   float: right;
+   padding-top:25px;
+}
+</style>
+>>>>>>> 6521fb8240b4fa14128833c41bd55a891dca5d17
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 
 </head>
 <body>
 <div id="main">
+<<<<<<< HEAD
 	<!-- ***** Main Banner Area Start ***** -->
 	<div class="page-heading about-page-heading" id="top">
 		<div class="container">
@@ -300,6 +343,92 @@
 					</c:when>
 					<c:otherwise>
 					<svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
+=======
+   <!-- ***** Main Banner Area Start ***** -->
+   <div class="page-heading about-page-heading" id="top">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="inner-content">
+                  <h2>My Page</h2>
+                  <span>마이페이지입니다</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<!-- ***** Main Banner Area End ***** -->
+   
+   <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+         <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-dark"> <i class="bi bi-arrow-left-right"></i> </button>
+            <!-- <button type="button" id="sidebarCollapse" class="btn btn-dark"></button> -->
+             </div>
+           <div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
+              <div class="user-logo">
+              <!-- 시작 -->
+              <c:choose>
+               <c:when test="${result.profile_image != null}">
+               <!-- profile 사진이 있으면? -->
+                  <div class="img" style="background-image: url('${result.profile_image}')"></div>
+               </c:when>
+               <c:otherwise>
+                  <div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div>
+               </c:otherwise>
+           </c:choose>
+              <!-- 끝 -->
+                 <!-- <div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div> -->   <!-- 프로필 사진 -->
+                 <h3><c:out value="${result.name }"/></h3>
+              </div>
+           </div>
+           <ul class="list-unstyled components mb-5">
+             <li class="active">
+               <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+             </li>
+             <li>
+                 <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+             </li>
+             <li>
+               <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
+             </li>
+             <li>
+               <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
+             </li>
+             <li>
+               <a href="https://nid.naver.com/user2/help/changeUserInfo?menu=nid&lang=ko_KR"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
+             </li>
+             <li>
+               <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
+             </li>
+             <li>
+               <a href="#"><span class="fa fa-sign-out mr-3"></span> 회원 탈퇴</a>
+             </li>
+           </ul>
+         </nav>
+         
+       <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 class="mb-4">My Page</h2>
+        <div class="card green">
+          <div class="additional">
+            <div class="user-card">
+              <%-- <div class="level center">
+                 ${result.birthyear }-${result.birthday }
+              </div>
+              <div class="points center">
+                ${result.mobile }
+              </div> --%>
+              <!-- svg시작 -->
+              <div>
+              <c:choose>
+               <c:when test="${result.profile_image != null}">
+               <!-- profile 사진이 있으면? -->
+               <div class="img circle-img" style="background-image: url('${result.profile_image}')"></div>
+               </c:when>
+               <c:otherwise>
+               <svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                 <title id="title">Teacher</title>
                 <desc id="desc">Cartoon of a Caucasian woman smiling, and wearing black glasses and a purple shirt with white collar drawn by Alvaro Montoro.</desc>
                 <defs>
@@ -349,8 +478,13 @@
                   </g>
                 </g>
               </svg>
+<<<<<<< HEAD
 					</c:otherwise>
 	  		</c:choose>
+=======
+               </c:otherwise>
+           </c:choose>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
               </div>
               <!-- svg 끝 -->
             </div>
@@ -379,6 +513,7 @@
             <img src="/resources/image/logo.png" class="logoPlace">
           </div>
         </div>
+<<<<<<< HEAD
 		</div>
 		
 	</div>
@@ -386,6 +521,15 @@
     <script src="/resources/sidebar/js/popper.js"></script>
     <script src="/resources/sidebar/js/main.js"></script>
 	
+=======
+      </div>
+      
+   </div>
+
+    <script src="/resources/sidebar/js/popper.js"></script>
+    <script src="/resources/sidebar/js/main.js"></script>
+   
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 </div>
 </body>
 <%@include file="../Book/footer.jsp" %>
