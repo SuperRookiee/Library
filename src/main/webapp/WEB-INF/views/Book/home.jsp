@@ -379,7 +379,6 @@
         </div>
     </section>
     <!-- ***** Explore Area Ends ***** -->
-    
 </body>
 <%@include file="../Book/footer.jsp" %>
 </html>

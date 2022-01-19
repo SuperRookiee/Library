@@ -64,11 +64,12 @@
       
       .dark-mode .general h1,
       .dark-mode .general p{
-<<<<<<< HEAD
-         color: #000000 !important;
-=======
       	color: #000000 !important;
->>>>>>> 05449dab61332959d5bf6d25d59a171deb86cf31
+      }
+      
+      .dark-mode #explore .left-content .main-border-button a{
+      	color:  #FFFFFF !important;
+      	border-color: #FFFFFF !important;
       }
       
       
