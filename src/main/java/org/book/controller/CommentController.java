@@ -41,21 +41,20 @@ public class CommentController {
 	}
 	
 	@GetMapping("/remove")
-	public String remove(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
-			RedirectAttributes rttr) {
-		log.info("remove.........:" + userId + isbn);
-		service.remove(userId, isbn);
-		log.info("remove.........:" + userId + "," + isbn);
-		rttr.addFlashAttribute("result", "success");
-		return "redirect:/comment/list?isbn=" + comment.getIsbn();
-	}
+	   public String remove(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
+	         RedirectAttributes rttr) {
+	      log.info("remove.........:" + userId + isbn);
+	      service.remove(userId, isbn);
+	      log.info("remove.........:" + userId + "," + isbn);
+	      rttr.addFlashAttribute("result", "success");
+	      return "redirect:/comment/list?isbn=" + isbn;
+	   }
 
-	@GetMapping("/modify")
-	public String modify(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
-			@RequestParam("content") int content, RedirectAttributes rttr,CommentDTO comment) {
-		log.info("modify.........:" + userId + bookName + amount);
-		service.modify(userId, bookName, amount);
-		rttr.addFlashAttribute("result", "success");
-		return "redirect:/comment/list?isbn=" + comment.getIsbn();
-	}
+	   @GetMapping("/modify")
+	   public String modify(CommentDTO comment, RedirectAttributes rttr) {
+	      log.info("modify.........:" + comment);
+	      service.modify(comment);
+	      rttr.addFlashAttribute("result", "success");
+	      return "redirect:/comment/list?isbn=" + comment.getIsbn();
+	   }
 }
