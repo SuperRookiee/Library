@@ -12,8 +12,7 @@
 	</select>
 	<insert id="insert">
 		insert into Comments (name, isbn, content, img_Url)
-		values(#{name),
-		#{isbn},#{content}, #{img_Url})
+		values(#{name}, #{isbn},#{content}, #{img_Url})
 	</insert>
 	<update id="update">
 		update Comments set content=#{content}, regdate=now()
