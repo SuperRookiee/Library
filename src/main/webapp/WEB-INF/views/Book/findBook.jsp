@@ -17,47 +17,64 @@
 	{
 		
 		$('input[name="chkbox1"]').change(function()
-				{
-					console.log('chkbox1 change...');
-					const regex=/\&age=-*[0-9]*/g;
-					search=search.replace(regex,"");
-					var checked_age=$('input[name="chkbox1"]:checked').val();
-					if(checked_age=="-2")
-					{
-						updateList();
-						return;
-					}
-					search+="&age="+checked_age;
-					console.log(search);
-					updateList();
-				})
+		{
+			console.log('chkbox1 change...');
+			const regex=/\&age=-*[0-9]*/g;
+			search=search.replace(regex,"");
+			var checked_age=$('input[name="chkbox1"]:checked').val();
+			if(checked_age=="-2")
+			{
+				updateList();
+				return;
+			}
+			search+="&age="+checked_age;
+			console.log(search);
+			updateList();
+		})
 				
-				$('input[name="chkbox2"]').change(function()
-				{
-					search=search.replace(/\&kdc=-*[0-9]*/,"");
-					var checked_kdc=$('input[name="chkbox2"]:checked').val();
-					if(checked_kdc=="-1")
-					{
-						updateList();
-						return;
-					}
-					search+="&kdc="+checked_kdc;
-					updateList();
-				})
+		$('input[name="chkbox2"]').change(function()
+		{
+			search=search.replace(/\&kdc=-*[0-9]*/,"");
+			var checked_kdc=$('input[name="chkbox2"]:checked').val();
+			if(checked_kdc=="-1")
+			{
+				updateList();
+				return;
+			}
+			search+="&kdc="+checked_kdc;
+			updateList();
+		})
 				
-				$('input[name="chkbox3"]').change(function()
-				{
-					search=search.replace(/\&gender=[0-9]*/,"");
-					var checked_gender=$('input[name="chkbox3"]:checked').val();
-					if(checked_gender=="-1")
-					{
-						updateList();
-						return;
-					}
-					search+="&gender="+checked_gender;
-					updateList();
-				})
+		$('input[name="chkbox3"]').change(function()
+		{
+			search=search.replace(/\&gender=[0-9]*/,"");
+			var checked_gender=$('input[name="chkbox3"]:checked').val();
+			if(checked_gender=="-1")
+			{
+				updateList();
+				return;
+			}
+			search+="&gender="+checked_gender;
+			updateList();
+		})
+		
+		var actionForm=$("#actionForm");
+		
+		$(document).on("click",".detail",function(e)
+		{
+			e.preventDefault();
+			console.log('detailClick');
+			actionForm.find("input[name='isbn']").val($(this).attr("href"));
+			if(actionForm.find("input[name='isbn']").val()=="")
+			{
+				alert("해당 책의 상세정보가 없습니다.");
+				return;
+			}	
+			actionForm.submit();
+		})
 	})
+	
+
 	
 	function updateList()
 	{
@@ -245,41 +262,9 @@
 	<div id="search">
 	
 	</div>
-	<!-- foreach 문 -->
-	<%-- <c:forEach var="item" items="${list}">
-		<!-- ***** Product Area Starts ***** -->
-	    <section class="section" id="product">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-lg-4">
-	                <div class="left-images">
-	                    <img id="IMG" src="${item.bookImageURL}" onerror="this.src='/resources/image/books.png';"/>
-	                </div>
-	            </div>
-	            <div class="col-lg-8">
-	                <div class="right-content">
-	                    <h4><a class="detail" href="./bookDetail?isbn=<c:out value='${item.bookIsbn}'/>&bookName=<c:out value='${item.bookName}'/>" onclick="nameClick()">${item.bookName}</a> </h4>
-	                    <span class="price">${item.writer}</span>
-	                    <span class="price">출판사 : ${item.publisher}	/	출판년도 : ${item.bookPublishYear}</span>
-	                    
-	                    <ul class="stars">
-	                        <li>${item.category}</li>
-	                    </ul>
-	                    <span>${item.description}</span>
-	                    <br>
-	                    <div class="total">
-	                        <h4>₩<fmt:formatNumber value="${item.bookPrice}" pattern="#,###"/>원</h4>
-	                        <div class="main-border-button"><a href="#">Add To Cart</a></div>
-	                    </div>
-	                </div>
-	            </div>
-	            </div>
-	        </div>
-	    </section>
-	    <!-- ***** Product Area Ends ***** -->
-	    <hr>
-	</c:forEach> --%>
-	
+	<form id="actionForm" action="/Book/bookDetail">
+		<input type="hidden" name="isbn">
+	</form>
 </body>
 <%@include file="../Book/footer.jsp"%>
 </html>

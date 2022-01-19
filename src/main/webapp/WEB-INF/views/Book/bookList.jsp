@@ -30,7 +30,7 @@
 			actionForm.find("input[name='isbn']").val($(this).attr("href"));
 			if(actionForm.find("input[name='isbn']").val()=="")
 			{
-				alert("해당 책을 구매하실 수 없습니다.");
+				alert("해당 책의 상세정보가 없습니다.");
 				return;
 			}	
 			actionForm.submit();
@@ -94,7 +94,11 @@
 		            </div>
 		            <div class="col-lg-8">
 		                <div class="right-content">
+<<<<<<< HEAD
+		                    <h4><a class="detail" href="./bookDetail?isbn=<c:out value='${item.bookIsbn}'/>&bookName=<c:out value='${item.bookName}'/>" onclick="nameClick()">${item.bookName}</a> </h4>
+=======
 		                    <h4><a class="detail" href="<c:out value='${item.bookIsbn}'/>">${item.bookName}</a></h4>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		                    <span class="price">${item.writer}</span>
 		                    <span class="price">출판사 : ${item.publisher}	/	출판년도 : ${item.bookPublishYear}</span>
 		                    
@@ -115,9 +119,13 @@
 		    <!-- ***** Product Area Ends ***** -->
 		    <hr>
 		</c:forEach>
+<<<<<<< HEAD
+		
+=======
 		<form id="actionForm" action="/Book/bookDetail">
 			<input type="hidden" name="isbn">
 		</form>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		<div id="products">
 			<div class="col-lg-12">
 				<div class="pagination">
@@ -144,7 +152,10 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
+=======
 	</div>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 </body>
 <%@include file="../Book/footer.jsp" %>
 </html>

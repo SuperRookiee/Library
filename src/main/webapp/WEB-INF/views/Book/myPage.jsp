@@ -9,14 +9,343 @@
 <title>Insert title here</title>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<<<<<<< HEAD
+		
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/resources/sidebar/css/style.css">
+
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Abel');
+=======
       
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/resources/sidebar/css/style.css">
 <link rel="stylesheet" href="/resources/css/myPage.css">
 
+<<<<<<< HEAD
+=======
+=======
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Abel');
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
+
+ .skin { fill: #eab38f; }
+                  .eyes { fill: #1f1f1f; }
+                  .hair { fill: #2f1b0d; }
+                  .line { fill: none; stroke: #2f1b0d; stroke-width:2px; }
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 900px;
+  height: 500px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+  margin-left: 20rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(#dE685E, #EE786E);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+/* 
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+} */
+
+.card .additional .user-card {
+  width: 350px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);*/
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card .additional .user-card .points {
+  top: 85%;
+}
+
+.card .additional .user-card svg {
+  top: 50%;
+}
+
+.card .additional .more-info {
+  width: 310px;
+  float: left;
+  position: absolute;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card.green .additional .more-info h1 {
+  color: #224C36;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card.green .additional .coords {
+  color: #325C46;
+}
+
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card.green .additional .stats {
+  color: #325C46;
+}
+
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .additional .stats i {
+  display: block;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card .general {
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+
+.circle-img {
+<<<<<<< HEAD
+	height: 200px;
+	width: 200px;
+	margin-top: 141px;
+	margin-left: 53px;
+	border-radius : 106px;
+}
+
+.nameStyle {
+	margin-top: 50px;
+}
+
+.fontStyle{
+	color: #32a852;
+}
+
+.mypage-content{
+	font-size: 28px;
+	margin-left: 30px; 
+	line-height: 40px;
+}
+
+.logoPlace{
+	float: right;
+	padding-top:25px;
+}
+</style>
+=======
+   height: 200px;
+   width: 200px;
+   margin-top: 141px;
+   margin-left: 53px;
+   border-radius : 106px;
+}
+
+.nameStyle {
+   margin-top: 50px;
+}
+
+.fontStyle{
+   color: #32a852;
+}
+
+.mypage-content{
+   font-size: 28px;
+   margin-left: 30px; 
+   line-height: 40px;
+}
+
+.logoPlace{
+   float: right;
+   padding-top:25px;
+}
+</style>
+>>>>>>> 6521fb8240b4fa14128833c41bd55a891dca5d17
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
+
+>>>>>>> 96bb40d8ba2c3530049fbc523126b20824c77cd9
 </head>
 <body>
 <div id="main">
+<<<<<<< HEAD
+	<!-- ***** Main Banner Area Start ***** -->
+	<div class="page-heading about-page-heading" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="inner-content">
+						<h2>My Page</h2>
+						<span>마이페이지입니다</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- ***** Main Banner Area End ***** -->
+	
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-dark"> <i class="bi bi-arrow-left-right"></i> </button>
+				<!-- <button type="button" id="sidebarCollapse" class="btn btn-dark"></button> -->
+       		</div>
+	  		<div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
+	  			<div class="user-logo">
+	  			<!-- 시작 -->
+	  			<c:choose>
+					<c:when test="${result.profile_image != null}">
+					<!-- profile 사진이 있으면? -->
+					<div class="img" style="background-image: url('${result.profile_image}')"></div>
+					</c:when>
+					<c:otherwise>
+					<div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div>
+					</c:otherwise>
+	  		</c:choose>
+	  			<!-- 끝 -->
+	  				<!-- <div class="img" style="background-image: url(/resources/image/conan.jpeg);"></div> -->	<!-- 프로필 사진 -->
+	  				<h3><c:out value="${result.name }"/></h3>
+	  			</div>
+	  		</div>
+	        <ul class="list-unstyled components mb-5">
+	          <li class="active">
+	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+	          </li>
+	          <li>
+	              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+	          </li>
+	          <li>
+	            <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
+	          </li>
+	          <li>
+	            <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
+	          </li>
+	          <li>
+	            <a href="#"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
+	          </li>
+	          <li>
+	            <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
+	          </li>
+	          <li>
+	            <a href="/remove?token='<c:out value="${access_token }"/>'"><span class="fa fa-sign-out mr-3"></span> 회원 탈퇴${access_token }</a>
+	          </li>
+	        </ul>
+   		</nav>
+   		
+	    <!-- Page Content  -->
+		<div id="content" class="p-4 p-md-5 pt-5">
+		  <h2 class="mb-4">My Page</h2>
+		  <div class="card green">
+          <div class="additional">
+            <div class="user-card">
+              <!-- svg시작 -->
+              <div>
+              <c:choose>
+					<c:when test="${result.profile_image != null}">
+					<!-- profile 사진이 있으면? -->
+					<div class="img circle-img" style="background-image: url('${result.profile_image}')"></div>
+					</c:when>
+					<c:otherwise>
+					<svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
+=======
    <!-- ***** Main Banner Area Start ***** -->
    <div class="page-heading about-page-heading" id="top">
       <div class="container">
@@ -101,6 +430,7 @@
                </c:when>
                <c:otherwise>
                <svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                 <title id="title">Teacher</title>
                 <desc id="desc">Cartoon of a Caucasian woman smiling, and wearing black glasses and a purple shirt with white collar drawn by Alvaro Montoro.</desc>
                 <defs>
@@ -150,8 +480,13 @@
                   </g>
                 </g>
               </svg>
+<<<<<<< HEAD
+					</c:otherwise>
+	  		</c:choose>
+=======
                </c:otherwise>
            </c:choose>
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
               </div>
               <!-- svg 끝 -->
             </div>
@@ -180,6 +515,15 @@
             <img src="/resources/image/logo.png" class="logoPlace">
           </div>
         </div>
+<<<<<<< HEAD
+		</div>
+		
+	</div>
+
+    <script src="/resources/sidebar/js/popper.js"></script>
+    <script src="/resources/sidebar/js/main.js"></script>
+	
+=======
       </div>
       
    </div>
@@ -187,7 +531,27 @@
     <script src="/resources/sidebar/js/popper.js"></script>
     <script src="/resources/sidebar/js/main.js"></script>
    
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 </div>
 </body>
 <%@include file="../Book/footer.jsp" %>
+
+<script>
+function deleteToken(consumerKey, consumerName) {
+    var url;
+
+   else {
+        url = "/user2/help/externalAuth?m=externalAuthDrop&auth_token=" + consumerKey;
+
+        if (confirm(replaceAll("[service_name]의 정보 제공 동의를 철회 하시겠습니까? \n\n정보 제공 동의를 철회한 이후부터는 [service_name]에서 회원님의 정보를 조회할 수 없습니다.\n[service_name] 탈퇴는 해당 서비스에서 진행해 주세요.", "[service_name]", consumerName))) {
+            document.fm.action = url;
+            document.fm.method = "POST";
+            document.fm.submit();
+        } else {
+            document.getElementById(on).className = "btn_connect";
+            document.getElementById(off).className = "btn_connect selected";
+        }
+    }
+}
+</script>
 </html>

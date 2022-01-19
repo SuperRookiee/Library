@@ -25,6 +25,14 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
+<<<<<<< HEAD
+
+	<!-- naverLogin class 에 대한 bean 설정 추가 -->
+	<beans:bean id="naverLoginBO"
+		class="org.login.api.NaverLoginBO">
+	</beans:bean>
+
+=======
 
 	<!-- naverLogin -->
 	<beans:bean id="naverClientID" class="java.lang.String">
@@ -46,6 +54,7 @@
 			ref="naverRedirectUrl" /> -->
 	</beans:bean>
 
+>>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 	<context:component-scan
 		base-package="org.book.*" />
 	<context:component-scan
