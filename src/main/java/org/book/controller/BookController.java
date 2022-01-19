@@ -30,7 +30,8 @@ public class BookController {
 	@GetMapping("/home")
 	public String home(Model model) {
 		Document doc_naru;
-		String url = "http://data4library.kr/api/loanItemSrch?authKey=98f61069b118242705dcd27c2fa00bf1c2ecfa258eeca760214c31dad2c234cb&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
+//		String url = "http://data4library.kr/api/loanItemSrch?authKey=98f61069b118242705dcd27c2fa00bf1c2ecfa258eeca760214c31dad2c234cb&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
+		String url = "http://data4library.kr/api/loanItemSrch?authKey=252d4cf1dc317d82e5929ae1d837b812fa0bfd72bc773e25f1d4a8a061f82ef1&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
 		List<BookDTO> bestlist=new ArrayList<BookDTO>();
 		
 		try {
