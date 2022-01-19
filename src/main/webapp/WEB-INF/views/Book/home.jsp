@@ -63,7 +63,7 @@
                                                 <h4>20대 추천도서</h4>
                                                 <p>20대만의 베스트셀러들을 만나보세요</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">연령별 추천 보러가기</a>
+                                                    <a href="/Book/findBook">연령별 추천 보러가기</a>
                                                 </div>
                                             </div>
                                         </div>

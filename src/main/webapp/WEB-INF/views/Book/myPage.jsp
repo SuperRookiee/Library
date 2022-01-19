@@ -12,6 +12,10 @@
       
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/resources/sidebar/css/style.css">
+<<<<<<< HEAD
+<link rel="stylesheet" href="/resources/css/myPage.css">
+
+=======
 <style>
    @import url('https://fonts.googleapis.com/css?family=Abel');
 
@@ -217,6 +221,7 @@
    padding-top:25px;
 }
 </style>
+>>>>>>> 6521fb8240b4fa14128833c41bd55a891dca5d17
 
 </head>
 <body>
