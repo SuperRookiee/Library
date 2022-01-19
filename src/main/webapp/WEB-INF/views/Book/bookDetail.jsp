@@ -66,10 +66,13 @@
 		                    <h6>Comments</h6>
 		                </div>
 		                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color"> 
-		                	<img src="https://i.imgur.com/zQZSWrt.jpg" width="50" class="rounded-circle mr-2"> <input type="text" class="form-control" placeholder="댓글을 입력하세요..."> 
+		                	<img src="https://i.imgur.com/zQZSWrt.jpg" width="50" class="rounded-circle mr-2"> 
+		                	<input type="text" class="form-control" placeholder="댓글을 입력하세요...">
+		                	<input type="submit" value="send">
 		                </div>
 						<div class="panel-body">
 							<ul class="media-list">
+							<c:forEach var="item" items="${commentList}" varStatus="status">
 		                        <li class="media">
 		                            <a href="#" class="pull-left">
 		                                <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
@@ -85,21 +88,7 @@
 		                                </p>
 		                            </div>
 		                        </li>
-		                        <li class="media">
-		                            <a href="#" class="pull-left">
-		                                <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
-		                            </a>
-		                            <div class="media-body">
-		                                <span class="text-muted pull-right">
-		                                    <small class="text-muted">30 min ago</small>
-		                                </span>
-		                                <strong class="text-success">@LaurenceCorreil</strong>
-		                                <p>
-		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		                                    Lorem ipsum dolor <a href="#">#ipsumdolor </a>adipiscing elit.
-		                                </p>
-		                            </div>
-		                        </li>
+		                        </c:forEach>
 		                    </ul>
 	                 	</div>
 		            </div>	
