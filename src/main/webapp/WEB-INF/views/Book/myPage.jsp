@@ -9,20 +9,13 @@
 <title>Insert title here</title>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-<<<<<<< HEAD
-		
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/resources/sidebar/css/style.css">
 
-<style>
-	@import url('https://fonts.googleapis.com/css?family=Abel');
-=======
-      
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/resources/sidebar/css/style.css">
-<<<<<<< HEAD
 <link rel="stylesheet" href="/resources/css/myPage.css">
 
+<<<<<<< HEAD
 =======
 <style>
    @import url('https://fonts.googleapis.com/css?family=Abel');
@@ -230,6 +223,8 @@
 	padding-top:25px;
 }
 </style>
+=======
+>>>>>>> f07e109bea7aca8d45b0c7dceb10e51ffc8ff902
 </head>
 <body>
 <div id="main">
@@ -291,7 +286,7 @@
 	            <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
 	          </li>
 	          <li>
-	            <a href="/remove?token='<c:out value="${access_token }"/>'"><span class="fa fa-sign-out mr-3"></span> 회원 탈퇴${access_token }</a>
+	            <a href="/remove?token='<c:out value="${access_token }"/>'"><span class="fa fa-sign-out mr-3"></span> 회원 탈퇴</a>
 	          </li>
 	        </ul>
    		</nav>
