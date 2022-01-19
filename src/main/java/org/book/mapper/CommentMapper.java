@@ -1,13 +1,13 @@
 package org.book.mapper;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import org.apache.ibatis.annotations.Param;
 import org.book.domain.CommentDTO;
 
 public interface CommentMapper {
 	// 책별 리뷰
-	public List<CommentDTO> getList(String isbn);
+	public ArrayList<CommentDTO> getList(String isbn);
 	// 전체 리뷰 수
 	public int getTotalCount(String isbn);
 	// 리뷰 추가

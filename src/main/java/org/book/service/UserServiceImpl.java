@@ -2,6 +2,7 @@ package org.book.service;
 
 import org.book.domain.UserDTO;
 import org.book.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
