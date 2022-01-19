@@ -55,6 +55,7 @@
 		document.cookie = name + '=' + value + ';expires='
 				+ date.toUTCString() + ';path=/';
 	};
+	
 	//쿠기 가져오기
 	var getCookie = function(name) {
 		var value = document.cookie.match('(^|;) ?' + name
@@ -68,12 +69,12 @@
 	
 	//라이트모드 실행
 	function LightMode() {
-		setCookie("Mode", "false", 30);
+		setCookie("Mode", "true", 30);
 		document.body.classList.remove("dark-mode");
 	}
 	//다크모드 실행
 	function DarkMode() {
-		setCookie("Mode", "true", 30);
+		setCookie("Mode", "false", 30);
 		document.body.classList.add("dark-mode");
 	}
 	
