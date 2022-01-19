@@ -25,5 +25,11 @@ public class UserServiceImpl implements UserService {
 		
 		return mapper.checkId(id);
 	}
+	@Override
+	public UserDTO getUserList(String id) {
+		// TODO Auto-generated method stub
+		log.info("getUserList............");
+		return mapper.getList(id);
+	}
 
 }

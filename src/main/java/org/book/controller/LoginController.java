@@ -64,7 +64,7 @@ public class LoginController {
 
 	// 네이버 로그인 성공시 callback호출 메소드
 	@RequestMapping(value = "/callback", method = { RequestMethod.GET, RequestMethod.POST })
-	public String callback(@RequestParam String code, @RequestParam String state, HttpSession session)
+	public String callback(@RequestParam String code, @RequestParam String state, HttpSession session, Model model)
 			throws IOException, ParseException {
 		System.out.println("여기는 callback state 호출해보겟다"+state);
 
@@ -130,8 +130,8 @@ public class LoginController {
 		if(!(service.insertCheck(id))) {
 			service.signup(dto);
 		}
-		//db에 있는 회원정보 가져오기
-//		service.getUserList(id);
+		//db에 있는 회원정보 id로 가져오기
+		model.addAttribute("userList", service.getUserList(id));
 		
 		return "login";
 
