@@ -6,16 +6,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>AVOCADO</title>
-<<<<<<< HEAD
-<style>
-	#explore{
-		padding: 50px 0px;
-		border-bottom: none;
-	}
-</style>
-=======
 <link rel="stylesheet" href="/resources/css/bookDetail.css?after">
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 </head>
 <body>
 <div id="main">
@@ -25,11 +16,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="inner-content">
-<<<<<<< HEAD
-							<h2>"${param.bookName}"</h2>
-=======
 							<h2>"${book.bookName}"</h2>
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 							<span>상세 페이지 </span>
 						</div>
 					</div>
@@ -43,38 +30,21 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-image">
-<<<<<<< HEAD
-                        <img src="/resources/image/books.png" alt="">
-=======
                         <img src="${book.bookImageURL}" alt="">
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="right-content">
-<<<<<<< HEAD
-                        <h4>${param.bookName}</h4>
-                        <span>작가 : ----- </span>
-                        <span>출판연도: ----- </span>
-                        <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>책 내용 --------------------------------------------------------------</p>
-=======
                         <h4>${book.bookName}</h4>
                         <span>작가 : ${book.writer} </span>
                         <span>출판연도: ${book.bookPublishYear} </span>
                         <div class="quote">
                             <i class="fa fa-quote-left"></i><p>${book.description}</p>
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                         </div>
 						
 
                         <ul>
-<<<<<<< HEAD
-                        	<h5>가격: ₩ ??,???원 </h5>
-                        	<%-- <p>가격: ₩<fmt:formatNumber value=" " pattern="#,###"/>원 </p> --%>
-=======
                         	<h5>가격: ₩<fmt:formatNumber value="${book.bookPrice}" pattern="#,###"/>원</h5>
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
                         </ul>
                         <section class="section" id="explore">
 	                        <div class="left-content">
@@ -86,11 +56,6 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-            
-            <br>
-            <!-- ***** Services Area Starts ***** -->
-=======
             <br>
             
             <!-- reply Area Starts -->
@@ -100,26 +65,27 @@
 		                <div class="p-3">
 		                    <h6>Comments</h6>
 		                </div>
-		                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color"> 
-		                	<img src="https://i.imgur.com/zQZSWrt.jpg" width="50" class="rounded-circle mr-2"> 
+		                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color">
+		                <form action="/comment/register" method = "post"> 
+		                	<input type="image" src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
 		                	<input type="text" class="form-control" placeholder="댓글을 입력하세요...">
 		                	<input type="submit" value="send">
+		                	</form>
 		                </div>
 						<div class="panel-body">
 							<ul class="media-list">
 							<c:forEach var="item" items="${commentList}" varStatus="status">
 		                        <li class="media">
 		                            <a href="#" class="pull-left">
-		                                <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+		                                <img src="${item.img_Url}" alt="" class="img-circle">
 		                            </a>
 		                            <div class="media-body">
 		                                <span class="text-muted pull-right">
-		                                    <small class="text-muted">30 min ago</small>
+		                                    <small class="text-muted">${item.regDate }</small>
 		                                </span>
-		                                <strong class="text-info">@글쓴이</strong>
+		                                <strong class="text-info">${item.userId }</strong>
 		                                <p>
-		                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		                                    Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.
+		                                    ${item.content }
 		                                </p>
 		                            </div>
 		                        </li>
@@ -132,7 +98,6 @@
             <!-- reply Area Ends -->
             
             <!-- ***** Another Book Area Starts ***** -->
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		    <section class="our-services">
 		        <div class="container">
 		            <div class="row">
@@ -146,43 +111,27 @@
 		                    <div class="service-item">
 		                        <h4>Title 1</h4>
 		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-<<<<<<< HEAD
-		                        <img src="assets/images/service-01.jpg" alt="">
-=======
 		                        <img src="/resources/hexa/assets/images/service-01.jpg" alt="">
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		                    </div>
 		                </div>
 		                <div class="col-lg-4">
 		                    <div class="service-item">
 		                        <h4>Title 2</h4>
 		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-<<<<<<< HEAD
-		                        <img src="assets/images/service-02.jpg" alt="">
-=======
 		                        <img src="/resources/hexa/assets/images/service-02.jpg" alt="">
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		                    </div>
 		                </div>
 		                <div class="col-lg-4">
 		                    <div class="service-item">
 		                        <h4>Title 3</h4>
 		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-<<<<<<< HEAD
-		                        <img src="assets/images/service-03.jpg" alt="">
-=======
 		                        <img src="/resources/hexa/assets/images/service-03.jpg" alt="">
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		                    </div>
 		                </div>
 		            </div>
 		        </div>
 		    </section>
-<<<<<<< HEAD
-		    <!-- ***** Services Area Ends ***** -->
-=======
 		    <!-- ***** Another Book Area Ends ***** -->
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
 		    
         </div>
     </div>

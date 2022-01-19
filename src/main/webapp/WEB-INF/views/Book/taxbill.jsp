@@ -5,28 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AVOCADO</title>
+<title>AVOCADO Taxbill</title>
 	<link rel="shortcut icon" href="paypal.png">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
 	<link rel="stylesheet" href="/resources/css/taxbill.css" charset="utf-8">
 </head>
 <body>
-<!-- ***** Main Banner Area Start ***** -->
-   <div class="page-heading about-page-heading" id="top">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12">
-               <div class="inner-content">
-                  <h2>구매 목록</h2>
-                  <span>구매한 도서의 목록을 불러옵니다</span>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-<!-- ***** Main Banner Area End ***** -->
-
-
 <div class="paypal">
       <div class="paypal__header">
         <div class="paypal__logo-wrapper">

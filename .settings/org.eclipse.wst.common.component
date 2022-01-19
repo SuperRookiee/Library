@@ -1,74 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-<<<<<<< HEAD
+        
+    <wb-module deploy-name="sample">
                 
-    
-    
-    <wb-module deploy-name="sample">
-                                
-        
-        
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                                
-        
-        
+                
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                                
-        
-        
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                                
-        
-        
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-                                
-=======
-                    
-    
-    
-    
-    <wb-module deploy-name="sample">
-                                        
-        
-        
-        
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                                        
-        
-        
-        
-        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                                        
-        
-        
-        
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                                        
-        
-        
-        
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-                                        
-        
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
-        
-        
+                
         <property name="java-output-path" value="/Library/target/classes"/>
         <property name="context-root" value="/"/>
-<<<<<<< HEAD
-                            
-    
-    
-    </wb-module>
             
-=======
-                                    
-    
-    
-    
     </wb-module>
-                
-
->>>>>>> 70a2499e0f961ce7a284f689019aa753c4be2f8a
-
-
+    
 </project-modules>
