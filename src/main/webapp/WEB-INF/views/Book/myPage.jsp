@@ -47,7 +47,7 @@
 					<div class="img circle-img" style="background-image: url('/display?fileName=${list.profile_image}')"></div>
 					</c:when>
 					<c:otherwise>
-					<div class="img" style="background-image: url('/resources/image/user.png')"></div>
+					<div class="img" style="background-image: url('${image2}')"></div>
 					</c:otherwise>
 					</c:choose>
 	  				<!-- 끝  -->
@@ -60,7 +60,7 @@
 	            <a href="/Book/myPage"><span class="fa fa-home mr-3"></span> Home</a>
 	          </li>
 	          <li>
-	              <a href="#"><span class="fa fa-id-card mr-3"><small class="d-flex align-items-center justify-content-center"></small></span> Membership</a>
+	              <a href="javascript:;" onclick="BETA()"><span class="fa fa-id-card mr-3"><small class="d-flex align-items-center justify-content-center"></small></span> Membership</a>
 	          </li>
 	          <li>
 	            <a href="/pay/result?userId=${result.name}"><span class="fa fa-gift mr-3"></span> Paybill</a>

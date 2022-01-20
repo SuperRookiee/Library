@@ -8,7 +8,6 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <meta charset="EUC-KR">
 <title>AVOCADO</title>
-</head>
 
 <style>
 	#IMG{
@@ -17,6 +16,23 @@
 		border: 0.5px solid gray;
 	}
 </style>
+
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		var actionForm=$("#actionForm");
+		$(".toCart").on("click",function(e)
+		{
+			e.preventDefault();
+			console.log('cartClick');
+			var amount=$(".amount").val();
+			actionForm.find("input[name='amount']").val(amount);
+			actionForm.submit();
+		})
+	})
+</script>
+
+</head>
 
 <script type="text/javascript">
 	$(document).ready(function()
@@ -105,7 +121,7 @@
 		                    <br>
 		                    <div class="total">
 		                        <h4>₩<fmt:formatNumber value="${item.bookPrice}" pattern="#,###"/>원</h4>
-		                        <div class="main-border-button"><a href="#">Add To Cart</a></div>
+		                        <div class="main-border-button"><a class="toCart" href="${book.bookIsbn}">Add To Cart</a></div>
 		                    </div>
 		                </div>
 		            </div>

@@ -22,7 +22,6 @@
 			actionForm.submit();
 		})
 	})
-
 </script>
 
 <body>
@@ -141,7 +140,7 @@
 		                <div class="col-lg-12">
 		                    <div class="section-heading">
 		                        <h2>다른 도서 둘러보기</h2>
-		                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+		                        <span>또 다른 책도 함께 읽어보세요</span>
 		                    </div>
 		                </div>
 		                <div class="col-lg-4">

@@ -60,24 +60,6 @@
   box-sizing: border-box;
 }
 
-/* html {
-  font-size: 10px;
-}
- */
-/* body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  color: #455A64;
-  background-color: #7E57C2;
-  font-family: var(--fontFamily);
-  font-size: var(--fontSizeMd);
-  line-height: var(--lineHeightMd);
-} */
-
 .Wrapper {
   flex: 0 0 80%;
   max-width: 80%;
@@ -219,19 +201,22 @@ input[type=submit] {
 	  		</div>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
-	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+	            <a href="/Book/myPage"><span class="fa fa-home mr-3"></span> Home</a>
 	          </li>
 	          <li>
-	              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+	              <a href="#"><span class="fa fa-id-card mr-3"><small class="d-flex align-items-center justify-content-center"></small></span> Membership</a>
 	          </li>
 	          <li>
-	            <a href="#"><span class="fa fa-gift mr-3"></span> Cart</a>
+	            <a href="/pay/result?userId=${result.name}"><span class="fa fa-gift mr-3"></span> Paybill</a>
 	          </li>
 	          <li>
-	            <a href="javascript:;" onclick="myFunction()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
+	            <a href="javascript:;" onclick="LightMode()"><span class="fa fa-cog mr-3"></span>Light Mode</a>
 	          </li>
 	          <li>
-	            <a href="#"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
+	            <a href="javascript:;" onclick="DarkMode()"><span class="fa fa-cog mr-3"></span>Dark Mode</a>
+	          </li>
+	          <li>
+	            <a href="/update?id=${list.id }"><span class="fa fa-support mr-3"></span> 회원 정보 수정</a>
 	          </li>
 	          <li>
 	            <a href="/logout"><span class="fa fa-sign-out mr-3"></span> 로그 아웃</a>
