@@ -43,7 +43,6 @@ public class CartController {
 		service.register(cart);
 		String userId = cart.getUserId();
 		log.info("userId = "+userId+"....., cart.getUserId = "+cart.getUserId());
-		rttr.addFlashAttribute("result", cart.getUserId());
 		rttr.addAttribute("userId", userId);
 		return "redirect:/cart/cart"; // redirect를 하지않는 경우, 새로 고침시 도배
 	}
@@ -58,7 +57,6 @@ public class CartController {
 		log.info("remove.........:" + userId + bookName);
 		service.remove(userId, bookName);
 		log.info("remove.........:" + userId + "," + bookName);
-		rttr.addFlashAttribute("result", "success");
 		rttr.addAttribute("userId", userId);
 		return "redirect:/cart/cart";
 	}
@@ -67,7 +65,6 @@ public class CartController {
 	public String removeAll(@RequestParam("userId") String userId, RedirectAttributes rttr) {
 		log.info("removeAll.........:" + userId);
 		if (service.removeAll(userId)) {
-			rttr.addFlashAttribute("result", "success");
 			rttr.addAttribute("userId", userId);
 		}
 		return "redirect:/cart/cart";
@@ -78,7 +75,6 @@ public class CartController {
 			@RequestParam("amount") int amount, RedirectAttributes rttr) {
 		log.info("modify.........:" + userId + bookName + amount);
 		service.modify(userId, bookName, amount);
-		rttr.addFlashAttribute("result", "success");
 		rttr.addAttribute("userId", userId);
 		return "redirect:/cart/cart";
 	}
