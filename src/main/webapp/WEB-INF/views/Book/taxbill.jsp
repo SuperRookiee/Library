@@ -11,6 +11,21 @@
 	<link rel="stylesheet" href="/resources/css/taxbill.css" charset="utf-8">
 </head>
 <body>
+	<!--  Main Banner Area Start  -->
+	<div class="page-heading about-page-heading" id="top">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-lg-12">
+	                <div class="inner-content">
+	                    <h2>Pay</h2>
+	                    <span>지금까지 구매 했던 책들이 담겨있습니다</span>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!--  Main Banner Area End  -->
+
 <div class="paypal">
       <div class="paypal__header">
         <div class="paypal__logo-wrapper">

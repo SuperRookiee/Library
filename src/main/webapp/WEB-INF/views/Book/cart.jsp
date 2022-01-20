@@ -12,7 +12,20 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet" type="text/css">
 </head>
 <body>
-
+	<!--  Main Banner Area Start  -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Cart</h2>
+                        <span>담아 둔 책을 볼 수 있습니다</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Main Banner Area End  -->
 
 	<div id="main">
 		<div class="card">

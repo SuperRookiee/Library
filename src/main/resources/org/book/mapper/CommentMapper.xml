@@ -12,12 +12,7 @@
 	</select>
 	<insert id="insert">
 		insert into Comments (name, isbn, content, img_Url)
-<<<<<<< HEAD
-		values(#{name),
-		#{isbn},#{content}, #{img_Url})
-=======
 		values(#{name},#{isbn},#{content}, #{img_Url})
->>>>>>> da012d1615027e1f5166cd7019e214fcb9b2e63b
 	</insert>
 	<update id="update">
 		update Comments set content=#{content}, regdate=now()

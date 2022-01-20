@@ -33,13 +33,10 @@
         color: #fff;
       }
       
+      .dark-mode a,
       .dark-mode p,
       .dark-mode dl {
-        color: #dbdbdb;
-      }
-      
-      .dark-mode a {
-        text-decoration: none;
+        color: #dbdbdb !important;
       }
       
       .dark-mode code {
@@ -49,6 +46,7 @@
         padding: 2.5px 5px;
       }
       
+      .dark-mode #Recommend .item .down-content,
       .dark-mode header,
       .dark-mode head,
       .dark-mode #main,
@@ -64,12 +62,27 @@
       
       .dark-mode .general h1,
       .dark-mode .general p{
-      	color: #000000 !important;
+          color: #000000 !important;
       }
       
       .dark-mode #explore .left-content .main-border-button a{
-      	color:  #FFFFFF !important;
-      	border-color: #FFFFFF !important;
+          color:  #FFFFFF !important;
+          border-color: #FFFFFF !important;
       }
       
       
+      .dark-mode .subscribe ul li,
+      .dark-mode #explore .left-content h2,
+      .dark-mode #explore .left-content .quote i,
+      .dark-mode #explore .left-content .quote p{
+          color : #dbdbdb;
+      }
+      
+      .dark-mode .subscribe form button{
+          border-color: #FFFFFF !important;
+      }
+      
+      .dark-mode .paypal__username,
+      .dark-mode .paypal__cart-title{
+          color: black !important;
+      }

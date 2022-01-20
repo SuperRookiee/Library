@@ -85,39 +85,16 @@
 		                </div>
 		                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color">
 		                <form action="/comment/register" method = "post"> 
-<<<<<<< HEAD
-		                	<input type="image" src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
-		                	<input type="text" class="form-control" placeholder="댓글을 입력하세요...">
-=======
 		                	<img src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
 		                	<input type="text" name="content" class="form-control" placeholder="댓글을 입력하세요...">
 		                	<input type="hidden" name="img_Url" value="${result.profile_image}">
 		                	<input type="hidden" name="name" value="${result.name}">
 	    					<input type="hidden" name="isbn" value="${book.bookIsbn}">
->>>>>>> da012d1615027e1f5166cd7019e214fcb9b2e63b
 		                	<input type="submit" value="send">
 		                	</form>
 		                </div>
 						<div class="panel-body">
 							<ul class="media-list">
-<<<<<<< HEAD
-							<c:forEach var="item" items="${commentList}" varStatus="status">
-		                        <li class="media">
-		                            <a href="#" class="pull-left">
-		                                <img src="${item.img_Url}" alt="" class="img-circle">
-		                            </a>
-		                            <div class="media-body">
-		                                <span class="text-muted pull-right">
-		                                    <small class="text-muted">${item.regDate }</small>
-		                                </span>
-		                                <strong class="text-info">${item.userId }</strong>
-		                                <p>
-		                                    ${item.content }
-		                                </p>
-		                            </div>
-		                        </li>
-		                        </c:forEach>
-=======
 							   <c:forEach var="item" items="${commentList}">
 		                        	<li class="media">
 		                            	<a href="#" class="pull-left">
@@ -134,7 +111,6 @@
 		                            	</div>
 		                        	</li>
 		                       </c:forEach>
->>>>>>> da012d1615027e1f5166cd7019e214fcb9b2e63b
 		                    </ul>
 	                 	</div>
 		            </div>	
