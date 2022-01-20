@@ -66,7 +66,7 @@
                         <section class="section" id="explore">
 	                        <div class="left-content">
 		                     	<div class="main-border-button">
-									수량 : <input class="amount" type="number" min="1" max="5" name="amount">
+									수량 : <input class="amount" type="number" min="1" max="5" name="amount" value = "1">
 		                            <a class="toCart" href="${book.bookIsbn}"> <i class="bi bi-bag-check"></i> 카트에 담기</a>
 		                        </div>
 		                    </div>
