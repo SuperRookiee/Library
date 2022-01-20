@@ -46,7 +46,7 @@
 								<section class="section" id="explore">
 			                        <div class="left-content">
 				                     	<div class="main-border-button">
-				                            <a href="/Book/myPage"> 마이페이지로 가기</a> <a href="/logout"> 로그아웃 </a>
+				                            <a href="/Book/myPage?id=${result.id}">마이페이지로 가기</a> <a href="/logout"> 로그아웃 </a>
 				                        </div>
 				                    </div>
 			                    </section>

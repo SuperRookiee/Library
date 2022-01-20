@@ -55,7 +55,7 @@ public class BookController {
 				String[] isbn_list=bookIsbn.get(i).text().split(" ");
 				String img=image.get(i).text();
 				String isbn="";
-				
+
 				if(isbn_list.length>1)		//책이 세트인 경우(isbn이 여러개인 경우 첫번째 isbn은 set_isbn이므로 두번째것 부터 봐야함
 				{
 					isbn=isbn_list[1];

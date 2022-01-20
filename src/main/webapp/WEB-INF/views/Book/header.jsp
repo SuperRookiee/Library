@@ -120,11 +120,8 @@
 						<!-- ***** Menu Start ***** -->
 						<ul class="nav">
 							<li class="scroll-to-section"><a href="/Book/home">홈 화면</a></li>
-							<li class="scroll-to-section"><a href="/Book/findBook">조건
-									검색</a></li>
-							<li class="scroll-to-section"><a href="/cart/cart?userId=${result.name}">담아둔
-									상품</a></li>
-
+							<li class="scroll-to-section"><a href="/Book/findBook">조건 검색</a></li>
+							<li class="scroll-to-section"><a href="/cart/cart?userId=${result.name}">담아둔 상품</a></li>
 							<li class="submenu"><a href="javascript:;">추천도서</a>
 								<ul>
 									<li><a href="/Book/recommend?sort=주제">주제별 추천도서</a></li>
@@ -136,7 +133,7 @@
 										<a href="/login">로그인</a>
 									</c:when>
 									<c:otherwise>
-										<a href="/Book/myPage">마이페이지</a>
+										<a href="/Book/myPage?id=${result.id}">마이페이지</a>
 									</c:otherwise>
 								</c:choose></li>
 						</ul>

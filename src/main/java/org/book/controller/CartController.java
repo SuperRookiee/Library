@@ -25,17 +25,15 @@ public class CartController {
 	@GetMapping("/cart")
 	public String list(Model model, @RequestParam("userId") String userId) {
 		log.info("list.......userId : " + userId);
-		
-		//임시
 		if(service.getTotalCount(userId)==0) {
-			return "cart/cart";
+			model.addAttribute("count",service.getTotalCount(userId));
+			log.info(service.getTotalCount(userId));
+			model.addAttribute("userId",userId);
+			return "/Book/cart";
 		}
-		//임시
-		
 		model.addAttribute("count",service.getTotalCount(userId));
 		model.addAttribute("list", service.getList(userId));
 		model.addAttribute("totalSum", service.totalSumPrice(userId));
-		model.addAttribute("userId",userId);
 		return "/Book/cart";
 	}
 
@@ -60,6 +58,7 @@ public class CartController {
 		log.info("remove.........:" + userId + bookName);
 		service.remove(userId, bookName);
 		log.info("remove.........:" + userId + "," + bookName);
+		rttr.addFlashAttribute("result", "success");
 		rttr.addAttribute("userId", userId);
 		return "redirect:/cart/cart";
 	}
@@ -68,6 +67,7 @@ public class CartController {
 	public String removeAll(@RequestParam("userId") String userId, RedirectAttributes rttr) {
 		log.info("removeAll.........:" + userId);
 		if (service.removeAll(userId)) {
+			rttr.addFlashAttribute("result", "success");
 			rttr.addAttribute("userId", userId);
 		}
 		return "redirect:/cart/cart";
@@ -78,6 +78,7 @@ public class CartController {
 			@RequestParam("amount") int amount, RedirectAttributes rttr) {
 		log.info("modify.........:" + userId + bookName + amount);
 		service.modify(userId, bookName, amount);
+		rttr.addFlashAttribute("result", "success");
 		rttr.addAttribute("userId", userId);
 		return "redirect:/cart/cart";
 	}

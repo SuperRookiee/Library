@@ -10,7 +10,17 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet" type="text/css">
+
+<script>
+   $(document).ready(function() {
+      if(${count==0}){
+      alert("장바구니가 비어있습니다.")
+      }else
+      alert("${count}개의 상품이 장바구니에 있습니다.");
+   })
+</script>
 </head>
+
 <body>
 	<!--  Main Banner Area Start  -->
     <div class="page-heading about-page-heading" id="top">
@@ -107,7 +117,14 @@
 					</form>
 					<div class="row" style="border-top: 1px solid rgba(0, 0, 0, .1); padding: 2vh 0;">
 						<div class="col">결제 총 금액</div>
-						<div class="col text-right">${totalSum-5000}원</div>
+						   <c:choose>
+		                     <c:when test="${count == 0}">
+		                        <div class="col text-right">0원</div>
+		                     </c:when>
+		                     <c:otherwise>
+		                        <div class="col text-right">${totalSum-5000}원</div>
+		                     </c:otherwise>
+		                  </c:choose>
 						<!-- totalPrice -->
 					</div>
 					<button class="btn"><a href="<c:url value='/cart/pay?userId=${userId}'/>">결제하기</a></button>

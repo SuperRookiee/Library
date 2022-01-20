@@ -178,7 +178,6 @@
           </div>
         </div>
       </div>
-      
    </div>
 
     <script src="/resources/sidebar/js/popper.js"></script>
