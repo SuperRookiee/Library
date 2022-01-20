@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -20,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -130,9 +131,7 @@ public class LoginController {
 		if(!(service.insertCheck(id))) {
 			service.signup(dto);
 		}
-		//db에 있는 회원정보 id로 가져오기
-		model.addAttribute("userList", service.getUserList(id));
-		log.info("service.getUserList........................:"+service.getUserList(id));
+		
 		return "login";
 
 	}
@@ -201,10 +200,22 @@ public class LoginController {
 		  }
 	 
 	 @GetMapping("/update") 
-		public String update() {
+		public String update(@RequestParam String id, Model model) {
 			log.info("updateForm으로 이동...");
+				model.addAttribute("list",service.getUserList(id));
 				
 			    return "/Book/mypageUpdateFrm";
 		}
+	 @PostMapping("/update") 
+	 public String updateProc(UserDTO dto,Model model) {
+		 log.info("post update/............"+dto);
+		 
+		 //update 전에 생년을 읽어와서 나이를 계산해서 setting
+		 dto.setAge(service.calculateAge(dto.getBirthyear()));
+		 service.update(dto);
+		 
+		 model.addAttribute("id",dto.getId());
+		 return "redirect:/update";
+	 }
 
 }

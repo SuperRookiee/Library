@@ -7,6 +7,28 @@
 <meta charset="UTF-8">
 <title>AVOCADO</title>
 </head>
+
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		var actionForm=$("#actionForm");
+		
+		$(".detail").on("click",function(e)
+		{
+			e.preventDefault();
+			console.log('detailClick');
+			actionForm.find("input[name='isbn']").val($(this).attr("href"));
+			if(actionForm.find("input[name='isbn']").val()=="")
+			{
+				alert("해당 책의 상세정보가 없습니다.");
+				return;
+			}	
+			actionForm.submit();
+		})
+	})
+
+</script>
+
 <body>
  	<!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
@@ -206,7 +228,10 @@
 	                                    <img src="${item.bookImageURL}" height="490" style="border: 0.5px solid black">
 	                                </div>
 	                                <div class="down-content">
-	                                    <h4><a href="./bookDetail?isbn=<c:out value='${item.bookIsbn}'/>" style="color: black;"> ${item.bookName}</a></h4>
+	                                    <h4><a style="color: black;" class="detail" href="<c:out value='${item.bookIsbn}'/>"> ${item.bookName}</a></h4>
+	                                    <form id="actionForm" action="/Book/bookDetail">
+											<input type="hidden" name="isbn">
+										</form>
 	                                    <span>${indexNo.count}0,000</span>
 	                                    <ul class="stars">
 	                                    	<li>${indexNo.count}위</li>

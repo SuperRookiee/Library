@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.book.mapper.CommentMapper">
+
+	<select id="getList" resultType="org.book.domain.CommentDTO">
+		select * from Comments where
+		isbn=#{isbn}
+	</select>
+	<select id="getTotalCount" resultType="integer">
+		select count(*) from
+		Comments where isbn=#{isbn}
+	</select>
+	<insert id="insert">
+		insert into Comments (name, isbn, content, img_Url)
+		values(#{name},#{isbn},#{content}, #{img_Url})
+	</insert>
+	<update id="update">
+		update Comments set content=#{content}, regdate=now()
+		where
+		name=#{name} AND isbn=#{isbn}
+	</update>
+	<delete id="delete">
+		delete from Comments where name=#{name} AND
+		isbn=#{isbn}
+	</delete>
+</mapper>

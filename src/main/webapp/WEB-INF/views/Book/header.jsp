@@ -122,7 +122,7 @@
 							<li class="scroll-to-section"><a href="/Book/home">홈 화면</a></li>
 							<li class="scroll-to-section"><a href="/Book/findBook">조건
 									검색</a></li>
-							<li class="scroll-to-section"><a href="/Book/cart">담아둔
+							<li class="scroll-to-section"><a href="/cart/cart?userId=${result.name}">담아둔
 									상품</a></li>
 
 							<li class="submenu"><a href="javascript:;">추천도서</a>

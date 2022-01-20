@@ -96,12 +96,12 @@
 
 .Input {
   position: relative;
+  margin-bottom: 5px;
 }
 
 .Input-text {
   display: block;
   margin: 0;
-  padding: var(--inputPaddingV) var(--inputPaddingH);
   color: inherit;
   width: 100%;
   font-family: inherit;
@@ -162,6 +162,20 @@
     visibility 0ms,
     z-index 0ms;
 }
+
+/* submit 버튼 */
+input[type=submit] {
+        background-color: #A2CCB6;
+        border: none;
+        color: #fff;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        float: right;
+        width: 100px;
+        height: 50px;
+        margin-top: 30px;
+      }
 </style>
 </head>
 <body>
@@ -189,8 +203,8 @@
        		</div>
 	  		<div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
 	  			<div class="user-logo">
-					<div class="img" style="background-image: url('${result.profile_image}')"></div>
-	  				<h3><c:out value="${result.name }"/></h3>
+					<div class="img" style="background-image: url('${list.profile_image}')"></div>
+	  				<h3><c:out value="${list.name }"/></h3>
 	  			</div>
 	  		</div>
 	        <ul class="list-unstyled components mb-5">
@@ -220,16 +234,16 @@
    		
 	    <!-- Page Content  -->
 		<div id="content" class="p-4 p-md-5 pt-5">
-		  <h2 class="mb-4">My Page</h2>
+		  <h2 class="mb-4">My Page Update Form</h2>
 		  <div class="card green">
           <div class="additional">
             <div class="user-card">
               <!-- svg시작 -->
               <div>
               <c:choose>
-					<c:when test="${result.profile_image != null}">
+					<c:when test="${list.profile_image != null}">
 					<!-- profile 사진이 있으면? -->
-					<div class="img circle-img" style="background-image: url('${result.profile_image}')"></div>
+					<div class="img circle-img" style="background-image: url('${list.profile_image}')"></div>
 					</c:when>
 					<c:otherwise>
 					<svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
@@ -288,12 +302,12 @@
               <!-- svg 끝 -->
             </div>
             <div class="more-info">
-              <h1 class="nameStyle">${result.name }</h1>
+              <h1 class="nameStyle">${list.name }</h1>
               <div class="stats">
                 <div>
                   <div class="title">Age</div>
                   <i class="fa fa-trophy"></i>
-                  <div class="value">${result.age }</div>
+                  <div class="value">${list.age }</div>
                 </div>
                 <div>
                   <div class="title">Coffee</div>
@@ -303,17 +317,28 @@
               </div>
             </div>
           </div>
+          <form method="POST" action="/update">
+          <input type="hidden" name="id" value="${list.id }">
           <div class="general">
-            <h1>회원 정보</h1><br>
+            <h1>회원 정보 수정</h1><br>
             <div class="Input">
-	          <input type="text" id="input" class="Input-text" placeholder="email" value="${result.email }">
-	          <label for="input" class="Input-label">이메일</label>
+	          <input type="text" id="input" name="email" class="Input-text" placeholder="email" value="${list.email }">
         	</div>
-            <p class="mypage-content"><span class="fontStyle">생년월일</span> ${result.birthyear }-${result.birthday }</p>
-            <p class="mypage-content"><span class="fontStyle">성별</span> ${result.gender }</p>
-            <p class="mypage-content"><span class="fontStyle">전화번호</span> ${result.mobile }</p>
-            <img src="/resources/image/logo.png" class="logoPlace">
+            <div class="Input">
+	          <input type="Number" id="input" name="birthyear" class="Input-text"
+	          value="${list.birthyear }">
+        	</div>
+            <div class="Input">
+	          <input type="text" id="input" name="birthday" class="Input-text" value="${list.birthday }">
+        	</div>
+            <div class="Input">
+	          <input type="text" id="input" name="mobile" class="Input-text" value="${list.mobile }">
+        	</div>
+        	<!-- <input type="file" name="profile_image"> -->
+        	<input type="submit" value="수정">
           </div>
+          <!-- general end -->
+          </form>
         </div>
       </div>
       

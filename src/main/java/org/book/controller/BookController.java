@@ -56,6 +56,16 @@ public class BookController {
 				String img=image.get(i).text();
 				String isbn="";
 				
+				if(isbn_list.length>1)		//책이 세트인 경우(isbn이 여러개인 경우 첫번째 isbn은 set_isbn이므로 두번째것 부터 봐야함
+				{
+					isbn=isbn_list[1];
+				}
+				else
+				{
+					isbn=isbn_list[0];
+				}
+				isbn=isbn.replaceAll("\\((.*?)\\)", "");	//정규식을 이용해서 괄호 패턴이 있으면 그부분만 지워주기
+				
 				int bookPrice = 10000;
 				String des ="";
 				
