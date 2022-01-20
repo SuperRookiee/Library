@@ -29,8 +29,12 @@
       .dark-mode h1,
       .dark-mode h2,
       .dark-mode h3,
+      .dark-mode h4,
+      .dark-mode h5,
+      .dark-mode .fa-quote-left:before,
+      .dark-mode .main-border-button,
       .dark-mode .nav {
-        color: #fff;
+        color: #fff !important;
       }
       
       .dark-mode a,
@@ -60,6 +64,8 @@
          color: #FFFFFF !important;
       }
       
+      
+      .dark-mode #content,
       .dark-mode .general h1,
       .dark-mode .general p{
           color: #000000 !important;
@@ -86,3 +92,6 @@
       .dark-mode .paypal__cart-title{
           color: black !important;
       }
+      
+      
+      

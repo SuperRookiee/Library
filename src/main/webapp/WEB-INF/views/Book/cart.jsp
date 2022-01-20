@@ -19,6 +19,7 @@
       alert("${count}개의 상품이 장바구니에 있습니다.");
    })
 </script>
+
 </head>
 
 <body>
@@ -69,16 +70,16 @@
 									<div class="row">${item.bookName }</div>
 								</div>
 								<!-- 수량 -->
-								<div class="col">
-									<form action="/cart/modify">
-										<input type="Number" min ="1" max ="5" name = "amount" value="${item.amount}">
+								<div class="col" style="display:inline;">
+									<form id="frm" action="/cart/modify">
+										<input type="Number" min ="1" max ="5" name = "amount" value="${item.amount}" id="N" >
+										<input type="submit" value= "변경" class="btn btn-lg btn-default" id="S">
 										<input type="hidden" name = "userId" value="${item.userId}">
 										<input type="hidden" name = "bookName" value="${item.bookName}">
-										<input type="submit" value= "변경" class="btn btn-lg btn-default">
 									</form>
 								</div>
 								<!-- 가격 -->
-								<div class="col">
+								<div class="col" id="ch">
 									${item.price*item.amount}원<span class="close"></span>
 								</div>
 								<div>
@@ -90,7 +91,7 @@
 						</div>
 					</c:forEach>
 					<div class="back-to-shop">
-						<a href="/Book/detail">&leftarrow;</a><span class="text-muted">마이페이지로 돌아가기</span>
+						<button id="back" onclick="history.back()"> &leftarrow; <span class="text-muted">이전으로 돌아가기</span> </button>
 					</div>
 				</div>
 				<div class="col-md-4 summary">
@@ -118,16 +119,16 @@
 					<div class="row" style="border-top: 1px solid rgba(0, 0, 0, .1); padding: 2vh 0;">
 						<div class="col">결제 총 금액</div>
 						   <c:choose>
-		                     <c:when test="${count == 0}">
-		                        <div class="col text-right">0원</div>
-		                     </c:when>
-		                     <c:otherwise>
-		                        <div class="col text-right">${totalSum-5000}원</div>
-		                     </c:otherwise>
-		                  </c:choose>
+	                     <c:when test="${count == 0}">
+	                        <div class="col text-right">0원</div>
+	                     </c:when>
+	                     <c:otherwise>
+	                        <div class="col text-right">${totalSum-5000}원</div>
+	                     </c:otherwise>
+	                  </c:choose>
 						<!-- totalPrice -->
 					</div>
-					<button class="btn"><a href="<c:url value='/cart/pay?userId=${userId}'/>">결제하기</a></button>
+					<button class="btn" onclick="location.href='<c:url value="/cart/pay?userId=${result.name}"/>'">결제하기</button>
 				</div>
 			</div>
 		</div>

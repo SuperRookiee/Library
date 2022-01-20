@@ -203,7 +203,17 @@ input[type=submit] {
        		</div>
 	  		<div class="img bg-wrap text-center py-4" style="background-image: url(/resources/sidebar/images/bg_1.jpg);">
 	  			<div class="user-logo">
-					<div class="img" style="background-image: url('${list.profile_image}')"></div>
+	  				<!-- 시작 -->
+	  				<c:choose>
+	  				<c:when test="${list.profile_image != null}">
+					<!-- profile 사진이 있으면? -->
+					<div class="img circle-img" style="background-image: url('/display?fileName=${list.profile_image}')"></div>
+					</c:when>
+					<c:otherwise>
+					<div class="img" style="background-image: url('/resources/image/user.png')"></div>
+					</c:otherwise>
+					</c:choose>
+	  				<!-- 끝  -->
 	  				<h3><c:out value="${list.name }"/></h3>
 	  			</div>
 	  		</div>
@@ -243,7 +253,7 @@ input[type=submit] {
               <c:choose>
 					<c:when test="${list.profile_image != null}">
 					<!-- profile 사진이 있으면? -->
-					<div class="img circle-img" style="background-image: url('${list.profile_image}')"></div>
+					<div class="img circle-img" style="background-image: url('/display?fileName=${list.profile_image}')"></div>
 					</c:when>
 					<c:otherwise>
 					<svg width="110" height="110" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" class="center">
@@ -317,7 +327,8 @@ input[type=submit] {
               </div>
             </div>
           </div>
-          <form method="POST" action="/update">
+
+          <form method="POST" action="/update" enctype="multipart/form-data">
           <input type="hidden" name="id" value="${list.id }">
           <div class="general">
             <h1>회원 정보 수정</h1><br>
@@ -334,7 +345,7 @@ input[type=submit] {
             <div class="Input">
 	          <input type="text" id="input" name="mobile" class="Input-text" value="${list.mobile }">
         	</div>
-        	<!-- <input type="file" name="profile_image"> -->
+        	<input type="file" name="uploadFile">
         	<input type="submit" value="수정">
           </div>
           <!-- general end -->

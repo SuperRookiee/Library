@@ -80,3 +80,20 @@
 .text-muted{
 	margin-right: 10px;
 }
+
+#frm{
+	display: inline !important;
+	width: 100%;
+	padding : 3px;
+}
+
+.insertComment{
+	whitespace: nowrap;
+}
+
+#sendButton{
+	margin : 5px;
+	float: right;
+}
+
+

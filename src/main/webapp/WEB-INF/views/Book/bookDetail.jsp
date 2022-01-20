@@ -83,17 +83,21 @@
 		                <div class="p-3">
 		                    <h6>Comments</h6>
 		                </div>
-		                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color">
-		                <form action="/comment/register" method = "post"> 
-		                	<img src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
-		                	<input type="text" name="content" class="form-control" placeholder="댓글을 입력하세요...">
-		                	<input type="hidden" name="pic" value="${book.bookImageURL}">
-		                	<input type="hidden" name="img_Url" value="${result.profile_image}">
-		                	<input type="hidden" name="name" value="${result.name}">
-	    					<input type="hidden" name="isbn" value="${book.bookIsbn}">
-		                	<input type="submit" value="send">
-		                	</form>
-		                </div>
+		                <c:choose>
+	                        <c:when test="${not empty result.name}">
+				                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color">
+				                <img src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
+				                <form id="frm" action="/comment/register" method = "post">
+				                	<input type="text" name="content" class="form-control" placeholder="댓글을 입력하세요...">
+				                	<input type="hidden" name="pic" value="${book.bookImageURL}">
+				                	<input type="hidden" name="img_Url" value="${result.profile_image}">
+				                	<input type="hidden" name="name" value="${result.name}">
+			    					<input type="hidden" name="isbn" value="${book.bookIsbn}">
+				                	<input type="submit" class="btn btn-outline-primary" value="send" id="sendButton">
+				                </form>
+				                </div>
+			                </c:when>
+			            </c:choose>
 						<div class="panel-body">
 							<ul class="media-list">
 							   <c:forEach var="item" items="${commentList}">
@@ -106,9 +110,20 @@
 		                                   		<small class="text-muted">${item.regdate}</small>
 		                                	</span>
 		                                	<strong class="text-info">${item.name}</strong>
-		                                	<p>
+		                                	<p id="content">
 		                                    	${item.content}
 		                                	</p>
+		                                	<div class="pull-right">
+												<c:choose>
+													<c:when test="${item.name eq result.name}">
+														<form action="/comment/remove">
+															<input type="hidden" value="${item.rno }" name="rno" /> 
+															<input type="hidden" value="${item.isbn }" name="isbn" /> 
+															<input type="submit" value="remove" class="btn btn-outline-danger"/>
+														</form>
+													</c:when>
+												</c:choose>
+											</div>
 		                            	</div>
 		                        	</li>
 		                       </c:forEach>

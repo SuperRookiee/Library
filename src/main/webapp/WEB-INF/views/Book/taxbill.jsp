@@ -33,7 +33,7 @@
         </div>
 
         <div class="paypal__header-info">
-          <span class="paypal__date">${date}</span>
+          <span class="paypal__date">기준 날짜 : ${date}</span>
         </div>
       </div>
 

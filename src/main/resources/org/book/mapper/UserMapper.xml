@@ -17,7 +17,7 @@
 	</select>
 	<update id="updateInfo">
 	update USERS set email=#{email}, birthyear=#{birthyear}, birthday=#{birthday}, 
-	mobile=#{mobile}, age=#{age}
+	mobile=#{mobile}, age=#{age}, profile_image=#{profile_image}
 	where id=#{id}
 	</update>
 </mapper>

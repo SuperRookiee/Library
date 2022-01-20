@@ -36,10 +36,10 @@ public class CommentServiceImpl implements CommentService{
 	}
 
 	@Override
-	public int remove(String name, String isbn) {
+	public int remove(int rno) {
 		// TODO Auto-generated method stub
-		log.info("commentremove................."+name+", "+isbn);
-		return mapper.delete(name, isbn);
+		log.info("commentremove................."+rno);
+		return mapper.delete(rno);
 	}
 
 	@Override

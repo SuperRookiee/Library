@@ -25,7 +25,6 @@
 		name=#{name} AND isbn=#{isbn}
 	</update>
 	<delete id="delete">
-		delete from Comments where name=#{name} AND
-		isbn=#{isbn}
+		delete from Comments where rno=#{rno}
 	</delete>
 </mapper>

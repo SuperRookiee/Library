@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.book.domain.BookDTO;
-import org.book.domain.CommentDTO;
 import org.book.service.CommentService;
+import org.book.service.UserService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -25,6 +27,9 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class BookController {
 	private CommentService service;
+	private UserService userService;
+	
+	
 	
 	@GetMapping("/home")
 	public String home(Model model) {
@@ -87,23 +92,151 @@ public class BookController {
 	
 	
 	@GetMapping("/myPage")
-	public void myPage() {
-	}
+   public void myPage(@RequestParam String id,Model model, HttpSession session) {
+      
+      model.addAttribute("list", userService.getUserList(id));
+   }
+	
+	
 	@GetMapping("/findBook")
 	public void findBook() {
 	}
+	
 	@GetMapping("/cart")
 	public void cart() {
 	}
+	
 	@GetMapping("/taxbill")
 	public void taxbill() {
 	}
+	
 	@GetMapping("/recommend")
-	public String recommend() {
-		return "/Book/recommend";
+	public void recommend(@RequestParam("sort") String sort,Model model) {
+		ArrayList<ArrayList<BookDTO>> bookList=recommend_book(sort);
+		model.addAttribute("bookList",bookList);
+		model.addAttribute("sort",sort);
+		
+		ArrayList<String> select_String=new ArrayList<String>();
+		if(sort.equals("gender"))
+		{
+			select_String.add("남성");
+			select_String.add("여성");
+			select_String.add("미상");
+		}
+		else if(sort.equals("kdc"))
+		{
+			select_String.add("예술");
+			select_String.add("언어");
+			select_String.add("문학");
+		}
+		else if(sort.equals("age"))
+		{
+			select_String.add("20대");
+			select_String.add("30대");
+			select_String.add("40대");
+		}
+		log.info("sort...."+sort);
+		log.info("select_String......"+select_String);
+		model.addAttribute("select",select_String);
 	}
 
+	public ArrayList<Integer> sortSelect(String sort)
+	{
+		ArrayList<Integer> sort_select=new ArrayList<Integer>();
+		switch(sort)
+		{
+		case "주제":
+			for(int i=1;i<4;i++)
+			{
+				sort_select.add(i);
+			}
+			break;
+		case "연령":
+			sort_select.add(20);
+			sort_select.add(30);
+			sort_select.add(40);
+			break;
+
+		case "성":
+			for(int i=0;i<3;i++)
+			{
+				sort_select.add(i);
+			}
+			break;
+		}
+		return sort_select;
+	}
 	
+	public ArrayList<ArrayList<BookDTO>> recommend_book(String sort)
+	{
+		Document doc;
+		String url_last="";
+		ArrayList<ArrayList<BookDTO>> finalList=new ArrayList<ArrayList<BookDTO>>();
+		ArrayList<Integer> sort_select=new ArrayList<Integer>();
+		switch(sort)
+		{
+		case "kdc":
+			url_last="&kdc=";
+			for(int i=6;i<9;i++)
+			{
+				sort_select.add(i);
+			}
+			break;
+		case "age":
+			url_last="&age=";
+			sort_select.add(20);
+			sort_select.add(30);
+			sort_select.add(40);
+			break;
+
+		case "gender":
+			url_last="&gender=";
+			for(int i=0;i<3;i++)
+			{
+				sort_select.add(i);
+			}
+			break;
+		}
+		
+		String url_kdcBase="http://data4library.kr/api/loanItemSrch?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd"
+				+ "&startDt=2022-01-01&endDt=2022-01-20&pageSize=6"+url_last;
+		for(int i:sort_select)
+		{
+			ArrayList<BookDTO> bookList=new ArrayList<BookDTO>();
+			String url_kdc=url_kdcBase+i;
+			try
+			{
+				doc=Jsoup.connect(url_kdc).get();
+				Elements bookname=doc.getElementsByTag("bookname");
+				Elements authors=doc.getElementsByTag("authors");
+				Elements publisher=doc.getElementsByTag("publisher");
+				Elements class_nm=doc.getElementsByTag("class_nm");
+				Elements publication_year=doc.getElementsByTag("publication_year");
+				Elements bookImageURL=doc.getElementsByTag("bookImageURL");
+				Elements isbn13=doc.getElementsByTag("isbn13");
+				
+				for(int j=0;j<bookname.size();j++)
+				{
+					String tit=bookname.get(j).text();
+					String auth=authors.get(j).text();
+					String pub=publisher.get(j).text();
+					String category=class_nm.get(j).text();
+					String pubYear=publication_year.get(j).text();
+					String img=bookImageURL.get(j).text();
+					String isbn=isbn13.get(j).text();
+
+					int bookPrice=(Character.getNumericValue(isbn.charAt(isbn.length()-1))+1)*20000/4;
+					
+					BookDTO book=new BookDTO(tit,category,auth,pub,pubYear,bookPrice,isbn,img,null);
+					bookList.add(book);
+				}
+				
+			}
+			catch(IOException e) {e.printStackTrace();}
+			finalList.add(bookList);
+		}
+		return finalList;
+	}
 	
 	
 	@GetMapping("/bookDetail")

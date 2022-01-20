@@ -28,35 +28,33 @@ public class CommentController {
 		return "/Book/bookDetail";
 	}
 
-
-	@PostMapping("/register") // 
+	@PostMapping("/register") //
 	public String register(CommentDTO comment, RedirectAttributes rttr) {
 		log.info("register :" + comment);
 		service.register(comment);
-		String isbn=comment.getIsbn();
-		rttr.addAttribute("isbn",isbn);
+		String isbn = comment.getIsbn();
+		rttr.addAttribute("isbn", isbn);
 		return "redirect:/Book/bookDetail";
-		}
+	}
 
 	@GetMapping("/register")
 	public void register() {
 	}
 
 	@GetMapping("/remove")
-	   public String remove(@RequestParam("userId") String userId, @RequestParam("isbn") String isbn,
-	         RedirectAttributes rttr) {
-	      log.info("remove.........:" + userId + isbn);
-	      service.remove(userId, isbn);
-	      log.info("remove.........:" + userId + "," + isbn);
-	      rttr.addFlashAttribute("result", "success");
-	      return "redirect:/comment/list?isbn=" + isbn;
-	   }
+	public String remove(@RequestParam("rno") int rno, @RequestParam("isbn") String isbn, RedirectAttributes rttr) {
+		log.info("remove.........:" + rno + isbn);
+		service.remove(rno);
+		log.info("remove.........:" + rno + "," + isbn);
+		rttr.addAttribute("isbn", isbn);
+		return "redirect:/Book/bookDetail";
+	}
 
-	   @GetMapping("/modify")
-	   public String modify(CommentDTO comment, RedirectAttributes rttr) {
-	      log.info("modify.........:" + comment);
-	      service.modify(comment);
-	      rttr.addFlashAttribute("result", "success");
-	      return "redirect:/comment/list?isbn=" + comment.getIsbn();
-	   }
+	@GetMapping("/modify")
+	public String modify(CommentDTO comment, RedirectAttributes rttr) {
+		log.info("modify.........:" + comment);
+		service.modify(comment);
+		rttr.addFlashAttribute("result", "success");
+		return "redirect:/comment/list?isbn=" + comment.getIsbn();
+	}
 }

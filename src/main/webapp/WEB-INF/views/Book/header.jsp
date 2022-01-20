@@ -124,9 +124,9 @@
 							<li class="scroll-to-section"><a href="/cart/cart?userId=${result.name}">담아둔 상품</a></li>
 							<li class="submenu"><a href="javascript:;">추천도서</a>
 								<ul>
-									<li><a href="/Book/recommend?sort=주제">주제별 추천도서</a></li>
-									<li><a href="/Book/recommend?sort=연령">연령별 추천도서</a></li>
-									<li><a href="/Book/recommend?sort=성">성별 추천도서</a></li>
+									<li><a href="/Book/recommend?sort=kdc">주제별 추천도서</a></li>
+									<li><a href="/Book/recommend?sort=age">연령별 추천도서</a></li>
+									<li><a href="/Book/recommend?sort=gender">성별 추천도서</a></li>
 								</ul></li>
 							<li class="scroll-to-section"><c:choose>
 									<c:when test="${sessionId == null}">

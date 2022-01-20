@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 public class CommentDTO {
+	private String rno;
 	private String name;
 	private String isbn;
 	private String content;

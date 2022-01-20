@@ -126,7 +126,6 @@
 #main input {
     border: 1px solid rgba(0, 0, 0, 0.137);
     padding: 1vh;
-    margin-bottom: 4vh;
     outline: none;
     width: 100%;
     background-color: rgb(247, 247, 247)
@@ -142,7 +141,6 @@
     color: white;
     width: 100%;
     font-size: 0.7rem;
-    margin-top: 4vh;
     padding: 1vh;
     border-radius: 0
 }
@@ -175,4 +173,20 @@
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: center
+}
+
+#ch{
+	
+}
+
+#frm{
+	display: inline;
+}
+#N, #S{
+	width: 40% !important;
+}
+
+#back{
+	background-color:transparent;
+	border: none;
 }

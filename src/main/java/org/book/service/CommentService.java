@@ -14,7 +14,7 @@ public interface CommentService {
 	//리뷰 수정
 	public int modify(CommentDTO comment);
 	//리뷰 삭제
-	public int remove(String name, String isbn);
+	public int remove(int rno);
 	//리뷰 불러오기
 	public ArrayList<CommentDTO> getList(String isbn);
 	//리뷰 숫자
