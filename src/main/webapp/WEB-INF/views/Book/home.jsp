@@ -28,8 +28,15 @@
 
 </script>
 
-
 <c:set var="list" value="${bestlist}"/>
+
+<style>
+	#rc_img{
+		padding: 2px;
+		height: 27vh;
+	}
+</style>
+
 
 </head>
 
