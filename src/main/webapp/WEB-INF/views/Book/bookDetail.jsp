@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-image">
-                        <img class="bookImageURL" src="${book.bookImageURL}" alt="">
+                        <img class="bookImageURL" src="${book.bookImageURL}" onerror="this.src='/resources/image/books.png';">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -87,6 +87,7 @@
 		                <form action="/comment/register" method = "post"> 
 		                	<img src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
 		                	<input type="text" name="content" class="form-control" placeholder="댓글을 입력하세요...">
+		                	<input type="hidden" name="pic" value="${book.bookImageURL}">
 		                	<input type="hidden" name="img_Url" value="${result.profile_image}">
 		                	<input type="hidden" name="name" value="${result.name}">
 	    					<input type="hidden" name="isbn" value="${book.bookIsbn}">

@@ -1,6 +1,7 @@
 package org.book.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.book.domain.CommentDTO;
 import org.book.mapper.CommentMapper;
@@ -14,6 +15,11 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class CommentServiceImpl implements CommentService{
 	private CommentMapper mapper;
+	
+	@Override
+	public List<CommentDTO> getRecentComments() {
+		return mapper.getRecentComments();
+	}
 	
 	@Override
 	public int register(CommentDTO comment) {

@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>AVOCADO</title>
-</head>
 
 <script type="text/javascript">
 	$(document).ready(function()
@@ -29,6 +28,12 @@
 
 </script>
 
+
+<c:set var="list" value="${bestlist}"/>
+
+</head>
+
+
 <body>
  	<!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
@@ -44,7 +49,7 @@
                                 <span>많은 사람들이 선택한 책을 읽어보세요</span>
                                 <span>수 많은 선택을 받은 책에는 이유가 있습니다</span>
                                 <div class="main-border-button">
-                                    <a href="#">Purchase Now!</a>
+                                    <a href="/Book/bookDetail?isbn=<c:out value='${list[0].bookIsbn}'/>">Purchase Now!</a>
                                 </div>
                             </div>
                             <img src="/resources/image/crowd.png" alt="">
@@ -268,75 +273,23 @@
         </div>
         <div class="container">
             <div class="row images">
-                <div class="col-2">
+            <c:forEach var="rc" items="${RC}">
+            	<div class="col-2">
                     <div class="thumb">
                         <div class="icon">
-                        <h7 style="color:white; padding:5px">2022-01-19</h7>
-                        <h5 style="color:white; padding:5px">댓글로렘입슘로렘입슘로렘입슘 로렘입슘로렘입슘로렘입슘 로렘입슘로렘입슘로렘입슘</h5><br>
-                            <a href="http://instagram.com">
-                                <h6>${list[0].bookName}</h6>
+                        <h7 style="color:white; padding:5px">${rc.regdate}</h7>
+                        <h5 style="color:white; padding:5px">${rc.content}</h5><br>
+                            <a href="/Book/bookDetail?isbn=<c:out value='${rc.isbn}'/>">
+                                <h6>${rc.name}</h6>
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="${list[0].bookImageURL}" alt="">
-<!--                         <img src="/resources/hexa/assets/images/instagram-01.jpg" alt=""> -->
+                        <img id="rc_img" src="${rc.pic}" onerror="this.src='/resources/image/books.png';"/>
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="thumb">
-                        <div class="icon">
-                            <a href="http://instagram.com">
-                                <h6>New</h6>
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
-                        <img src="/resources/hexa/assets/images/instagram-02.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="thumb">
-                        <div class="icon">
-                            <a href="http://instagram.com">
-                                <h6>Brand</h6>
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
-                        <img src="/resources/hexa/assets/images/instagram-03.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="thumb">
-                        <div class="icon">
-                            <a href="http://instagram.com">
-                                <h6>Makeup</h6>
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
-                        <img src="/resources/hexa/assets/images/instagram-04.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="thumb">
-                        <div class="icon">
-                            <a href="http://instagram.com">
-                                <h6>Leather</h6>
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
-                        <img src="/resources/hexa/assets/images/instagram-05.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="thumb">
-                        <div class="icon">
-                            <a href="http://instagram.com">
-                                <h6>Bag</h6>
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
-                        <img src="/resources/hexa/assets/images/instagram-06.jpg" alt="">
-                    </div>
-                </div>
+            </c:forEach>
+                
+                
             </div>
         </div>
     </section>

@@ -24,11 +24,11 @@ import lombok.extern.log4j.Log4j;
 @RequestMapping("/Book/*")
 @AllArgsConstructor
 public class BookController {
-	
 	private CommentService service;
 	
 	@GetMapping("/home")
 	public String home(Model model) {
+		//도서관 정보나루 API
 		Document doc_naru;
 //		String url = "http://data4library.kr/api/loanItemSrch?authKey=98f61069b118242705dcd27c2fa00bf1c2ecfa258eeca760214c31dad2c234cb&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
 		String url = "http://data4library.kr/api/loanItemSrch?authKey=252d4cf1dc317d82e5929ae1d837b812fa0bfd72bc773e25f1d4a8a061f82ef1&startDt=2022-01-01&endDt=2022-01-12&pageSize=5";
@@ -75,7 +75,13 @@ public class BookController {
 			
 		}
 		catch(IOException e) {e.printStackTrace();}
+		
+		//책 API 정보
 		model.addAttribute("bestlist",bestlist);
+		
+		//최근 댓글
+		model.addAttribute("RC",service.getRecentComments());
+		
 		return "/Book/home";
 	}
 	

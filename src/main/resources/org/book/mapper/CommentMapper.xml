@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.book.mapper.CommentMapper">
-
+	
+	<!-- 최근 댓글 6개 -->
+	<select id="getRecentComments" resultType="org.book.domain.CommentDTO">
+		select * from comments order by regdate desc limit 6;
+	</select>
+	
 	<select id="getList" resultType="org.book.domain.CommentDTO">
 		select * from Comments where
 		isbn=#{isbn}
@@ -11,8 +16,8 @@
 		Comments where isbn=#{isbn}
 	</select>
 	<insert id="insert">
-		insert into Comments (name, isbn, content, img_Url)
-		values(#{name},#{isbn},#{content}, #{img_Url})
+		insert into Comments (name, isbn, content, pic, img_Url)
+		values(#{name},#{isbn},#{content}, #{pic}, #{img_Url})
 	</insert>
 	<update id="update">
 		update Comments set content=#{content}, regdate=now()
