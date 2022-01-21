@@ -14,3 +14,5 @@ C:\Users\BIT\eclipse-workspace\Library\target\m2e-wtp\web-resources\META-INF\mav
 pom.properties
 org.eclipse.wst.common.component
 >>>>>>> origin/JJH
+target/test-classes/log4jdbc.log4j2.properties
+target/test-classes/log4j.xml
