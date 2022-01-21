@@ -90,7 +90,9 @@
 
 	});
 
-	
+	function BETA(){ 
+		alert('(BETA) 정식 서비스를 기대해주세요!!'); 
+	}
 </script>
 
 </head>

@@ -25,7 +25,6 @@
 			actionForm.submit();
 		})
 	})
-
 </script>
 
 <c:set var="list" value="${bestlist}"/>
@@ -144,9 +143,9 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>멤버쉽 가입</h4>
-                                                <p>월 ₩100,000원에 멤버쉽을 경험하실 수 있습니다.</p>
+                                                <p>월 ₩10,000원에 멤버쉽을 경험하실 수 있습니다.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    <a href="javascript:;" onclick="BETA()">Membership 가입하기</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -232,9 +231,9 @@
 	                                <div class="thumb">
 	                                    <div class="hover-content">
 	                                        <ul>
-	                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>	<!-- detailList -->
-	                                            <li><a href="#"><i class="fa fa-star"></i></a></li>	
-	                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+	                                            <li><a href="/Book/bookDetail?isbn=<c:out value='${item.bookIsbn}'/>"><i class="fa fa-eye"></i></a></li>	<!-- detailList -->
+	                                            <li><a href="javascript:;"><i class="fa fa-star"></i></a></li>	
+	                                            <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
 	                                        </ul>
 	                                    </div>
 	                                    <img src="${item.bookImageURL}" height="490" style="border: 0.5px solid black">
@@ -326,7 +325,7 @@
 						</p>
 						<p><b>사회적 성장</b> : &nbsp;지적/문화적 성장을 통해 사회에 선한 영향을 끼치는 사람으로 변화하는 것</p>
                         <div class="main-border-button">
-                            <a href="products.html">Discover More</a>
+                            <a href="https://github.com/SuperRookiee/Library#readme">Discover More</a>
                         </div>
                     </div>
                 </div>

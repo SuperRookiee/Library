@@ -24,27 +24,27 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <h4>Search</h4>
+                    <h4>Explore &amp; Search</h4>
                     <ul>
-                        <li><a href="#">Search1</a></li>
-                        <li><a href="#">Search2</a></li>
-                        <li><a href="#">Search3</a></li>
+                        <li><a href="/Book/home">Home</a></li>
+                        <li><a href="/Book/findBook">조건 검색</a></li>
+                        <li><a href="/cart/cart?userId=${result.name}">Cart</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h4>추천 도서</h4>
+                    <h4>Finder</h4>
                     <ul>
-                        <li><a href="#">주제별 추천도서</a></li>
-                        <li><a href="#">연령별 추천도서</a></li>
-                        <li><a href="#">성별 추천도서</a></li>
+                        <li><a href="/Book/recommend?sort=kdc">주제별 추천도서</a></li>
+                        <li><a href="/Book/recommend?sort=age">연령별 추천도서</a></li>
+                        <li><a href="/Book/recommend?sort=gender">성별 추천도서</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h4>Help &amp; Information</h4>
+                    <h4>Information</h4>
                     <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Cart</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/Book/myPage?id=${result.id}">My Page</a></li>
+                        <li><a href="#">Top</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-12">
