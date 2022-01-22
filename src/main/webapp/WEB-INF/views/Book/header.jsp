@@ -46,6 +46,9 @@
 <link rel="stylesheet" type="text/css"
 	href="/resources/css/DarkMode.css?after">
 
+<!-- 아이콘 -->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 <script>
 	//쿠키 생성

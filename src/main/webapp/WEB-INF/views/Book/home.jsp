@@ -243,14 +243,11 @@
 	                                    <form id="actionForm" action="/Book/bookDetail">
 											<input type="hidden" name="isbn">
 										</form>
-	                                    <span>${indexNo.count}0,000</span>
+	                                    <span>${indexNo.count}위</span>
 	                                    <ul class="stars">
-	                                    	<li>${indexNo.count}위</li>
-	                                       <!--  <li><i class="fa fa-star"></i></li>
+	                                       	<li><i class="fa fa-star"></i></li>
 	                                        <li><i class="fa fa-star"></i></li>
 	                                        <li><i class="fa fa-star"></i></li>
-	                                        <li><i class="fa fa-star"></i></li>
-	                                        <li><i class="fa fa-star"></i></li> -->
 	                                    </ul>
 	                                </div>
 	                            </div>

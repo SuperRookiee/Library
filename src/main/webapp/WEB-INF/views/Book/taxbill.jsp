@@ -33,7 +33,7 @@
         </div>
 
         <div class="paypal__header-info">
-          <span class="paypal__date">기준 날짜 : ${date}</span>
+          <span class="paypal__date">기준 날짜 <br> ${date}</span>
         </div>
       </div>
 
@@ -51,7 +51,7 @@
     <c:forEach var="item" items="${paylist}" varStatus="status">
           <li class="paypal__cart-item">
             <span class="paypal__index">${status.count}</span>
-            <span class="paypal__item-name">[${item.category}]</span>
+            <span class="paypal__item-name">[${item.category}]</span><br>
             <span class="paypal__item-name">${item.bookName}</span>
             <span class="paypal__item-price">${item.price*item.amount}원</span>
           </li>

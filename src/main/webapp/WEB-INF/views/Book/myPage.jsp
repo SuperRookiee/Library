@@ -47,11 +47,7 @@
 					<div class="img circle-img" style="background-image: url('/display?fileName=${list.profile_image}')"></div>
 					</c:when>
 					<c:otherwise>
-<<<<<<< HEAD
-					<div class="img" style="background-image: url('/resources/image/user.png')"></div>
-=======
 					<div class="img" style="background-image: url('${image2}')"></div>
->>>>>>> 0b565539e84fffcd5b42b5b7ab6942205a239fd5
 					</c:otherwise>
 					</c:choose>
 	  				<!-- 끝  -->

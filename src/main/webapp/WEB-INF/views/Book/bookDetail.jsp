@@ -133,7 +133,7 @@
 														<form action="/comment/remove">
 															<input type="hidden" value="${item.rno }" name="rno" /> 
 															<input type="hidden" value="${item.isbn }" name="isbn" /> 
-															<input type="submit" value="remove" class="btn btn-outline-danger"/>
+															<input type="submit" value="remove" class="btn btn-outline-danger" id="sendButton"/>
 														</form>
 													</c:when>
 												</c:choose>
@@ -160,23 +160,23 @@
 		                </div>
 		                <div class="col-lg-4">
 		                    <div class="service-item">
-		                        <h4>Title 1</h4>
-		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-		                        <img src="/resources/hexa/assets/images/service-01.jpg" alt="">
+		                        <h4><a href="/Book/bookDetail?isbn=9788983928078">해리포터 : 죽음의 성물</a></h4>
+								<p>1997년 영국에서 출간된 이래 [해리 포터] 시리즈는 지금까지 200개국 이상 80개의 언어로 번역되고 출간되어 5억 부 이상을 판매했다. 20주년을 맞아 새롭게 출간한 [해리 포터] 시리즈는 '21세기 고전'이라 불릴 만한 품격에 맞춰 작품의 완성도를 높였다.</p>
+		                        <img id="s_img" src="/resources/image/sample1.jpg" alt="">
 		                    </div>
 		                </div>
 		                <div class="col-lg-4">
 		                    <div class="service-item">
-		                        <h4>Title 2</h4>
-		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-		                        <img src="/resources/hexa/assets/images/service-02.jpg" alt="">
+		                    	<h4><a href="/Book/bookDetail?isbn=9788925556789">마션 :어느 괴짜 과학자의 화성판 어드벤처 생존기</a></h4>
+		                        <p>화성에서 조난당한 한 남자에 대한 이야기. 컴퓨터 프로그래머 출신인 작가 앤디 위어가 2009년 취미 삼아 개인 블로그에 연재를 시작했던 [마션]은 독자들의 요청으로 2011년 아마존 킨들 버전으로 출판되었다.</p>
+		                        <img id="s_img" src="/resources/image/sample2.jpg" alt="">
 		                    </div>
 		                </div>
 		                <div class="col-lg-4">
 		                    <div class="service-item">
-		                        <h4>Title 3</h4>
-		                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-		                        <img src="/resources/hexa/assets/images/service-03.jpg" alt="">
+		                    	<h4><a href="/Book/bookDetail?isbn=9791189184018">(코드로 배우는) 스프링 웹 프로젝트</a></h4>
+								<p>Spring Framework를 사용해서 ‘웹 프로젝트’를 어떻게 진행하는지를 설명한다. 좀 더 구체적으로는 스프링으로 웹 프로젝트에서 사용되는 게시물 관리를 만들어 보는 것이 주된 목적이다.<p>
+			                    <img id="s_img" src="/resources/image/sample3.jpg" alt="">
 		                    </div>
 		                </div>
 		            </div>

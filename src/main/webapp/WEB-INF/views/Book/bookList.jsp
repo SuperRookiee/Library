@@ -98,6 +98,29 @@
 			</div>
 		</div>
 		
+		<div class="subscribe">
+			<div class="container">
+				<div class="col-lg-8">
+					<form id="subscribe" action="/Book/bookList" method="get">
+			            <div class="row">
+			              <div class="col-lg-10">
+			                <fieldset>
+			                  <input name="key" type="text" id="key" placeholder="검색어 입력" required="">
+			                  <input name="pageNum" type="hidden" id="pageNum" value='1'>
+			                </fieldset>
+			              </div>
+			              <div class="col-lg-2">
+			                <fieldset>
+			                  <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+			                </fieldset>
+			              </div>
+			            </div>
+		       		</form>
+	            </div>
+		    </div>
+		</div>
+		
+		
 		<c:forEach var="item" items="${list}">
 			<!-- ***** Product Area Starts ***** -->
 		    <section class="section" id="product">
