@@ -132,15 +132,22 @@
 									<li><a href="/Book/recommend?sort=kdc">주제별 추천도서</a></li>
 									<li><a href="/Book/recommend?sort=age">연령별 추천도서</a></li>
 									<li><a href="/Book/recommend?sort=gender">성별 추천도서</a></li>
-								</ul></li>
-							<li class="scroll-to-section"><c:choose>
+								</ul>
+							</li>
+								<c:choose>
 									<c:when test="${sessionId == null}">
-										<a href="/login">로그인</a>
+										<li class="scroll-to-section">
+											<a href="/login">로그인</a>
+										</li>
 									</c:when>
 									<c:otherwise>
-										<a href="/Book/myPage?id=${result.id}">마이페이지</a>
+										<li class="submenu"><a href="/Book/myPage?id=${result.id}">마이페이지</a>
+											<ul>
+												<li><a href="/logout">로그아웃</a></li>
+											</ul>
+										</li>
 									</c:otherwise>
-								</c:choose></li>
+								</c:choose>
 						</ul>
 						<a class='menu-trigger'> <span>Menu</span>
 						</a>

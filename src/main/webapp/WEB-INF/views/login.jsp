@@ -40,8 +40,9 @@
 									<section class="section" id="explore">
 										<div class="left-content">
 											<div class="main-border-button">
-												<a href="/Book/myPage?id=${result.id}"> 마이페이지로 가기</a> <a
-													href="/logout"> 로그아웃 </a>
+												<a href="/Book/home"> 홈 화면으로 가기</a> 
+												<a href="/Book/myPage?id=${result.id}"> 마이페이지로 가기</a> 
+												<a href="/logout"> 로그아웃 </a>
 											</div>
 										</div>
 									</section>
@@ -62,8 +63,8 @@
 										<input type="password" name="psw" placeholder="Password">
 										<span class="input-icon"><i class="fa fa-lock"></i></span>
 									</div>
-									<button class="login-btn">Login</button>
-									<a class="reset-psw" href="#">Forgot your password?</a>
+									<button class="login-btn" onclick="BETA()">Login</button>
+									<a class="reset-psw" href="#" onclick="BETA()">Forgot your password?</a>
 									<div class="seperator">
 										<b>or</b>
 									</div>
