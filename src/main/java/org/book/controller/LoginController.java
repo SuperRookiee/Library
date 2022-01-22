@@ -114,12 +114,14 @@ public class LoginController {
 		String email = (String) response_obj.get("email");
 		String age = (String) response_obj.get("age");
 		String mobile = (String) response_obj.get("mobile");
+
 		String profile_image2 = (String) response_obj.get("profile_image");
 		String profile_image = null;
 		String gender = (String) response_obj.get("gender");
 		Integer birthyear = Integer.valueOf((String) response_obj.get("birthyear"));
 		String birthday = (String) response_obj.get("birthday");
 
+		session.setAttribute("memberId", id);
 		session.setAttribute("image2", profile_image2);
 		
 		// 4.파싱 user네임 세션으로 저장

@@ -84,12 +84,27 @@
 		                </div>
 		                <c:choose>
 	                        <c:when test="${not empty result.name}">
-				                <div class="mt-3 d-flex flex-row align-items-center p-3 form-color">
-				                <img src="${result.profile_image}" width="50" class="rounded-circle mr-2"> 
+	                        	<div class="mt-3 d-flex flex-row align-items-center p-3 form-color">
+	                        	<c:choose>
+	                        	<c:when test='${not empty list}'>
+	                        		<img src="/display?fileName=${list}" width="50" class="rounded-circle mr-2">
+	                        	</c:when>
+	                        	<c:otherwise>
+				                	<img src="${result.profile_image}" width="50" class="rounded-circle mr-2">
+				                </c:otherwise>
+	                        	</c:choose>
+
 				                <form id="frm" action="/comment/register" method = "post">
 				                	<input type="text" name="content" class="form-control" placeholder="댓글을 입력하세요...">
 				                	<input type="hidden" name="pic" value="${book.bookImageURL}">
-				                	<input type="hidden" name="img_Url" value="${result.profile_image}">
+				                	<c:choose>
+	                        			<c:when test='${not empty list}'>
+	                        				<input type="hidden" name="img_Url" value="/display?fileName=${list}">
+	                        			</c:when>
+	                        			<c:otherwise>
+	                        				<input type="hidden" name="img_Url" value="${result.profile_image}">
+				                		</c:otherwise>
+	                        		</c:choose>
 				                	<input type="hidden" name="name" value="${result.name}">
 			    					<input type="hidden" name="isbn" value="${book.bookIsbn}">
 				                	<input type="submit" class="btn btn-outline-primary" value="send" id="sendButton">

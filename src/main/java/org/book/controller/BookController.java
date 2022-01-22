@@ -25,12 +25,10 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 @RequestMapping("/Book/*")
 @AllArgsConstructor
-public class BookController {
-	private CommentService service;
+public class BookController {	
 	private UserService userService;
-	
-	
-	
+	private CommentService service;
+
 	@GetMapping("/home")
 	public String home(Model model) {
 		//도서관 정보나루 API
@@ -92,12 +90,10 @@ public class BookController {
 	
 	
 	@GetMapping("/myPage")
-   public void myPage(@RequestParam String id,Model model, HttpSession session) {
-      
-      model.addAttribute("list", userService.getUserList(id));
-   }
-	
-	
+	public void myPage(@RequestParam String id,Model model,HttpSession session) {
+		
+		model.addAttribute("list", userService.getUserList(id));
+	}
 	@GetMapping("/findBook")
 	public void findBook() {
 	}
@@ -240,7 +236,7 @@ public class BookController {
 	
 	
 	@GetMapping("/bookDetail")
-	public void bookDetail(@RequestParam("isbn") String isbn, Model model){
+	public void bookDetail(@RequestParam("isbn") String isbn, Model model,HttpSession session){
 		String url_naru="http://data4library.kr/api/srchDtlList?authKey=516d6057acf9b3415283b1b6459355d04fdc09061bb8b2aad43f086301d5c6dd"
 				+ "&isbn13=";
 		Document doc_naru;
@@ -295,6 +291,8 @@ public class BookController {
 			}
 		}
 		catch(IOException e) {e.printStackTrace();}
+		String id=session.getAttribute("memberId").toString();
+		model.addAttribute("list",userService.getUserList(id).getProfile_image());
 		model.addAttribute("book",book);
 		model.addAttribute("commentList",service.getList(isbn));
 	}
