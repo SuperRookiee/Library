@@ -52,6 +52,7 @@
                         <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
                         
                         <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+                        <a href="https://inuackr-my.sharepoint.com/:p:/g/personal/jk0837_inu_ac_kr/ETNFSBF5jslAmvE-WG6JNEIB7SV1P42hmpTz8bSnzF6FWA?e=m4kGsO" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">Presentation</a>
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
