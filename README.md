@@ -40,7 +40,7 @@
 | 김종백 | comment, cart, paybill, db |
 | 고현욱 | FE개발 + 다크모드 구현, QA  |
 | 정현주 | Naver Login API연동 및 마이페이지 |
-| 조장훈 | 도서관 API 연동, 파싱 |
+| 조장훈 | 도서관 API 연동, 파싱, BE, QA |
 
 
 ![Slide1](https://user-images.githubusercontent.com/96603039/150729741-4f6f2873-273c-4161-a920-b8e4d6d7187a.jpg)
