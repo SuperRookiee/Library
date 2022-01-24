@@ -90,9 +90,6 @@
 				        <li>
 				            <a href="./bookList?key=${param.key}&pageNum=5">5</a>
 				        </li>
-				        <li>
-				            <a href="#">></a>
-				        </li>
 				    </ul>
 				</div>
 			</div>
@@ -119,7 +116,6 @@
 	            </div>
 		    </div>
 		</div>
-		
 		
 		<c:forEach var="item" items="${list}">
 			<!-- ***** Product Area Starts ***** -->
@@ -175,9 +171,6 @@
 				        </li>
 				        <li>
 				            <a href="./bookList?key=${param.key}&pageNum=5">5</a>
-				        </li>
-				        <li>
-				            <a href="#">></a>
 				        </li>
 				    </ul>
 				</div>

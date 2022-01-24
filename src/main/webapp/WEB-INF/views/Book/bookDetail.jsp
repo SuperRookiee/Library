@@ -133,7 +133,7 @@
 														<form action="/comment/remove">
 															<input type="hidden" value="${item.rno }" name="rno" /> 
 															<input type="hidden" value="${item.isbn }" name="isbn" /> 
-															<input type="submit" value="remove" class="btn btn-outline-danger" id="sendButton"/>
+															<input type="submit" value="remove" class="btn btn-outline-danger"/>
 														</form>
 													</c:when>
 												</c:choose>
@@ -148,7 +148,7 @@
 			</div>
             <!-- reply Area Ends -->
             
-            <!-- ***** Another Book Area Starts ***** -->
+<!-- ***** Another Book Area Starts ***** -->
 		    <section class="our-services">
 		        <div class="container">
 		            <div class="row">

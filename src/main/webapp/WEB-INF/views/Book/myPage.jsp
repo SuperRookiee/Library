@@ -85,7 +85,7 @@
    		
 	    <!-- Page Content  -->
 		<div id="content" class="p-4 p-md-5 pt-5">
-		  <h2 class="mb-4">My Page ${list.profile_image}</h2>
+		  <h2 class="mb-4">My Page</h2>
 		  <div class="card green">
           <div class="additional">
             <div class="user-card">

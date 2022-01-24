@@ -58,7 +58,7 @@
                                     <a href="/Book/bookDetail?isbn=<c:out value='${list[0].bookIsbn}'/>">Purchase Now!</a>
                                 </div>
                             </div>
-                            <img src="/resources/image/crowd.png" alt="">
+                            <img src="/resources/image/bookstore.jpg" alt="" height="794px">
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="/resources/hexa/assets/images/baner-right-image-01.jpg">
+                                        <img src="/resources/image/avocado.jpg" height="382.06px">
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <h4>20대 추천도서</h4>
-                                            <span>어떤 책을 가장 많이 읽었는지 확인해보세요</span>
+                                            <span style="background-color: rgba(0,0,0,0.7)">어떤 책을 가장 많이 읽었는지 확인해보세요</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
@@ -106,7 +106,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="/resources/image/20s.png">
+                                        <img src="/resources/image/osusume.jpg" height="382px">
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="/resources/image/laptop.png">
+                                        <img src="/resources/image/review.jpg" height="382.06px">
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +137,8 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>OO Membership</h4>
-                                            <span>더 많은 혜택을 누려보세요</span>
+                                            <h4 style="color: black">OO Membership</h4>
+                                            <span style="color: black">더 많은 혜택을 누려보세요</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
@@ -149,7 +149,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="/resources/hexa/assets/images/baner-right-image-04.jpg">
+                                        <img src="/resources/image/membership.jpg" height="382.16px">
                                     </div>
                                 </div>
                             </div>
@@ -245,9 +245,12 @@
 										</form>
 	                                    <span>${indexNo.count}위</span>
 	                                    <ul class="stars">
-	                                       	<li><i class="fa fa-star"></i></li>
+	                                    	
+	                                       <!--  <li><i class="fa fa-star"></i></li>
 	                                        <li><i class="fa fa-star"></i></li>
 	                                        <li><i class="fa fa-star"></i></li>
+	                                        <li><i class="fa fa-star"></i></li>
+	                                        <li><i class="fa fa-star"></i></li> -->
 	                                    </ul>
 	                                </div>
 	                            </div>
