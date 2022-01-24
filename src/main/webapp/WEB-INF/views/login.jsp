@@ -34,20 +34,24 @@
 					<div class="col-lg-4"></div>
 					<c:choose>
 						<c:when test="${sessionId != null}">
+							
 							<div class="col-lg-6">
 								<div class="section-heading">
 									<h2>'${sessionId}' 님 환영합니다!</h2>
 									<section class="section" id="explore">
 										<div class="left-content">
 											<div class="main-border-button" style="margin-left: -40px;">
-												<a href="/Book/home"> 홈 화면으로 가기</a> 
+												<a href="/Book/home"> 홈 화면으로 가기</a>
 												<a href="/Book/myPage?id=${result.id}"> 마이페이지로 가기</a> 
 												<a href="/logout"> 로그아웃 </a>
 											</div>
+											<img src="/resources/image/a1.png" style="margin-left: -50px;">
 										</div>
 									</section>
 								</div>
+								
 							</div>
+							
 						</c:when>
 						<c:otherwise>
 							

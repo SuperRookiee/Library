@@ -31,12 +31,13 @@
 		class="org.login.api.NaverLoginBO">
 	</beans:bean>
 
-<!-- fileupload -->
-<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
-	</beans:bean>	
+	<!-- fileupload -->
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+	</beans:bean>
 	<context:component-scan
 		base-package="org.book.*" />
- 	<context:component-scan
+	<context:component-scan
 		base-package="org.login.*" />
 
 

@@ -282,7 +282,7 @@ input[type=submit] {
 	          <input type="text" id="input" name="mobile" class="Input-text" value="${list.mobile }">
         	</div>
         	<input type="file" name="uploadFile">
-        	<input type="submit" value="수정">
+        	<input type="submit" value="수정" >
           </div>
           <!-- general end -->
           </form>
