@@ -39,7 +39,7 @@
 									<h2>'${sessionId}' 님 환영합니다!</h2>
 									<section class="section" id="explore">
 										<div class="left-content">
-											<div class="main-border-button">
+											<div class="main-border-button" style="margin-left: -40px;">
 												<a href="/Book/home"> 홈 화면으로 가기</a> 
 												<a href="/Book/myPage?id=${result.id}"> 마이페이지로 가기</a> 
 												<a href="/logout"> 로그아웃 </a>

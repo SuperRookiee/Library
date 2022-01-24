@@ -110,4 +110,8 @@
          background: #ffffff; 
       }
       
+      .dark-mode .login-form form{
+      	 background: #202b38 !important;
+      }
+      
       
