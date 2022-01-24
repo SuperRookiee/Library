@@ -38,7 +38,7 @@
 | 이름 | 역할 |
 | ------ | ------ |
 | 김종백 | comment, cart, paybill, db |
-| 고현욱 | FE개발 + 다크모드 구현,  |
+| 고현욱 | FE개발 + 다크모드 구현, QA  |
 | 정현주 | Naver Login API연동 및 마이페이지 |
 | 조장훈 | 도서관 API 연동, 파싱 |
 
@@ -88,10 +88,10 @@
 #### cart는 결제하기를 누르면 구매내역에 stack이 쌓이게 되며 동시에 카트는 비워짐  
 ![Slide13](https://user-images.githubusercontent.com/96603039/150729811-e0753ff7-60a1-4f85-b5f0-59d91e14e452.jpg)
 
-# 배운 것
+# 느낀 점 및 배운 점
 ### image를 절대경로로 보여주는것은 보안상 불가하며, 반드시 업로드 폴더를 uploadFolder로 지정해 준 후, display 할 수 있는 것
 ### Json을 파싱할 때에 타입을 잘 보고 log를 찍어가며 디버깅 하기 - 데이터는 같은 값을 가지고 가더라도 따옴표가 붙을 수 있음에 주의
 ### 디버깅을 진행하며 springFramework의 구조에 대한 이해를 했다.
 ### 자바에도 파이썬처럼 크롤링하게 편리한 도구가 있다는 것을 알았음 (Jsoup)
-### 
+### 다양한 API를 연동하며 교육과정 이외의 것들을 활용함으로써 배운것 이상의 결과물을 도출해내었습니다. 앞으로 서로 다른 각자의 프로젝트를 수행하면서도 주어진 목표 이상의 결과물을 내는 동기생들이 되길 기원합니다.
  [powerpoint]: <https://inuackr-my.sharepoint.com/:p:/g/personal/jk0837_inu_ac_kr/ETNFSBF5jslAmvE-WG6JNEIB7SV1P42hmpTz8bSnzF6FWA?e=m4kGsO>
